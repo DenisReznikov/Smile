@@ -25,13 +25,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        authentication.cpp \
         main.cpp \
         abstract_windows.cpp
 
 HEADERS += \
-        abstract_windows.h
+        abstract_windows.h \
+        authentication.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+FORMS += \
+  authentication.ui

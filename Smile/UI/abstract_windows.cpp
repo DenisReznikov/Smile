@@ -1,11 +1,14 @@
 #include "abstract_windows.h"
 
-abstract_windows::abstract_windows(QWidget *parent)
+
+Abstract_Windows::Abstract_Windows(QString name_Person,QWidget *parent)
   : QMainWindow(parent)
 {
+
+  this->name_Person = name_Person;
 }
 
-abstract_windows::~abstract_windows()
+Abstract_Windows::~Abstract_Windows()
 {
 
 }

@@ -3,13 +3,22 @@
 
 #include <QMainWindow>
 
-class abstract_windows : public QMainWindow
-{
-  Q_OBJECT
+  class Abstract_Windows : public QMainWindow
+  {
+    Q_OBJECT
 
-public:
-  abstract_windows(QWidget *parent = 0);
-  ~abstract_windows();
-};
+  public:
+    Abstract_Windows(QString login,QWidget *parent = nullptr);
+    ~Abstract_Windows();
+    static QString name_Person;
+
+  protected:
+    virtual void closeWindow() = 0;
+    virtual void nextWindow() = 0;
+
+  private:
+
+
+  };
 
 #endif // ABSTRACT_WINDOWS_H
