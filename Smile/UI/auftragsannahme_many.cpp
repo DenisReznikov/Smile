@@ -1,13 +1,19 @@
 #include "auftragsannahme_many.h"
 #include "ui_auftragsannahme_many.h"
+<<<<<<< HEAD
 #include <QDebug>
 #include <QSqlError>
 #include "auftragsannahme_alone.h"
 Auftragsannahme_Many::Auftragsannahme_Many(QString login,QString str,QWidget *parent) :
+=======
+
+Auftragsannahme_Many::Auftragsannahme_Many(QWidget *parent) :
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_Many)
 {
   ui->setupUi(this);
+<<<<<<< HEAD
   ui->Name_person->setText(login);
   this->login=login;
   db = QSqlDatabase::addDatabase("QSQLITE");
@@ -28,6 +34,8 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QString str,QWidget *pa
 
   this->update_table();
 
+=======
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 }
 
 Auftragsannahme_Many::~Auftragsannahme_Many()
@@ -35,6 +43,7 @@ Auftragsannahme_Many::~Auftragsannahme_Many()
   delete ui;
 }
 
+<<<<<<< HEAD
 void Auftragsannahme_Many::update_table()
 {
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
@@ -73,4 +82,9 @@ void Auftragsannahme_Many::on_tableView_doubleClicked(const QModelIndex &index)
 void Auftragsannahme_Many::resizeEvent(QResizeEvent *event)
 {
   this->update_table();
+=======
+void Auftragsannahme_Many::on_lupeButton_clicked()
+{
+    Lupe(ui->outFrame);
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 }

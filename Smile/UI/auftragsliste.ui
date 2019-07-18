@@ -28,7 +28,11 @@
      <widget class="QTableView" name="tableView"/>
     </item>
     <item>
+<<<<<<< HEAD
      <widget class="QFrame" name="frame">
+=======
+     <widget class="QFrame" name="outFrame">
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -267,7 +271,11 @@
        </widget>
       </item>
       <item>
+<<<<<<< HEAD
        <widget class="QPushButton" name="Abbrech_7">
+=======
+       <widget class="QPushButton" name="lupeButton">
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
         <property name="minimumSize">
          <size>
           <width>90</width>

@@ -1,5 +1,4 @@
 #include "authentication.h"
-#include "abstract_windows.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

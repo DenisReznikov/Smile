@@ -8,6 +8,7 @@ Auftragsliste::Auftragsliste(QString login,QString sql_string,QWidget *parent) :
   ui->setupUi(this);
   ui->Name_person->setText(login);
   this->login=login;
+<<<<<<< HEAD
   db =  QSqlDatabase::addDatabase("QSQLITE");
 
   db.setDatabaseName("C:/D_B/test.db");
@@ -23,9 +24,22 @@ Auftragsliste::Auftragsliste(QString login,QString sql_string,QWidget *parent) :
   model->setQuery(sql_string);
 
   ui->tableView->setModel(model);
+=======
+
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 }
 
 Auftragsliste::~Auftragsliste()
 {
   delete ui;
 }
+<<<<<<< HEAD
+=======
+
+
+
+void Auftragsliste::on_lupeButton_clicked()
+{
+    Lupe(ui->outFrame);
+}
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794

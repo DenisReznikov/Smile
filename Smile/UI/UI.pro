@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++17
 
 SOURCES += \
+<<<<<<< HEAD
                authentication.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -34,6 +35,33 @@ HEADERS += \
         authentication.h \
         mainwindow.h \
         passwort_anderung.h
+=======
+        auftragsannahme_alone.cpp \
+        auftragsannahme_many.cpp \
+        auftragsannahme_telas.cpp \
+        auftragsauswahl.cpp \
+        auftragsliste.cpp \
+        auswahl_dispo_center.cpp \
+        authentication.cpp \
+        base_window_with_table.cpp \
+        dispositionsdater_for_hvt_schaltauftrag.cpp \
+        main.cpp \
+        mainwindow.cpp \
+        new_passwort.cpp
+
+HEADERS += \
+        auftragsannahme_alone.h \
+        auftragsannahme_many.h \
+        auftragsannahme_telas.h \
+        auftragsauswahl.h \
+        auftragsliste.h \
+        auswahl_dispo_center.h \
+        authentication.h \
+        base_window_with_table.h \
+        dispositionsdater_for_hvt_schaltauftrag.h \
+        mainwindow.h \
+        new_passwort.h
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -41,9 +69,22 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
+<<<<<<< HEAD
    authentication.ui \
   mainwindow.ui \
   passwort_anderung.ui
 
 DISTFILES += \
   ../../../../../Forms/Tests/1/Password/auth.sqlite
+=======
+  auftragsannahme_alone.ui \
+  auftragsannahme_many.ui \
+  auftragsannahme_telas.ui \
+  auftragsauswahl.ui \
+  auftragsliste.ui \
+  auswahl_dispo_center.ui \
+  authentication.ui \
+  dispositionsdater_for_hvt_schaltauftrag.ui \
+  mainwindow.ui \
+  new_passwort.ui
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794

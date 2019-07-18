@@ -1,9 +1,13 @@
 #include "auftragsannahme_telas.h"
 #include "ui_auftragsannahme_telas.h"
 #include <QDebug>
+<<<<<<< HEAD
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
+=======
+
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_TelAs)
@@ -12,6 +16,7 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   ui->dateEdit->setDate(QDate::currentDate());
   ui->Name_person->setText(login);
   this->login=login;
+<<<<<<< HEAD
   db = QSqlDatabase::addDatabase("QSQLITE");
 
   db.setDatabaseName("C:/D_B/test.db");
@@ -27,11 +32,16 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   qDebug() <<db.tables();
 }
 
+=======
+
+}
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
 {
   delete ui;
 }
 
+<<<<<<< HEAD
 
 
 void Auftragsannahme_TelAs::on_OK_clicked()
@@ -95,3 +105,5 @@ void Auftragsannahme_TelAs::on_name_for_Sql_returnPressed()
 {
   this->on_OK_clicked();
 }
+=======
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794

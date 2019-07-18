@@ -58,7 +58,11 @@
        </widget>
       </item>
       <item>
+<<<<<<< HEAD
        <widget class="QFrame" name="frame">
+=======
+       <widget class="QFrame" name="outFrame">
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
         <property name="minimumSize">
          <size>
           <width>780</width>
@@ -459,7 +463,11 @@
        </spacer>
       </item>
       <item>
+<<<<<<< HEAD
        <widget class="QPushButton" name="OK_2">
+=======
+       <widget class="QPushButton" name="lupeButton">
+>>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
         <property name="minimumSize">
          <size>
           <width>90</width>
