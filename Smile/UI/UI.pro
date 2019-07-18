@@ -32,23 +32,24 @@ SOURCES += \
         auftragsliste.cpp \
         auswahl_dispo_center.cpp \
         authentication.cpp \
-        base_window.cpp \
+        base_window_with_table.cpp \
         dispositionsdater_for_hvt_schaltauftrag.cpp \
         main.cpp \
         mainwindow.cpp \
         new_passwort.cpp
 
 HEADERS += \
+        auftragsannahme_alone.h \
+        auftragsannahme_many.h \
         auftragsannahme_telas.h \
         auftragsauswahl.h \
         auftragsliste.h \
         auswahl_dispo_center.h \
         authentication.h \
-        base_window.h \
+        base_window_with_table.h \
         dispositionsdater_for_hvt_schaltauftrag.h \
         mainwindow.h \
-        new_passwort.h \
-        pass.h
+        new_passwort.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

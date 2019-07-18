@@ -12,3 +12,12 @@ Authentication::~Authentication()
 {
   delete ui;
 }
+
+void Authentication::on_login_clicked()
+{
+  this->ui->userName->text();
+  mainWind = new MainWindow(this->ui->userName->text());
+  mainWind->show();
+  this->close();
+
+}

@@ -1,8 +1,5 @@
 #include "authentication.h"
-#include "base_window.h"
 #include <QApplication>
-
-QString Abstract_Windows::name_Person="You can't see me";
 
 int main(int argc, char *argv[])
 {

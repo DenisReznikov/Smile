@@ -2,14 +2,13 @@
 #define AUFTRAGSLISTE_H
 #include <QDebug>
 #include <QMainWindow>
-#include <QSqlQueryModel>
-#include <QSqlDatabase>
-#include <QSqlError>
+#include <base_window_with_table.h>
+
 namespace Ui {
   class Auftragsliste;
 }
 
-class Auftragsliste : public QMainWindow
+class Auftragsliste : public QMainWindow,public BaseWindowWithTable
 {
   Q_OBJECT
 
@@ -18,10 +17,14 @@ public:
   ~Auftragsliste();
   QString login,sql_string;
 
+private slots:
+
+
+  void on_lupeButton_clicked();
+
 private:
   Ui::Auftragsliste *ui;
-  QSqlQueryModel *model;
-  QSqlDatabase db;
+
 };
 
 #endif // AUFTRAGSLISTE_H

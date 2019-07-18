@@ -1,6 +1,6 @@
 #ifndef AUFTRAGSANNAHME_TELAS_H
 #define AUFTRAGSANNAHME_TELAS_H
-#include <QSqlDatabase>
+
 #include <QCloseEvent>
 #include <QMainWindow>
 #include <QMessageBox>
@@ -21,12 +21,10 @@ public:
 
 private slots:
   //  void on_OK_clicked();
-  void on_OK_clicked();
-  void on_Abbrech_clicked();
-  void on_name_for_Sql_returnPressed();
+
 
 private:
-  QSqlDatabase db;
+
   QString login;
   Ui::Auftragsannahme_TelAs *ui;
   Auftragsannahme_Many *AUF_many;
