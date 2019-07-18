@@ -12,3 +12,14 @@ Authentication::~Authentication()
 {
   delete ui;
 }
+
+void Authentication::on_newPasswort_clicked()
+{
+    passwortAnderung = new Passwort_Anderung;
+    passwortAnderung->show();
+}
+
+void Authentication::on_login_clicked()
+{
+
+}
