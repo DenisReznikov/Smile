@@ -1,11 +1,11 @@
-#include "MM.h"
+#include "UI/authentication.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
   QApplication a(argc, argv);
-  MainWindow w;
-  w.show();
+  Authentication auth;
+  auth.show();
 
   return a.exec();
 }

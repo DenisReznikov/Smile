@@ -2,7 +2,7 @@
 #define AUFTRAGSLISTE_H
 #include <QDebug>
 #include <QMainWindow>
-#include <base_window_with_table.h>
+#include "base_window_with_table.h"
 
 namespace Ui {
   class Auftragsliste;
