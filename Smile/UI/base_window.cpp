@@ -1,4 +1,4 @@
-#include "abstract_windows.h"
+#include "base_window.h"
 
 
 Abstract_Windows::Abstract_Windows(QString name_Person,QWidget *parent)

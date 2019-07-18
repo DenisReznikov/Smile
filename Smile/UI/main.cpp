@@ -1,5 +1,5 @@
 #include "authentication.h"
-#include "abstract_windows.h"
+#include "base_window.h"
 #include <QApplication>
 
 QString Abstract_Windows::name_Person="You can't see me";

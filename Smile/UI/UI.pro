@@ -22,16 +22,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-CONFIG += c++11
+CONFIG += c++17
 
 SOURCES += \
+        auftragsannahme_alone.cpp \
+        auftragsannahme_many.cpp \
+        auftragsannahme_telas.cpp \
+        auftragsauswahl.cpp \
+        auftragsliste.cpp \
+        auswahl_dispo_center.cpp \
         authentication.cpp \
+        base_window.cpp \
+        dispositionsdater_for_hvt_schaltauftrag.cpp \
         main.cpp \
-        abstract_windows.cpp
+        mainwindow.cpp \
+        new_passwort.cpp
 
 HEADERS += \
-        abstract_windows.h \
-        authentication.h
+        auftragsannahme_telas.h \
+        auftragsauswahl.h \
+        auftragsliste.h \
+        auswahl_dispo_center.h \
+        authentication.h \
+        base_window.h \
+        dispositionsdater_for_hvt_schaltauftrag.h \
+        mainwindow.h \
+        new_passwort.h \
+        pass.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -39,4 +56,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
-  authentication.ui
+  auftragsannahme_alone.ui \
+  auftragsannahme_many.ui \
+  auftragsannahme_telas.ui \
+  auftragsauswahl.ui \
+  auftragsliste.ui \
+  auswahl_dispo_center.ui \
+  authentication.ui \
+  dispositionsdater_for_hvt_schaltauftrag.ui \
+  mainwindow.ui \
+  new_passwort.ui
