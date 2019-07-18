@@ -12,6 +12,7 @@ Authentication::~Authentication()
 {
   delete ui;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 void Authentication::on_newPasswort_clicked()
@@ -32,3 +33,5 @@ void Authentication::on_login_clicked()
 >>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 
 }
+=======
+>>>>>>> parent of a9619b1... complete ui

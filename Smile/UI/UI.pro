@@ -22,16 +22,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-CONFIG += c++17
+CONFIG += c++11
 
 SOURCES += \
 <<<<<<< HEAD
+<<<<<<< HEAD
                authentication.cpp \
+=======
+        authentication.cpp \
+>>>>>>> parent of a9619b1... complete ui
         main.cpp \
-        mainwindow.cpp \
-        passwort_anderung.cpp
+        abstract_windows.cpp
 
 HEADERS += \
+<<<<<<< HEAD
         authentication.h \
         mainwindow.h \
         passwort_anderung.h
@@ -62,6 +66,10 @@ HEADERS += \
         mainwindow.h \
         new_passwort.h
 >>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
+=======
+        abstract_windows.h \
+        authentication.h
+>>>>>>> parent of a9619b1... complete ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -69,6 +77,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
+<<<<<<< HEAD
 <<<<<<< HEAD
    authentication.ui \
   mainwindow.ui \
@@ -88,3 +97,6 @@ DISTFILES += \
   mainwindow.ui \
   new_passwort.ui
 >>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
+=======
+  authentication.ui
+>>>>>>> parent of a9619b1... complete ui
