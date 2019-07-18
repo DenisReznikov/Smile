@@ -1,17 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-<<<<<<< HEAD
-#include <QMessageBox>
-#include <QMainWindow>
-#include "auftragsannahme_telas.h"
-#include "auswahl_dispo_center.h"
-=======
 #include "auftragsannahme_telas.h"
 #include "auswahl_dispo_center.h"
 #include <QMessageBox>
 #include <QMainWindow>
 
->>>>>>> 684bdc32c3b8175d3ee751b51b4c4c2376c37794
 namespace Ui {
   class MainWindow;
 }

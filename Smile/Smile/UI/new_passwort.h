@@ -2,7 +2,6 @@
 #define NEW_PASSWORT_H
 
 #include <QWidget>
-
 namespace Ui {
   class New_Passwort;
 }
