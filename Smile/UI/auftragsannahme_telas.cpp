@@ -9,11 +9,8 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   ui->setupUi(this);
   ui->dateEdit->setDate(QDate::currentDate());
   ui->Name_person->setText(login);
-  enum i{
 
-  };
-
-  this->login=login;
+      this->login=login;
   checkWidjets();
 }
 void Auftragsannahme_TelAs::putInMap()
@@ -28,11 +25,12 @@ Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
 
 bool Auftragsannahme_TelAs::checkWidjets()
 {
-  QList<QLabel *> box=ui->tabWidget->findChildren<QLabel*>();
+  QList<QLineEdit *> box=ui->Name->findChildren<QLineEdit*>();
   for (auto iter = box.begin(); iter != box.end(); iter++)
-      {
-          qDebug()<<(*iter)->text();
-      }
+    {
+      if((*iter)->text().isEmpty())
+     return false;
+    }
   return true;
 }
 
