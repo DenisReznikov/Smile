@@ -17,10 +17,13 @@
    <bool>false</bool>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Authentication</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
+   <item row="1" column="0">
     <layout class="QFormLayout" name="inPutLayot">
      <property name="labelAlignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -33,7 +36,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="userName"/>
+      <widget class="QLineEdit" name="lineUserName"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="labelPassword">
@@ -43,7 +46,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="password">
+      <widget class="QLineEdit" name="lineUserPassword">
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
        </property>
@@ -51,7 +54,20 @@
      </item>
     </layout>
    </item>
-   <item row="2" column="0" colspan="2">
+   <item row="2" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>9</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0" colspan="2">
     <layout class="QHBoxLayout" name="buttonLayout">
      <item>
       <widget class="QPushButton" name="login">
@@ -89,7 +105,7 @@
      </item>
     </layout>
    </item>
-   <item row="0" column="1">
+   <item row="1" column="1">
     <spacer name="horizontalSpacer_2">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -102,15 +118,15 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <spacer name="verticalSpacer">
+   <item row="0" column="0">
+    <spacer name="verticalSpacer_2">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>9</height>
+       <height>40</height>
       </size>
      </property>
     </spacer>

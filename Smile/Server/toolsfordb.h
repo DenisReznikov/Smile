@@ -6,26 +6,27 @@
 #include <QSqlError>
 #include <QMainWindow>
 #include <QDebug>
-
+#include <QSqlQuery>
 #include <QSqlRelationalTableModel>
 
 class toolsForDB
 {
 public:
+  // chekcInTable(Названия таблицы,<Название колонки где искать,что искать в данной колонке>)
 
   //нестандартная база данных
   toolsForDB(QString nameDB="C:/D_B/test.db");
   ~toolsForDB();
+  bool checkInTable(QString tableName,QMap<QString,QString> map);
 private:
   //выбераем таблицу
   void selectTable(QString str);
-  // chekcInTable(Названия таблицы,<Название колонки где искать,что искать в данной колонке>)
-  bool checkInTable(QString tableName,QMap<QString,QString> map);
+
 
   QSqlQueryModel sqlAsk(QString sqlQuest);
   QSqlQueryModel *tableModel;
-  QSqlDatabase *db;
-
+  QSqlDatabase db;
+  QSqlQuery *sqlQuery;
 };
 
 #endif // DB_TOOL_H

@@ -1,6 +1,6 @@
 #ifndef AUFTRAGSAUSWAHL_H
 #define AUFTRAGSAUSWAHL_H
-#include <auftragsliste.h>
+#include "auftragsliste.h"
 #include <QMainWindow>
 
 namespace Ui {
