@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include "auftragsannahme_many.h"
 #include "auftragsannahme_alone.h"
+#include <QLineEdit>
 namespace Ui {
   class Auftragsannahme_TelAs;
 }
@@ -20,11 +21,14 @@ public:
   ~Auftragsannahme_TelAs();
 
 private slots:
-  //  void on_OK_clicked();
 
+
+
+  void on_OK_clicked();
 
 private:
-
+  void putInMap();
+  bool checkWidjets();
   QString login;
   Ui::Auftragsannahme_TelAs *ui;
   Auftragsannahme_Many *AUF_many;

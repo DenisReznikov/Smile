@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Auftragsauswahl_clicked()
 {
-  Auf = new Auftragsannahme_TelAs(this->login);
+  Auf = new Auftragsannahme_TelAs(this->login,this);
   Auf->show();
 }
 

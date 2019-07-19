@@ -32,7 +32,7 @@ bool toolsForDB::checkInTable(QString tableName, QMap<QString, QString> map)
       sqlAsk=sqlAsk+" "+nameTable+" = '"+map[nameTable]+"' and";
     }
   sqlAsk.resize(sqlAsk.size()-4);
-  sqlQuery->exec(sqlAsk);
+  sqlQuery->exec(sqlAsk+"limit 1");
   return sqlQuery->first();
 }
 

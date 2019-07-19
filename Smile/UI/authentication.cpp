@@ -1,6 +1,7 @@
 #include "authentication.h"
 #include "ui_authentication.h"
 #include "Server/toolsfordb.h"
+#include <QValidator>
 Authentication::Authentication(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::Authentication)
