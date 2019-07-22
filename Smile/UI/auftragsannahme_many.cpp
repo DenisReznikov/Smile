@@ -11,7 +11,7 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
   ui->tableView->setModel(model);
-  ui->tableView->horizontalHeader()->setSelectionMode( QAbstractItemView::SingleSelection );
+
 
  ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
 

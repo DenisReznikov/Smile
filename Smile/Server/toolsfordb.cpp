@@ -35,6 +35,7 @@ QSqlQuery toolsForDB::checkInTable(QString tableName, QMap<QString, QString> map
       sqlAsk=sqlAsk+" "+nameTable+" = '"+map[nameTable]+"' and";
     }
   sqlAsk.resize(sqlAsk.size()-4);
+  qDebug()<<sqlAsk;
   sqlQuery->exec(sqlAsk);
   return *sqlQuery;
 }
