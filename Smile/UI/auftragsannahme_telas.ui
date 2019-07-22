@@ -181,7 +181,7 @@
          <x>10</x>
          <y>30</y>
          <width>511</width>
-         <height>52</height>
+         <height>57</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -292,7 +292,7 @@
         <rect>
          <x>540</x>
          <y>30</y>
-         <width>201</width>
+         <width>224</width>
          <height>51</height>
         </rect>
        </property>
@@ -347,7 +347,7 @@
          <x>10</x>
          <y>100</y>
          <width>721</width>
-         <height>51</height>
+         <height>53</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -434,7 +434,7 @@
          <x>10</x>
          <y>30</y>
          <width>721</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -676,7 +676,7 @@
          <x>10</x>
          <y>30</y>
          <width>731</width>
-         <height>56</height>
+         <height>61</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_15">
@@ -954,7 +954,7 @@
         <string>Vomame:</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="name_for_Sql">
+      <widget class="QLineEdit" name="nameForSql">
        <property name="geometry">
         <rect>
          <x>70</x>
@@ -964,7 +964,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_18">
+      <widget class="QLineEdit" name="vomamForSql">
        <property name="geometry">
         <rect>
          <x>70</x>
@@ -998,7 +998,7 @@
           <x>10</x>
           <y>10</y>
           <width>321</width>
-          <height>19</height>
+          <height>22</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_18">
@@ -1078,7 +1078,7 @@
          <x>20</x>
          <y>30</y>
          <width>192</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -1108,7 +1108,7 @@
          <x>20</x>
          <y>30</y>
          <width>251</width>
-         <height>25</height>
+         <height>30</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_20">
@@ -1187,7 +1187,7 @@
          <x>20</x>
          <y>30</y>
          <width>192</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_39">
@@ -1236,7 +1236,7 @@
          <x>20</x>
          <y>30</y>
          <width>241</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_59">
@@ -1282,7 +1282,7 @@
          <x>20</x>
          <y>30</y>
          <width>412</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_60">
@@ -1312,7 +1312,7 @@
          <x>20</x>
          <y>30</y>
          <width>211</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_61">
@@ -1341,7 +1341,7 @@
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>309</width>
+         <width>364</width>
          <height>211</height>
         </rect>
        </property>
@@ -1547,7 +1547,7 @@
          <x>342</x>
          <y>10</y>
          <width>381</width>
-         <height>22</height>
+         <height>24</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_63">
@@ -1936,7 +1936,7 @@
      <x>0</x>
      <y>0</y>
      <width>798</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDatei">

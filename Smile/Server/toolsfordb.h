@@ -15,7 +15,7 @@ public:
   // chekcInTable(Названия таблицы,<Название колонки где искать,что искать в данной колонке>)
 
   //нестандартная база данных
-  toolsForDB(QString nameDB="C:/D_B/test.db");
+  toolsForDB(QString nameDB="C:/Users/denis/Documents/GitHub/Smile/Smile/Server/test.db");
   ~toolsForDB();
   bool checkInTable(QString tableName,QMap<QString,QString> map);
 private:

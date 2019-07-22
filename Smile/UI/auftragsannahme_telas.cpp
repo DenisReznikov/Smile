@@ -11,11 +11,6 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   ui->Name_person->setText(login);
 
       this->login=login;
-  checkWidjets();
-}
-void Auftragsannahme_TelAs::putInMap()
-{
-
 }
 
 Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
@@ -29,7 +24,10 @@ bool Auftragsannahme_TelAs::checkWidjets()
   for (auto iter = box.begin(); iter != box.end(); iter++)
     {
       if((*iter)->text().isEmpty())
+      {
+          (*iter)->setStyleSheet("background-color:yellow");
      return false;
+      }
     }
   return true;
 }
@@ -41,5 +39,15 @@ void Auftragsannahme_TelAs::on_OK_clicked()
       QMessageBox::warning(this,"Внимание ","Вы не заполнили обязательные поля ");
       return;
     }
-  qDebug()<<"EEEEEEEEEEEE";
+  QMap<QString,QString> *map=new QMap<QString,QString>;
+  map->insert("name",ui->nameForSql->text());
+  if(db->checkInTable("",*map))
+  {
+
+  }
+  else
+  {
+      QMessageBox::warning(this,"Внимание ","Нет совпадений");
+      return;
+  }
 }

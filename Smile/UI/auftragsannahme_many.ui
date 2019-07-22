@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>576</height>
+    <width>1197</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -615,8 +615,8 @@ naucntragen</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>798</width>
-     <height>21</height>
+     <width>1197</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
