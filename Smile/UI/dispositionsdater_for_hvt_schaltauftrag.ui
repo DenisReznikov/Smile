@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dispositionsdater_for_HVt_Schaltauftrag</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1031,13 +1031,19 @@
         <height>30</height>
        </size>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Box</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_29">
+      <layout class="QHBoxLayout" name="horizontalLayout_30">
        <property name="spacing">
         <number>6</number>
        </property>
@@ -1054,7 +1060,13 @@
         <number>2</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_35">
+        <widget class="QLabel" name="label_38">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>5</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>530</width>
@@ -1079,11 +1091,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="Name_person_2">
+        <widget class="QLabel" name="Name_person">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>2</verstretch>
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
@@ -1104,7 +1116,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_36">
+        <widget class="QLabel" name="label_39">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>70</width>
@@ -1123,7 +1141,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_37">
+        <widget class="QLabel" name="label_40">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>70</width>

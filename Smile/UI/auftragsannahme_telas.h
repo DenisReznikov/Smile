@@ -8,6 +8,8 @@
 #include "auftragsannahme_alone.h"
 #include <Server/toolsfordb.h>
 #include <QLineEdit>
+#include <QSqlRecord>
+#include <QDebug>
 namespace Ui {
   class Auftragsannahme_TelAs;
 }

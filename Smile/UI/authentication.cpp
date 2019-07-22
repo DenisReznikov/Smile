@@ -1,7 +1,7 @@
 #include "authentication.h"
 #include "ui_authentication.h"
 #include "Server/toolsfordb.h"
-#include <QValidator>
+
 Authentication::Authentication(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::Authentication)
@@ -13,6 +13,7 @@ Authentication::~Authentication()
 {
   delete ui;
 }
+
 bool Authentication::checkMissing(QString log, QString pass)
 {
   if(log.isEmpty() && pass.isEmpty())
@@ -41,10 +42,14 @@ void Authentication::checkLogAndPassInBase()
       return ;
     }
   static toolsForDB db =  toolsForDB();
+
   QMap<QString,QString> map;
   map.insert("login",login);
   map.insert("pass",password);
-  if( db.checkInTable("auth",map))
+
+  QSqlQuery q = db.checkInTable("auth",map);
+
+  if(q.last())
     {
       mainWind = new MainWindow(login);
       mainWind->show();

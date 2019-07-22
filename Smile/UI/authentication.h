@@ -2,7 +2,7 @@
 #define AUTHENTICATION_H
 #include "mainwindow.h"
 #include <QWidget>
-
+#include <QSqlQuery>
 namespace Ui {
   class Authentication;
 }

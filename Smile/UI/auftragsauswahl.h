@@ -2,7 +2,7 @@
 #define AUFTRAGSAUSWAHL_H
 #include "auftragsliste.h"
 #include <QMainWindow>
-
+#include "Server/toolsfordb.h"
 namespace Ui {
   class Auftragsauswahl;
 }
@@ -14,7 +14,7 @@ class Auftragsauswahl : public QMainWindow
 public:
   explicit Auftragsauswahl(QString login,QWidget *parent = nullptr);
   ~Auftragsauswahl();
-  QString login,sql_string;
+  QString login;
 
 private slots:
   void on_OK_clicked();

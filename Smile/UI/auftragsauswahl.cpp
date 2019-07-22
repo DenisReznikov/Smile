@@ -8,8 +8,6 @@ Auftragsauswahl::Auftragsauswahl(QString login,QWidget *parent) :
   ui->setupUi(this);
   this->login=login;
   ui->Name_person->setText(login);
-
-  sql_string ="select * from Auftragsliste";
 }
 
 Auftragsauswahl::~Auftragsauswahl()
@@ -19,6 +17,10 @@ Auftragsauswahl::~Auftragsauswahl()
 
 void Auftragsauswahl::on_OK_clicked()
 {
-  auftragsliste = new Auftragsliste(login,sql_string);
+  QMap<QString,QString> map;
+  toolsForDB b;
+  QSqlQuery QSqlQ=b.checkInTable("Auftragsliste",map);
+  QString sql_string ="select * from Auftragsliste";
+  auftragsliste = new Auftragsliste(login,QSqlQ);
   auftragsliste->show();
 }

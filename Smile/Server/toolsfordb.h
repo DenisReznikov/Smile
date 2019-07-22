@@ -14,10 +14,9 @@ class toolsForDB
 public:
   // chekcInTable(Названия таблицы,<Название колонки где искать,что искать в данной колонке>)
 
-  //нестандартная база данных
-  toolsForDB(QString nameDB="C:/Users/denis/Documents/GitHub/Smile/Smile/Server/test.db");
+  toolsForDB(QString nameDB="C:/Users/drezniko/Documents/Smile/Smile/Server/test.db");
   ~toolsForDB();
-  bool checkInTable(QString tableName,QMap<QString,QString> map);
+  QSqlQuery checkInTable(QString tableName,QMap<QString,QString> map);
 private:
   //выбераем таблицу
   void selectTable(QString str);
@@ -25,7 +24,7 @@ private:
 
   QSqlQueryModel sqlAsk(QString sqlQuest);
   QSqlQueryModel *tableModel;
-  QSqlDatabase db;
+  static inline QSqlDatabase db;
   QSqlQuery *sqlQuery;
 };
 

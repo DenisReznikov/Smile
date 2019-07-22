@@ -10,9 +10,8 @@ namespace Ui {
 class Auftragsannahme_Alone : public QMainWindow
 {
   Q_OBJECT
-
 public:
-  explicit Auftragsannahme_Alone(QWidget *parent = nullptr);
+  explicit Auftragsannahme_Alone(QString login,QVector<QString> value,QWidget *parent = nullptr);
   ~Auftragsannahme_Alone();
 
 private:
