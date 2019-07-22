@@ -4,7 +4,7 @@ CONFIG += qt warn_on depend_includepath testcase
 
 TEMPLATE = app
 HEADERS += \
-  ../authentication.h
+  ../Smile/UI/authentication.h
 SOURCES += \
-  ../authentication.cpp \
-  tst_test_authentication.cpp
+  ../Smile/UI/authentication.cpp \
+  ../Smile/Test/tst_test_authentication.cpp
