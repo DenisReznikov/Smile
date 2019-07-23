@@ -6,7 +6,7 @@
 #include <QMessageBox>
 #include "auftragsannahme_many.h"
 #include "auftragsannahme_alone.h"
-#include <Server/toolsfordb.h>
+#include <../Smile/Server/toolsfordb.h>
 #include <QLineEdit>
 #include <QSqlRecord>
 #include <QDebug>

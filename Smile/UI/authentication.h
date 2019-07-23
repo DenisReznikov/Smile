@@ -14,17 +14,17 @@ class Authentication : public QWidget
 public:
   explicit Authentication(QWidget *parent = nullptr);
   ~Authentication();
-
+  bool checkMissing(QString log, QString pass);
+  bool checkLogAndPassInBase(QString log,QString pass);
+  Ui::Authentication *ui;
 private slots:
   void on_login_clicked();
   void on_lineUserPassword_returnPressed();
 
-
 private:
-  bool checkMissing(QString log, QString pass);
-  void checkLogAndPassInBase();
+
   MainWindow *mainWind;
-  Ui::Authentication *ui;
+
 };
 
 #endif // AUTHENTICATION_H

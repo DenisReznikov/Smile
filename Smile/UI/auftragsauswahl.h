@@ -2,7 +2,7 @@
 #define AUFTRAGSAUSWAHL_H
 #include "auftragsliste.h"
 #include <QMainWindow>
-#include "Server/toolsfordb.h"
+#include "../Smile/Server/toolsfordb.h"
 namespace Ui {
   class Auftragsauswahl;
 }

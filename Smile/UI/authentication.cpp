@@ -1,6 +1,6 @@
 #include "authentication.h"
 #include "ui_authentication.h"
-#include "Server/toolsfordb.h"
+#include "../Smile/Server/toolsfordb.h"
 
 Authentication::Authentication(QWidget *parent) :
   QWidget(parent),
@@ -32,42 +32,36 @@ bool Authentication::checkMissing(QString log, QString pass)
     }
   return true;
 }
-void Authentication::checkLogAndPassInBase()
+bool Authentication::checkLogAndPassInBase(QString login,QString password)
 {
-
-  QString login =ui->lineUserName->text();
-  QString password=ui->lineUserPassword->text();
   if (!checkMissing(login,password))
     {
-      return ;
+      return false;
     }
   static toolsForDB db =  toolsForDB();
-
   QMap<QString,QString> map;
   map.insert("login",login);
   map.insert("pass",password);
-
   QSqlQuery q = db.checkInTable("auth",map);
-
   if(q.last())
     {
-      mainWind = new MainWindow(login);
-      mainWind->show();
-      this->close();
+      return true;
     }
   else
     {
       ui->lineUserName->setStyleSheet("background-color: red");
       ui->lineUserPassword->setStyleSheet("background-color: red");
       QMessageBox::warning(this,"Авторизации","Неправильный логин или пароль");
+      return false;
     }
 }
 void Authentication::on_login_clicked()
 {
-  this->checkLogAndPassInBase();
+  this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text());
 }
 
 void Authentication::on_lineUserPassword_returnPressed()
 {
-  this->checkLogAndPassInBase();
+  this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text());
 }
+

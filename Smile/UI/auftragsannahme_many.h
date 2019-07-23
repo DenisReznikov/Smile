@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QSqlQueryModel>
-#include <UI/auftragsannahme_alone.h>
+//#include <UI/auftragsannahme_alone.h>
 #include <QDebug>
 #include <QSqlError>
 #include "auftragsannahme_alone.h"

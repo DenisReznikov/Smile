@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql testlib
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -23,7 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++17
-
+INCLUDEPATH += $$PWD/..
 SOURCES += \
         Server/toolsfordb.cpp \
         UI/auftragsannahme_alone.cpp \
@@ -69,3 +69,6 @@ FORMS += \
   UI/dispositionsdater_for_hvt_schaltauftrag.ui \
   UI/mainwindow.ui \
   UI/new_passwort.ui
+
+DISTFILES += \
+  Smile.pri
