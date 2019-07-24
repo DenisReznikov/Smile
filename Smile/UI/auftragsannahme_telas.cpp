@@ -21,7 +21,8 @@ Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
 bool Auftragsannahme_TelAs::checkWidjets()
 {
   QList<QLineEdit *> box=ui->Name->findChildren<QLineEdit*>();
-  for (auto iter = box.begin(); iter != box.end(); iter++)
+
+  for (QList<QLineEdit *>::iterator iter = box.begin(); iter != box.end(); iter++)
     {
       if((*iter)->text().isEmpty())
         {
