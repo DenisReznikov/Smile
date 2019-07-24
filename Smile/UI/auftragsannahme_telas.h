@@ -30,7 +30,6 @@ private slots:
 private:
   bool checkWidjets();
   QString login;
-  toolsForDB *db;
   Ui::Auftragsannahme_TelAs *ui;
   Auftragsannahme_Many *AUF_many;
   Auftragsannahme_Alone *AUF_Alone;

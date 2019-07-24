@@ -15,7 +15,6 @@ Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
 {
   delete AUF_Alone;
   delete AUF_many;
-  delete db;
   delete ui;
 }
 
@@ -43,8 +42,8 @@ void Auftragsannahme_TelAs::on_OK_clicked()
   QVector<QString> values;
   QMap<QString,QString> *map=new QMap<QString,QString>;
   map->insert("name",ui->nameForSql->text());
-  auto db = new toolsForDB();
-  QSqlQuery qSqlQuery = db->checkInTable("Auftragsannahme_TelAs",*map);
+  static toolsForDB db =  toolsForDB();
+  QSqlQuery qSqlQuery = db.checkInTable("Auftragsannahme_TelAs",*map);
   qSqlQuery.last();
   qDebug()<<qSqlQuery.at();
 
