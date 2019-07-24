@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 #include <QWidget>
 #include <QSqlQuery>
+#include <QTimer>
 namespace Ui {
   class Authentication;
 }
@@ -17,13 +18,14 @@ public:
   bool checkMissing(QString log, QString pass);
   bool checkLogAndPassInBase(QString log,QString pass);
   Ui::Authentication *ui;
+  MainWindow *mainWind;
+
 private slots:
   void on_login_clicked();
   void on_lineUserPassword_returnPressed();
 
 private:
 
-  MainWindow *mainWind;
 
 };
 

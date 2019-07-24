@@ -27,7 +27,10 @@ bool Authentication::checkMissing(QString log, QString pass)
     {
       ui->lineUserName->setStyleSheet("background-color: red");
       ui->lineUserPassword->setStyleSheet("background-color: red");
-      QMessageBox::warning(this,"Авторизации",(log.isEmpty()) ? "Вы забыли ввести логин!" : "Вы забыли ввести пароль!");
+      QMessageBox m;
+      m.setWindowTitle("Авторизации");
+      m.setText((log.isEmpty()) ? "Вы забыли ввести логин!" : "Вы забыли ввести пароль!");
+      QTimer::singleShot(1000, &m, SLOT(close()));
       return false;
     }
   return true;
@@ -57,11 +60,22 @@ bool Authentication::checkLogAndPassInBase(QString login,QString password)
 }
 void Authentication::on_login_clicked()
 {
-  this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text());
+
+  if(this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text()))
+    {
+      mainWind = new MainWindow(ui->lineUserName->text());
+      mainWind->show();
+      this->close();
+    }
 }
 
 void Authentication::on_lineUserPassword_returnPressed()
 {
-  this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text());
+  if(this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text()))
+    {
+      mainWind = new MainWindow(ui->lineUserName->text());
+      mainWind->show();
+      this->close();
+    }
 }
 

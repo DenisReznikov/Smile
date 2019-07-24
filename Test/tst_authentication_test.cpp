@@ -1,3 +1,4 @@
+
 #include <QtTest/QtTest>
 #include <QtGui>
 // add necessary includes here
@@ -17,9 +18,8 @@ private slots:
   void checkMissing();
   void checkLogAndPassInBase_data();
   void checkLogAndPassInBase();
-  void checkWidjet_data();
   void checkWidjetlineUserName();
-
+  void checkWidjetlineUserPassword();
 };
 
 authentication_test::authentication_test()
@@ -56,10 +56,10 @@ void authentication_test::checkLogAndPassInBase_data()
   QTest::addColumn<QString>("login");
   QTest::addColumn<QString>("password");
   QTest::addColumn<bool>("result_DB");
-  QString str = "";
-  QTest::newRow("all_empty") << QString(str) << QString(str) << bool(false);
-  QTest::newRow("log_empty") << QString(str) << QString("d") << bool(false);
-  QTest::newRow("pass_empty") << QString("2007") << QString(str) << bool(false);
+  QString emptyStr = "";
+  QTest::newRow("all_empty") << QString(emptyStr) << QString(emptyStr) << bool(false);
+  QTest::newRow("log_empty") << QString(emptyStr) << QString("d") << bool(false);
+  QTest::newRow("pass_empty") << QString("2007") << QString(emptyStr) << bool(false);
   QTest::newRow("Incorrect_all") << QString("dd") << QString("20")<< bool(false);
   QTest::newRow("Incorrect_login") << QString("ads") << QString("test")<< bool(false);
   QTest::newRow("Incorrect_password") << QString("denis") << QString("20")<< bool(false);
@@ -83,7 +83,16 @@ void authentication_test::checkWidjetlineUserName()
   QCOMPARE(txt->lineUserName->text(), QString("ABCDEFGH"));
   QVERIFY(txt->lineUserName->isModified());
 }
+void authentication_test::checkWidjetlineUserPassword()
+{
+  Authentication auth;
+  Ui_Authentication *txt=auth.ui;
+  QTest::keyClicks(txt->lineUserPassword, "ABCDEFGH");
+  QCOMPARE(txt->lineUserPassword->text(), QString("ABCDEFGH"));
+  QVERIFY(txt->lineUserPassword->isModified());
+}
 
 QTEST_MAIN(authentication_test)
 
 #include "tst_authentication_test.moc"
+
