@@ -20,7 +20,7 @@ class Auftragsannahme_TelAs : public QMainWindow
 
 public:
   static void wert();
-  explicit Auftragsannahme_TelAs(QString login,QWidget *parent = nullptr);
+  explicit Auftragsannahme_TelAs(QString login,QWidget *parent = 0);
   ~Auftragsannahme_TelAs();
 
 private slots:

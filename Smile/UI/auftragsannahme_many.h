@@ -17,7 +17,7 @@ class Auftragsannahme_Many : public QMainWindow,public BaseWindowWithTable
   Q_OBJECT
 
 public:
-  explicit Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery,QWidget *parent = nullptr);
+  explicit Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery,QWidget *parent = 0);
   ~Auftragsannahme_Many();
 
 private slots:

@@ -13,7 +13,7 @@ class Auftragsliste : public QMainWindow,public BaseWindowWithTable
   Q_OBJECT
 
 public:
-  explicit Auftragsliste(QString login,QSqlQuery qSqlQuery,QWidget *parent = nullptr);
+  explicit Auftragsliste(QString login,QSqlQuery qSqlQuery,QWidget *parent = 0);
   ~Auftragsliste();
   QString login,sql_string;
   void resizeEvent(QResizeEvent *event);

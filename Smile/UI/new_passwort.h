@@ -11,7 +11,7 @@ class New_Passwort : public QWidget
   Q_OBJECT
 
 public:
-  explicit New_Passwort(QWidget *parent = nullptr);
+  explicit New_Passwort(QWidget *parent = 0);
   ~New_Passwort();
 
 private:

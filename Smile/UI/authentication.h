@@ -13,7 +13,7 @@ class Authentication : public QWidget
   Q_OBJECT
 
 public:
-  explicit Authentication(QWidget *parent = nullptr);
+  explicit Authentication(QWidget *parent = 0);
   ~Authentication();
   bool checkMissing(QString log, QString pass);
   bool checkLogAndPassInBase(QString log,QString pass);

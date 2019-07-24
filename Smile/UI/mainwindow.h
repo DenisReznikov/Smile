@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
   Q_OBJECT
 
 public:
-  explicit MainWindow(QString login,QWidget *parent = nullptr);
+  explicit MainWindow(QString login,QWidget *parent = 0);
   ~MainWindow();
 private slots:
   void on_Auftragsauswahl_clicked();

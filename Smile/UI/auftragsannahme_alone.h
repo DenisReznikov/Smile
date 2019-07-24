@@ -11,7 +11,7 @@ class Auftragsannahme_Alone : public QMainWindow
 {
   Q_OBJECT
 public:
-  explicit Auftragsannahme_Alone(QString login,QVector<QString> value,QWidget *parent = nullptr);
+  explicit Auftragsannahme_Alone(QString login,QVector<QString> value,QWidget *parent = 0);
   ~Auftragsannahme_Alone();
 
 private:

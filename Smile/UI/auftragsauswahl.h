@@ -12,7 +12,7 @@ class Auftragsauswahl : public QMainWindow
   Q_OBJECT
 
 public:
-  explicit Auftragsauswahl(QString login,QWidget *parent = nullptr);
+  explicit Auftragsauswahl(QString login,QWidget *parent = 0);
   ~Auftragsauswahl();
   QString login;
 
