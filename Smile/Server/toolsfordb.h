@@ -24,7 +24,7 @@ private:
 
   QSqlQueryModel sqlAsk(QString sqlQuest);
   QSqlQueryModel *tableModel;
-  QSqlDatabase db;
+  static inline QSqlDatabase db;
   QSqlQuery *sqlQuery;
 };
 
