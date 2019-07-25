@@ -1,6 +1,6 @@
 
 QT +=  core gui sql testlib
-CONFIG += qt warn_on depend_includepath testcase c++17
+CONFIG += qt warn_on depend_includepath testcase c++17 -o file.txt
 QT += widgets
 
 TEMPLATE = app
