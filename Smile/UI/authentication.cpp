@@ -27,10 +27,7 @@ bool Authentication::checkMissing(QString log, QString pass)
     {
       ui->lineUserName->setStyleSheet("background-color: red");
       ui->lineUserPassword->setStyleSheet("background-color: red");
-      QMessageBox m;
-      m.setWindowTitle("Авторизации");
-      m.setText((log.isEmpty()) ? "Вы забыли ввести логин!" : "Вы забыли ввести пароль!");
-      QTimer::singleShot(1000, &m, SLOT(close()));
+      QMessageBox::warning(this,"Авторизации",(log.isEmpty()) ? "Вы забыли ввести логин!" : "Вы забыли ввести пароль!");
       return false;
     }
   return true;

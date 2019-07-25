@@ -19,13 +19,14 @@ class Auftragsannahme_TelAs : public QMainWindow
   Q_OBJECT
 
 public:
-  static void wert();
   explicit Auftragsannahme_TelAs(QString login,QWidget *parent = 0);
   ~Auftragsannahme_TelAs();
 
 private slots:
-
   void on_OK_clicked();
+  void on_radio_Volhistorie_clicked(bool checked);
+  void on_radio_L_Volhistorie_clicked(bool checked);
+  void on_radio_laufendeAufrage_clicked(bool checked);
 
 private:
   bool checkWidjets();

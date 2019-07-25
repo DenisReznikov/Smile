@@ -6,7 +6,7 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   ui(new Ui::Auftragsannahme_TelAs)
 {
   ui->setupUi(this);
-  ui->dateEdit->setDate(QDate::currentDate());
+  ui->data_grobeZust_Zeitbereich->setDate(QDate::currentDate());
   ui->Name_person->setText(login);
   this->login=login;
 }
@@ -42,7 +42,7 @@ void Auftragsannahme_TelAs::on_OK_clicked()
     }
   QVector<QString> values;
   QMap<QString,QString> *map=new QMap<QString,QString>;
-  map->insert("name",ui->nameForSql->text());
+  map->insert("name",ui->line_Name_Name->text());
   static toolsForDB db =  toolsForDB();
   QSqlQuery qSqlQuery = db.checkInTable("Auftragsannahme_TelAs",*map);
   qSqlQuery.last();
@@ -70,4 +70,20 @@ void Auftragsannahme_TelAs::on_OK_clicked()
     {
       QMessageBox::warning(this,"Name","jordan или не nejordan");
     }
+}
+
+
+void Auftragsannahme_TelAs::on_radio_Volhistorie_clicked(bool checked)
+{
+  this->ui->tabWidget->setTabEnabled(10,!checked);
+}
+
+void Auftragsannahme_TelAs::on_radio_L_Volhistorie_clicked(bool checked)
+{
+  this->ui->tabWidget->setTabEnabled(10,!checked);
+}
+
+void Auftragsannahme_TelAs::on_radio_laufendeAufrage_clicked(bool checked)
+{
+  this->ui->tabWidget->setTabEnabled(10,checked);
 }

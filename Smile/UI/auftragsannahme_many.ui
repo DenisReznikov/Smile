@@ -3,7 +3,7 @@
  <class>Auftragsannahme_Many</class>
  <widget class="QMainWindow" name="Auftragsannahme_Many">
   <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
+   <enum>Qt::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>

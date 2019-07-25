@@ -3,7 +3,7 @@
  <class>Auftragsannahme_TelAs</class>
  <widget class="QMainWindow" name="Auftragsannahme_TelAs">
   <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
+   <enum>Qt::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -52,8 +52,8 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>760</width>
-           <height>50</height>
+           <width>16777215</width>
+           <height>16777215</height>
           </size>
          </property>
          <property name="frameShape">
@@ -62,61 +62,78 @@
          <property name="frameShadow">
           <enum>QFrame::Sunken</enum>
          </property>
-         <widget class="QRadioButton" name="radioButton">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>15</y>
-            <width>105</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>laufende Aufrage</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-         <widget class="QRadioButton" name="radioButton_2">
-          <property name="geometry">
-           <rect>
-            <x>225</x>
-            <y>15</y>
-            <width>210</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>abgeschlossene Auftrage (Volhistorie)</string>
-          </property>
-         </widget>
-         <widget class="QRadioButton" name="radioButton_3">
-          <property name="geometry">
-           <rect>
-            <x>455</x>
-            <y>15</y>
-            <width>221</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>abgeschlossene Auftrage (L-Volhistorie)</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>20</y>
-            <width>50</width>
-            <height>10</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Sicht auf:</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_26">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Sicht auf:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_22">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radio_laufendeAufrage">
+            <property name="text">
+             <string>laufende Aufrage</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radio_Volhistorie">
+            <property name="text">
+             <string>abgeschlossene Auftrage (Volhistorie)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_21">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radio_L_Volhistorie">
+            <property name="text">
+             <string>abgeschlossene Auftrage (L-Volhistorie)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -128,7 +145,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <property name="elideMode">
           <enum>Qt::ElideLeft</enum>
@@ -179,9 +196,12 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_2">
+                <widget class="QLineEdit" name="line_AsBez_ONKz">
                  <property name="autoFillBackground">
                   <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color:yellow</string>
                  </property>
                  <property name="maxLength">
                   <number>3</number>
@@ -353,12 +373,15 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_6">
+              <widget class="QLineEdit" name="line_LtgBez_ONKzA">
                <property name="maximumSize">
                 <size>
                  <width>40</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
                </property>
               </widget>
              </item>
@@ -884,7 +907,14 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="nameForSql"/>
+                <widget class="QLineEdit" name="line_Name_Name">
+                 <property name="styleSheet">
+                  <string notr="true">background-color:yellow</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="horizontalSpacer_10">
@@ -914,7 +944,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="vomamForSql"/>
+                <widget class="QLineEdit" name="line_Name_Vomame"/>
                </item>
                <item>
                 <spacer name="horizontalSpacer_13">
@@ -1029,7 +1059,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_19"/>
+              <widget class="QLineEdit" name="line_KundenNr_KundenNr">
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="horizontalSpacer_15">
@@ -1088,12 +1122,15 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_20">
+              <widget class="QLineEdit" name="line_PEBez_ONKz">
                <property name="maximumSize">
                 <size>
                  <width>60</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
                </property>
               </widget>
              </item>
@@ -1111,12 +1148,15 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_21">
+              <widget class="QLineEdit" name="line_PEBez_PENr">
                <property name="maximumSize">
                 <size>
                  <width>90</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
                </property>
               </widget>
              </item>
@@ -1181,7 +1221,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_43"/>
+              <widget class="QLineEdit" name="line_AuftragsNr_AuftragsNr">
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="horizontalSpacer_17">
@@ -1252,7 +1296,11 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_66"/>
+                <widget class="QLineEdit" name="line_FremdauftrNr">
+                 <property name="styleSheet">
+                  <string notr="true">background-color:yellow</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -1291,7 +1339,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_67"/>
+              <widget class="QLineEdit" name="line_ANDI_BauaftrNr">
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="horizontalSpacer_18">
@@ -1344,7 +1396,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_68"/>
+              <widget class="QLineEdit" name="line_FktoNr_Fernmeld">
+               <property name="styleSheet">
+                <string notr="true">background-color:yellow</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="horizontalSpacer_19">
@@ -1376,7 +1432,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="grobe_Zust">
+         <widget class="QWidget" name="grobeZust">
           <property name="autoFillBackground">
            <bool>true</bool>
           </property>
@@ -1595,7 +1651,10 @@
                 </widget>
                </item>
                <item>
-                <widget class="QDateEdit" name="dateEdit">
+                <widget class="QDateEdit" name="data_grobeZust_Zeitbereich">
+                 <property name="styleSheet">
+                  <string notr="true">background-color:yellow</string>
+                 </property>
                  <property name="currentSection">
                   <enum>QDateTimeEdit::MonthSection</enum>
                  </property>
