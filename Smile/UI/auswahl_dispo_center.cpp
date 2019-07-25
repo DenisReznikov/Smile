@@ -16,23 +16,3 @@ Auswahl_Dispo_Center::~Auswahl_Dispo_Center()
 {
   delete ui;
 }
-
-
-
-void Auswahl_Dispo_Center::on_show_clicked()
-{
-    ui->frame->show();
-}
-
-void Auswahl_Dispo_Center::on_Close_clicked()
-{
-     ui->frame->close();
-}
-
-
-
-void Auswahl_Dispo_Center::on_Next_clicked()
-{
-    o_Auftragsauswahl= new Auftragsauswahl(this->login);
-    o_Auftragsauswahl->show();
-}

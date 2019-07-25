@@ -16,13 +16,11 @@ public:
   ~Auswahl_Dispo_Center();
 
 private slots:
-  void on_show_clicked();
-  void on_Close_clicked();
-  void on_Next_clicked();
+
 
 private:
   Ui::Auswahl_Dispo_Center *ui;
-  Auftragsauswahl * o_Auftragsauswahl;
+
   QString login;
 };
 
