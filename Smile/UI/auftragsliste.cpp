@@ -29,5 +29,5 @@ void Auftragsliste::resizeEvent(QResizeEvent *event)
 void Auftragsliste::on_lupeButton_clicked()
 {
 
-    lupe(ui->outFrame);
+  lupe(ui->outFrame);
 }

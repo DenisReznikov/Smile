@@ -19,8 +19,6 @@ public:
   void resizeEvent(QResizeEvent *event);
 
 private slots:
-
-
   void on_lupeButton_clicked();
 
 private:
