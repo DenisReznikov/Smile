@@ -3,11 +3,12 @@
 
 #include <QMainWindow>
 #include "auftragsauswahl.h"
+#include <QSqlQuery>
 namespace Ui {
   class Auswahl_Dispo_Center;
 }
 
-class Auswahl_Dispo_Center : public QMainWindow
+class Auswahl_Dispo_Center : public QMainWindow,public BaseWindowWithTable
 {
   Q_OBJECT
 
@@ -20,8 +21,8 @@ private slots:
 
 private:
   Ui::Auswahl_Dispo_Center *ui;
-
   QString login;
+  QSqlQueryModel *model;
 };
 
 #endif // AUSWAHL_DISPO_CENTER_H

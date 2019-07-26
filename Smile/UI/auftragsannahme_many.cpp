@@ -11,9 +11,7 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
   ui->tableView->setModel(model);
-
-
- ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
+  ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
 
 }
 
@@ -34,9 +32,9 @@ void Auftragsannahme_Many::on_tableView_doubleClicked(const QModelIndex &index)
 {
   QVector<QString> values;
   for(int i=0;i<model->columnCount();i++)
-    {
-      values.push_back((ui->tableView->model()->data(ui->tableView->model()->index(index.row(),i)).toString()));
-    }
+  {
+    values.push_back((ui->tableView->model()->data(ui->tableView->model()->index(index.row(),i)).toString()));
+  }
   auAlone =new Auftragsannahme_Alone(this->login,values,this);
   auAlone->show();
 }
@@ -48,5 +46,5 @@ void Auftragsannahme_Many::resizeEvent(QResizeEvent *event)
 
 void Auftragsannahme_Many::on_lupeButton_clicked()
 {
-    lupe(ui->outFrame);
+  lupe(ui->outFrame);
 }

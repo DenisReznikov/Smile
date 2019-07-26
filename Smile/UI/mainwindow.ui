@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -561,7 +564,7 @@
      <x>0</x>
      <y>0</y>
      <width>810</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="defaultUp">

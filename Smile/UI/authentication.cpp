@@ -17,62 +17,62 @@ Authentication::~Authentication()
 bool Authentication::checkMissing(QString log, QString pass)
 {
   if(log.isEmpty() && pass.isEmpty())
-    {
-      ui->lineUserName->setStyleSheet("background-color: red");
-      ui->lineUserPassword->setStyleSheet("background-color: red");
-      QMessageBox::warning(this,"Авторизации","Сначала надо ввести логин и пароль!");
-      return false;
-    }
+  {
+    ui->lineUserName->setStyleSheet("background-color: red");
+    ui->lineUserPassword->setStyleSheet("background-color: red");
+    QMessageBox::warning(this,"Авторизации","Сначала надо ввести логин и пароль!");
+    return false;
+  }
   else if (log.isEmpty()||pass.isEmpty())
-    {
-      ui->lineUserName->setStyleSheet("background-color: red");
-      ui->lineUserPassword->setStyleSheet("background-color: red");
-      QMessageBox::warning(this,"Авторизации",(log.isEmpty()) ? "Вы забыли ввести логин!" : "Вы забыли ввести пароль!");
-      return false;
-    }
+  {
+    ui->lineUserName->setStyleSheet("background-color: red");
+    ui->lineUserPassword->setStyleSheet("background-color: red");
+    QMessageBox::warning(this,"Авторизации",(log.isEmpty()) ? "Вы забыли ввести логин!" : "Вы забыли ввести пароль!");
+    return false;
+  }
   return true;
 }
 bool Authentication::checkLogAndPassInBase(QString login,QString password)
 {
   if (!checkMissing(login,password))
-    {
-      return false;
-    }
+  {
+    return false;
+  }
   static toolsForDB db =  toolsForDB();
   QMap<QString,QString> map;
   map.insert("login",login);
   map.insert("pass",password);
   QSqlQuery q = db.checkInTable("auth",map);
   if(q.last())
-    {
-      return true;
-    }
+  {
+    return true;
+  }
   else
-    {
-      ui->lineUserName->setStyleSheet("background-color: red");
-      ui->lineUserPassword->setStyleSheet("background-color: red");
-      QMessageBox::warning(this,"Авторизации","Неправильный логин или пароль");
-      return false;
-    }
+  {
+    ui->lineUserName->setStyleSheet("background-color: red");
+    ui->lineUserPassword->setStyleSheet("background-color: red");
+    QMessageBox::warning(this,"Авторизации","Неправильный логин или пароль");
+    return false;
+  }
 }
 void Authentication::on_login_clicked()
 {
 
   if(this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text()))
-    {
-      mainWind = new MainWindow(ui->lineUserName->text());
-      mainWind->show();
-      this->close();
-    }
+  {
+    mainWind = new MainWindow(ui->lineUserName->text());
+    mainWind->show();
+    this->close();
+  }
 }
 
 void Authentication::on_lineUserPassword_returnPressed()
 {
   if(this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text()))
-    {
-      mainWind = new MainWindow(ui->lineUserName->text());
-      mainWind->show();
-      this->close();
-    }
+  {
+    mainWind = new MainWindow(ui->lineUserName->text());
+    mainWind->show();
+    this->close();
+  }
 }
 

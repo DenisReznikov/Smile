@@ -16,7 +16,7 @@ public:
 
   toolsForDB(QString nameDB="C:/Users/drezniko/Documents/Smile/Smile/Server/test.db");
   ~toolsForDB();
-  QSqlQuery checkInTable(QString tableName,QMap<QString,QString> map);
+  QSqlQuery checkInTable(QString tableName,QMap<QString,QString> map=(QMap<QString,QString>()));
 private:
   //выбераем таблицу
   void selectTable(QString str);
