@@ -3,7 +3,6 @@
 #include <QDebug>
 BaseWindowWithTable::BaseWindowWithTable()
 {
-  qDebug()<<"HIIIIIIIIIIIIII";
 }
 void BaseWindowWithTable::lupe(QWidget *obj)
 {

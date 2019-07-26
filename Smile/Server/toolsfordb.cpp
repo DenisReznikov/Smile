@@ -7,8 +7,6 @@ toolsForDB::toolsForDB(QString parent)
     db = QSqlDatabase::addDatabase("QSQLITE");
 
     db.setDatabaseName(parent);
-    //db.setUserName("test");
-    //db.setPassword("test");
     if(!db.open())
     {
       qDebug() << db.lastError().text();
