@@ -43,7 +43,7 @@ build_script:
 after_build:
   - if "%APPVEYOR_REPO_TAG%"=="true" windeployqt bin\Smile.exe --qmldir %QTDIR%\qml
 artifacts:
-  - path: bin\Smile.exe
+  - path: /.*\.zip/
     name: $(releaseName)
 deploy:
   provider: GitHub
