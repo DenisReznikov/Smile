@@ -12,12 +12,23 @@ Auswahl_Dispo_Center::Auswahl_Dispo_Center(QString login,QWidget *parent) :
   static toolsForDB db =  toolsForDB();
   QSqlQuery qSqlQuery= db.checkInTable("Auswahl_Dispo_Center");
   model->setQuery(qSqlQuery);
-  ui->tableView->setModel(model);
-  ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
-  this->updateTable(ui->tableView);
+  this->createTable();
 }
 
 Auswahl_Dispo_Center::~Auswahl_Dispo_Center()
 {
   delete ui;
+}
+void Auswahl_Dispo_Center::createTable()
+{
+  ui->tableView->setModel(model);
+  ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
+  ui->tableView->verticalHeader()->setVisible(false);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
 }

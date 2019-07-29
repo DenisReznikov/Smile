@@ -2,7 +2,7 @@
 
 toolsForDB::toolsForDB(QString parent)
 {
-  if(!db.open())
+  if(!db.isOpen())
   {
     db = QSqlDatabase::addDatabase("QSQLITE");
 

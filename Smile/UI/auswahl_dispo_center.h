@@ -20,6 +20,7 @@ private slots:
 
 
 private:
+  void createTable();
   Ui::Auswahl_Dispo_Center *ui;
   QString login;
   QSqlQueryModel *model;
