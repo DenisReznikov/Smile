@@ -40,8 +40,7 @@ before_build:
 build_script:
   - qmake Smile/Smile.pro
   - nmake
-after_build:
-  - if "%APPVEYOR_REPO_TAG%"=="true" windeployqt bin\Smile.exe --qmldir %QTDIR%\qml
+
   
 deploy:
   on:
