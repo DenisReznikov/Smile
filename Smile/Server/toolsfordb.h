@@ -20,8 +20,6 @@ public:
 private:
   //выбераем таблицу
   void selectTable(QString str);
-
-
   QSqlQueryModel sqlAsk(QString sqlQuest);
   QSqlQueryModel *tableModel;
   static inline QSqlDatabase db;
