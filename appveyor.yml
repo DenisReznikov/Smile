@@ -43,7 +43,7 @@ build_script:
 after_build:
   - if "%APPVEYOR_REPO_TAG%"=="true" windeployqt bin\Smile.exe --qmldir %QTDIR%\qml
   
-  deploy:
+deploy:
   on:
     branch: master              
     APPVEYOR_REPO_TAG: true       
