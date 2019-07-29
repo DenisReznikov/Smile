@@ -44,9 +44,6 @@ build_script:
   
 deploy:
   on:
-    branch: master              
-    APPVEYOR_REPO_TAG: true       
-
   provider: GitHub                         
 
   auth_token:
