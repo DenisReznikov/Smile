@@ -47,7 +47,8 @@ artifacts:
     name: $(releaseName)
 deploy:
   provider: GitHub
-  auth_token: $(GITHUB_OAUTH_TOKEN)
+  auth_token: 
+    secure: 4afd4bdeb5e0e4ef796f70faf4dd1e3e97cd8354
   description: 'Smile Release'
   draft: false
   prerelease: false
