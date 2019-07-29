@@ -38,19 +38,24 @@ before_build:
   - if "%platform%"=="x86" call "%vcvarsall%" x86
   - if "%platform%"=="x64" call "%vcvarsall%" x64
 build_script:
-  - qmake
+  - qmake Smile.pro
   - nmake
 after_build:
   - if "%APPVEYOR_REPO_TAG%"=="true" windeployqt bin\Smile.exe --qmldir %QTDIR%\qml
-artifacts:
-  - path: '*.exe'
-    name: $(releaseName)
-deploy:
-  provider: GitHub
-  auth_token: 
+  
+  deploy:
+  on:
+    branch: master              
+    APPVEYOR_REPO_TAG: true       
+
+  provider: GitHub                         
+  description: 'Bump version to $(APPVEYOR_REPO_TAG_NAME).$(APPVEYOR_BUILD_NUMBER)' 
+
+  auth_token:
     secure: 4afd4bdeb5e0e4ef796f70faf4dd1e3e97cd8354
-  description: 'Smile Release'
+
+  artifact: /.*\.zip/ 
+  force_update: true  
   draft: false
   prerelease: false
-  on:
-      APPVEYOR_REPO_TAG: true
+  
