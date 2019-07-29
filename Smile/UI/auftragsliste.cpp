@@ -12,7 +12,7 @@ Auftragsliste::Auftragsliste(QString login,QSqlQuery qSqlQuery,QWidget *parent) 
   model->setQuery(qSqlQuery);
   ui->tableView->setModel(model);
   ui->tableView->setStyleSheet("QHeaderView::section {background-color:red}");
-  ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+  updateTable(ui->tableView);
 }
 
 Auftragsliste::~Auftragsliste()
@@ -22,6 +22,8 @@ Auftragsliste::~Auftragsliste()
 
 void Auftragsliste::resizeEvent(QResizeEvent *event)
 {
+  qDebug()<<"rer";
+  updateTable(ui->tableView);
 }
 
 void Auftragsliste::on_lupeButton_clicked()
