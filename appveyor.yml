@@ -48,7 +48,6 @@ deploy:
     APPVEYOR_REPO_TAG: true       
 
   provider: GitHub                         
-  description: 'Bump version to $(APPVEYOR_REPO_TAG_NAME).$(APPVEYOR_BUILD_NUMBER)' 
 
   auth_token:
     secure: 4afd4bdeb5e0e4ef796f70faf4dd1e3e97cd8354
