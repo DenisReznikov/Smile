@@ -27,8 +27,7 @@ private slots:
   void on_lupeButton_clicked();
 
 private:
-
-  void resizeEvent(QResizeEvent *event);
+  void createTable();
   QSqlQueryModel *model;
   QSqlDatabase db;
   QString login;

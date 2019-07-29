@@ -9,7 +9,6 @@ public:
   BaseWindowWithTable();
 protected:
   void lupe(QWidget *obj);
-  void updateTable(QTableView *obj);
 };
 
 #endif // BASEWINDOW_H
