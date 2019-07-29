@@ -1,3 +1,8 @@
+version: '{build}'
+
+branches:
+  except:
+    - project/travis
 environment:
   matrix:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
@@ -36,9 +41,10 @@ build_script:
   - qmake
   - nmake
 after_build:
-  - windeployqt bin\Smile.exe 
+  - if "%APPVEYOR_REPO_TAG%"=="true" windeployqt bin\Smile.exe --qmldir %QTDIR%\qml
 artifacts:
-  - path: release
+  - path: bin
+    name: $(releaseName)
 deploy:
   provider: GitHub
   auth_token: $(GITHUB_OAUTH_TOKEN)
