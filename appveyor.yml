@@ -1,4 +1,4 @@
-version: '{build}'
+version: 'Smile-1.0.{build}'
 
 branches:
   except:
@@ -9,18 +9,6 @@ environment:
     platform: x86
     qt: 5.9
     releaseName: Smile_qt59_vs2015_x86
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x64
-    qt: 5.9
-    releaseName: Smile_qt59_vs2015_x64
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    platform: x64
-    qt: 5.9
-    releaseName: Smile_qt59_vs2017_x64
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x64
-    qt: 5.12
-    releaseName: Smile_qt512_vs2015_x64
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
     qt: 5.12
