@@ -42,12 +42,13 @@ on_finish:
 
 artifacts:
   - path: release
-    name: Smile
+    name:  $(releaseName)
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
     artifact: Smile
-    draft: true
+    description: 'Smile Release'
+    draft: false
     prerelease: true
     auth_token:
       secure: raX5hiieSXgtTiXFvRQafRFN2qA4rg9evnBREHR/pGn9o/B4wF7N6qA9Vs5HdiXI
