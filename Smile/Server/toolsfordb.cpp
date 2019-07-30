@@ -2,12 +2,11 @@
 
 toolsForDB::toolsForDB(QString parent)
 {
-  if(!db.isOpen())
-  {
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(parent);
-    db.open();
-  }
+
+  db = QSqlDatabase::addDatabase("QSQLITE");
+  db.setDatabaseName(parent);
+  db.open();
+
 }
 
 toolsForDB::~toolsForDB()
