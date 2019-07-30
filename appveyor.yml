@@ -31,7 +31,7 @@ build_script:
   - cd release
   - windeployqt --release Smile.exe
   
-  - qmake C:/projects/smile/Test/Test.pro
+  - qmake C:/projects/smile/Test/ALL_in_one.pro
   - nmake release
   - cd release
   - windeployqt --release Test.exe
