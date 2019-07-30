@@ -32,11 +32,11 @@ build_script:
   - windeployqt --release Smile.exe
   
   - qmake C:/projects/smile/Test/Test.pro
-  - nmake
-  - cd bin
-  #- windeployqt --release Test.exe
+  - nmake release
+  - cd release
+  - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
-  - TYPE tests.xml
+  
 on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
