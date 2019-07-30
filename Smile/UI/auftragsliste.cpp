@@ -33,11 +33,11 @@ void Auftragsliste::createTable()
   ui->tableView->verticalHeader()->setVisible(false);
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::Stretch);
   ui->tableView->horizontalHeader()->setSectionResizeMode(7, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
