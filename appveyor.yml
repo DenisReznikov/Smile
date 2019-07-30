@@ -26,8 +26,8 @@ before_build:
   - if "%platform%"=="x86" call "%vcvarsall%" x86
   - if "%platform%"=="x64" call "%vcvarsall%" x64
 build_script:
-  - qmake Smile/Smile.pro
-  - nmake release
+  - qmake Smile/Smile.pro QMAKE_CXXFLAGS+=-std=c++17
+  - nmake release CXXFLAGS+=-std=c++17
   - cd release
   - windeployqt --release Smile.exe
 
