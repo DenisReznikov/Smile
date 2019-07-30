@@ -56,3 +56,4 @@ deploy:
       secure: mDhcZw05/zt66JV5AXGI6ibtfQVasA6NhaOSrEf/oanWklXUTqwDSvvrdm3kn44H
     on:
       branch: master
+      APPVEYOR_REPO_TAG: true
