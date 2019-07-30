@@ -72,7 +72,7 @@ void authentication_test::checkLogAndPassInBase()
   QFETCH(QString,login);
   QFETCH(QString,password);
   QFETCH(bool,result_DB);
-  QCOMPARE(auth.checkLogAndPassInBase(login,password),result_DB);
+  QVERIFY(auth.checkLogAndPassInBase(login,password)==result_DB);
 }
 
 void authentication_test::checkWidjetlineUserName()
