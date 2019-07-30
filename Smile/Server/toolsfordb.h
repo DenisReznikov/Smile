@@ -7,7 +7,7 @@
 #include <QMainWindow>
 #include <QSqlQuery>
 #include <QSqlRelationalTableModel>
-
+#include <QDebug>
 class toolsForDB
 {
 public:
