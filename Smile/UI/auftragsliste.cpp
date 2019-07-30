@@ -10,9 +10,7 @@ Auftragsliste::Auftragsliste(QString login,QSqlQuery qSqlQuery,QWidget *parent) 
   this->login=login;
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
-  ui->tableView->setModel(model);
-  ui->tableView->setStyleSheet("QHeaderView::section {background-color:red}");
-  updateTable(ui->tableView);
+  createTable();
 }
 
 Auftragsliste::~Auftragsliste()
@@ -20,14 +18,28 @@ Auftragsliste::~Auftragsliste()
   delete ui;
 }
 
-void Auftragsliste::resizeEvent(QResizeEvent *event)
-{
-  qDebug()<<"rer";
-  updateTable(ui->tableView);
-}
 
 void Auftragsliste::on_lupeButton_clicked()
 {
 
   lupe(ui->outFrame);
+}
+
+
+void Auftragsliste::createTable()
+{
+  ui->tableView->setModel(model);
+  ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
+  ui->tableView->verticalHeader()->setVisible(false);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(7, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
 }

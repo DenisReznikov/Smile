@@ -16,12 +16,12 @@ public:
   explicit Auftragsliste(QString login,QSqlQuery qSqlQuery,QWidget *parent = 0);
   ~Auftragsliste();
   QString login,sql_string;
-  void resizeEvent(QResizeEvent *event);
 
 private slots:
   void on_lupeButton_clicked();
 
 private:
+  void createTable();
   Ui::Auftragsliste *ui;
   QSqlQueryModel *model;
 };

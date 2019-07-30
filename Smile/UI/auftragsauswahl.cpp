@@ -1,13 +1,14 @@
 #include "auftragsauswahl.h"
 #include "ui_auftragsauswahl.h"
 
-Auftragsauswahl::Auftragsauswahl(QString login,QWidget *parent) :
+Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsauswahl)
 {
   ui->setupUi(this);
   this->login=login;
   ui->Name_person->setText(login);
+  ui->labelDispoCenter->setText(DispoCenter);
 }
 
 Auftragsauswahl::~Auftragsauswahl()
@@ -24,3 +25,4 @@ void Auftragsauswahl::on_OK_clicked()
   auftragsliste = new Auftragsliste(login,QSqlQ);
   auftragsliste->show();
 }
+

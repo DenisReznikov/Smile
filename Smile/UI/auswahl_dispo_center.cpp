@@ -32,3 +32,20 @@ void Auswahl_Dispo_Center::createTable()
   ui->tableView->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
 }
+
+void Auswahl_Dispo_Center::on_tableView_doubleClicked(const QModelIndex &index)
+{
+  ui->labelDispoCenter->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),2)).toString());
+  auftrags =new Auftragsauswahl(ui->Name_person->text(),ui->labelDispoCenter->text(),this);
+  auftrags->show();
+}
+
+void Auswahl_Dispo_Center::on_tableView_clicked(const QModelIndex &index)
+{
+  ui->labelDispoCenter->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),2)).toString());
+}
+
+void Auswahl_Dispo_Center::on_tableView_entered(const QModelIndex &index)
+{
+    this->on_tableView_doubleClicked(index);
+}

@@ -2,7 +2,7 @@
 #define AUSWAHL_DISPO_CENTER_H
 
 #include <QMainWindow>
-#include "auftragsauswahl.h"
+#include "Smile/UI/auftragsauswahl.h"
 #include <QSqlQuery>
 namespace Ui {
   class Auswahl_Dispo_Center;
@@ -19,10 +19,18 @@ public:
 private slots:
 
 
+  void on_tableView_doubleClicked(const QModelIndex &index);
+
+  void on_tableView_clicked(const QModelIndex &index);
+
+  void on_tableView_entered(const QModelIndex &index);
+
 private:
   void createTable();
+  void selectRow();
   Ui::Auswahl_Dispo_Center *ui;
   QString login;
+  Auftragsauswahl *auftrags;
   QSqlQueryModel *model;
 };
 

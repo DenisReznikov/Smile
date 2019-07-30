@@ -366,7 +366,7 @@
          <bool>true</bool>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="TelAs">
          <property name="autoFillBackground">
@@ -1151,7 +1151,7 @@ WG</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_37">
+        <widget class="QLabel" name="labelDispoCenter">
          <property name="minimumSize">
           <size>
            <width>70</width>
