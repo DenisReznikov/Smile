@@ -21,7 +21,7 @@ private:
   //выбераем таблицу
   void selectTable(QString str);
   QSqlQueryModel sqlAsk(QString sqlQuest);
-  static inline QSqlQueryModel *tableModel;
+  static QSqlQueryModel *tableModel;
   QSqlDatabase db;
   QSqlQuery *sqlQuery;
 };
