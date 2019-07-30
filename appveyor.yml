@@ -33,6 +33,7 @@ build_script:
   
   - qmake C:/projects/smile/ALL_in_one.pro
   - nmake release
+  - cd Test
   - cd release
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
