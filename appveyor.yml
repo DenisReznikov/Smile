@@ -32,7 +32,7 @@ build_script:
   - windeployqt --release Smile.exe
   
   - qmake C:/projects/smile/Test/Test.pro
-  - nmake build
+  - nmake
   - cd build
   #- windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
