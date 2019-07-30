@@ -51,7 +51,7 @@ deploy:
   - provider: GitHub
     artifact: Smile
     draft: true
-    prerelease: true
+    prerelease: false
     auth_token:
       secure: mDhcZw05/zt66JV5AXGI6ibtfQVasA6NhaOSrEf/oanWklXUTqwDSvvrdm3kn44H
     on:
