@@ -40,6 +40,7 @@ bool Authentication::checkMissing(QString log, QString pass)
   }
   return true;
 }
+
 bool Authentication::checkLogAndPassInBase(QString login,QString password)
 {
   if (!checkMissing(login,password))
