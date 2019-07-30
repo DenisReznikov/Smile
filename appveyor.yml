@@ -38,19 +38,21 @@ before_build:
   - if "%platform%"=="x86" call "%vcvarsall%" x86
   - if "%platform%"=="x64" call "%vcvarsall%" x64
 build_script:
-  - qmake Smile/Smile.pro
-  - nmake
+  - qmake Smile.pro
+  - nmake release
+  - cd release
+  - windeployqt --release Smile.exe
 
-  
+artifacts:
+  - path: release
+    name: Smile
 deploy:
-  on:
-  provider: GitHub                         
-
-  auth_token:
-    secure: 4afd4bdeb5e0e4ef796f70faf4dd1e3e97cd8354
-
-  artifact: /.*\.zip/ 
-  force_update: true  
-  draft: false
-  prerelease: false
-  
+  # Deploy to GitHub Releases
+  - provider: GitHub
+    artifact: Smile
+    draft: true
+    prerelease: true
+    auth_token:
+      secure: 4afd4bdeb5e0e4ef796f70faf4dd1e3e97cd8354
+    on:
+      branch: master
