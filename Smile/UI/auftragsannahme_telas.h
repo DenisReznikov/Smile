@@ -9,7 +9,6 @@
 #include <../Smile/Server/toolsfordb.h>
 #include <QLineEdit>
 #include <QSqlRecord>
-#include <QDebug>
 namespace Ui {
   class Auftragsannahme_TelAs;
 }

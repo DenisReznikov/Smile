@@ -45,7 +45,6 @@ void Auftragsannahme_TelAs::on_OK_clicked()
   static toolsForDB db =  toolsForDB();
   QSqlQuery qSqlQuery = db.checkInTable("Auftragsannahme_TelAs",*map);
   qSqlQuery.last();
-  qDebug()<<qSqlQuery.at();
   if(qSqlQuery.at()+1 == 1)
   {
     int i = 0;

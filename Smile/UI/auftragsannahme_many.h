@@ -4,8 +4,7 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QSqlQueryModel>
-//#include <UI/auftragsannahme_alone.h>
-#include <QDebug>
+#include <Smile/UI/auftragsannahme_alone.h>
 #include <QSqlError>
 #include "auftragsannahme_alone.h"
 namespace Ui {

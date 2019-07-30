@@ -5,17 +5,8 @@ toolsForDB::toolsForDB(QString parent)
   if(!db.isOpen())
   {
     db = QSqlDatabase::addDatabase("QSQLITE");
-
     db.setDatabaseName(parent);
-    if(!db.open())
-    {
-      qDebug() << db.lastError().text();
-    }
-    else
-    {
-      qDebug() <<"yes";
-    }
-    qDebug() <<db.tables();
+    db.open();
   }
 }
 
@@ -40,7 +31,6 @@ QSqlQuery toolsForDB::checkInTable(QString tableName, QMap<QString, QString> map
   {
     sqlAsk.resize(sqlAsk.size()-7);
   }
-  qDebug()<<sqlAsk;
   sqlQuery->exec(sqlAsk);
   return *sqlQuery;
 }

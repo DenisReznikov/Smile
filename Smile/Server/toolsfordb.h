@@ -5,7 +5,6 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QMainWindow>
-#include <QDebug>
 #include <QSqlQuery>
 #include <QSqlRelationalTableModel>
 
