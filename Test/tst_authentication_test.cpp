@@ -62,7 +62,7 @@ void authentication_test::checkLogAndPassInBase_data()
   QTest::newRow("pass_empty") << QString("2007") << QString(emptyStr) << bool(false);
   QTest::newRow("Incorrect_all") << QString("dd") << QString("20")<< bool(false);
   QTest::newRow("Incorrect_login") << QString("ads") << QString("test")<< bool(false);
-  QTest::newRow("Incorrect_password") << QString("denis") << QString("20")<< bool(true);
+  QTest::newRow("Incorrect_password") << QString("denis") << QString("20")<< bool(false);
   QTest::newRow("AllCorrect") << QString("denis") << QString("test")<< bool(true);
 }
 
