@@ -37,9 +37,8 @@ build_script:
   - cd release
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
-  - TYPE tests.xml
-#on_finish:
- # - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
+on_finish:
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
   - path: release
@@ -54,4 +53,4 @@ deploy:
     auth_token:
       secure: raX5hiieSXgtTiXFvRQafRFN2qA4rg9evnBREHR/pGn9o/B4wF7N6qA9Vs5HdiXI
     on:
-      branch: maste
+      branch: master
