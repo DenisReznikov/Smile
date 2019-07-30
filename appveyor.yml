@@ -26,10 +26,19 @@ before_build:
   - if "%platform%"=="x86" call "%vcvarsall%" x86
   - if "%platform%"=="x64" call "%vcvarsall%" x64
 build_script:
-  - qmake Smile/Smile.pro QMAKE_CXXFLAGS+=-std=c++17
+  - qmake Smile/Smile.pro
   - nmake release
   - cd release
   - windeployqt --release Smile.exe
+  
+  - qmake C:/projects/smile/Test/Test.pro
+  - nmake release
+  - cd release
+  - windeployqt --release Test.exe
+  - .\Test.exe -xunitxml > tests.xml 
+  
+on_finish:
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
   - path: release
