@@ -1,7 +1,8 @@
 #include "authentication.h"
 #include "ui_authentication.h"
 #include "../Smile/Server/toolsfordb.h"
-
+#include <QDir>
+#include <QDebug>
 Authentication::Authentication(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::Authentication)
@@ -52,6 +53,7 @@ bool Authentication::checkLogAndPassInBase(QString login,QString password)
   map.insert("login",login);
   map.insert("pass",password);
   QSqlQuery q = db.checkInTable("auth",map);
+  QDir::currentPath();
   if(q.last())
   {
     return true;

@@ -69,4 +69,5 @@ FORMS += \
   UI/mainwindow.ui \
   UI/new_passwort.ui
 
-DISTFILES +=
+DISTFILES += \
+  Server/test.db

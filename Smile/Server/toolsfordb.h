@@ -7,12 +7,13 @@
 #include <QMainWindow>
 #include <QSqlQuery>
 #include <QSqlRelationalTableModel>
+
 class toolsForDB
 {
 public:
   // chekcInTable(Названия таблицы,<Название колонки где искать,что искать в данной колонке>)
 
-  toolsForDB(QString nameDB="C:/Users/drezniko/Documents/Smile/Smile/Server/test.db");
+  toolsForDB(QString nameDB="test.db");
   ~toolsForDB();
   QSqlQuery checkInTable(QString tableName,QMap<QString,QString> map=(QMap<QString,QString>()));
 private:
