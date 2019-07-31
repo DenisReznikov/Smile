@@ -50,7 +50,7 @@ artifacts:
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
-    description: 'Smileb Test Release                                              and please copy db from https://github.com/DenisReznikov/Smile/blob/master/Smile/Server/test.db in folder with exe'
+    description: '"Smile Test Release".                                          For work You must copy db from https://github.com/DenisReznikov/Smile/blob/master/Smile/Server/test.db in folder with exe'
     draft: true
     prerelease: true
     auth_token:
