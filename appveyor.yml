@@ -31,10 +31,12 @@ build_script:
   - cd release
   - windeployqt --release Smile.exe
   
-  - qmake C:/projects/smile/Test.pro
+  - qmake C:/projects/smile/Test/Test.pro
   - nmake release
-  - cd Test
-  - cd release
+  - cd C:/projects/smile/Smile/Server
+  - COPY test.db C:/projects/smile/Test/release
+  - COPY test.db C:/projects/smile/Smile/release
+  - cd C:/projects/smile/Test/release
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
 on_finish:
