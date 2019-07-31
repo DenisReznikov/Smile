@@ -43,8 +43,7 @@ build_script:
   - .\Test.exe -xunitxml > tests.xml 
 on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
-  - cd C:/projects/smile/Smile/Server
-  - copy "test.db" %APPVEYOR_BUILD_FOLDER%\path\to\release
+
 artifacts:
   - path: release
     name: $(releaseName)
