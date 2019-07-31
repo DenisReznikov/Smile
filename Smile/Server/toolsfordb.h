@@ -11,13 +11,12 @@
 class toolsForDB
 {
 public:
-  // chekcInTable(Названия таблицы,<Название колонки где искать,что искать в данной колонке>)
-
+  
   toolsForDB(QString nameDB="test.db");
   ~toolsForDB();
   QSqlQuery checkInTable(QString tableName,QMap<QString,QString> map=(QMap<QString,QString>()));
 private:
-  //выбераем таблицу
+  
   void selectTable(QString str);
   QSqlQueryModel sqlAsk(QString sqlQuest);
   static QSqlQueryModel *tableModel;
