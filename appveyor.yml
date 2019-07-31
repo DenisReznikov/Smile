@@ -46,7 +46,6 @@ on_finish:
 
 artifacts:
   - path: Smile\release
-    name:  $(releaseName)
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
