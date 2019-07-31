@@ -50,8 +50,7 @@ artifacts:
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
-    artifact: Smile
-    description: 'Smile Release'
+    description: 'Smileb Test Release'
     draft: true
     prerelease: true
     auth_token:
