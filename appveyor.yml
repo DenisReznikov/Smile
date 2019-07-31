@@ -36,7 +36,7 @@ build_script:
   - cd C:/projects/smile/Smile/Server
   - copy "test.db" "C:/projects/smile/Test/release"
   - copy "test.db" "C:/projects/smile/Smile/release"
-  - cd C:/projects/smile/Test/release
+  - cd C:/projects/smile/Test
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
 on_finish:
