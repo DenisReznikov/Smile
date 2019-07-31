@@ -45,13 +45,12 @@ on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
-  - path: C:/projects/smile/Smile/release
-    name:  $(releaseName)
+  - path: release
+    name: $(releaseName)
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
-    artifact: Smile
-    description: 'Smile Release'
+    description: '"Smile Test Release".                                          For work You must copy db from https://github.com/DenisReznikov/Smile/blob/master/Smile/Server/test.db in folder with exe'
     draft: true
     prerelease: true
     auth_token:
