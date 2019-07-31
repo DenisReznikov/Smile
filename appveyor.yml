@@ -52,7 +52,7 @@ deploy:
   - provider: GitHub
     artifact: Smile
     description: 'Smile Release'
-    draft: false
+    draft: true
     prerelease: true
     auth_token:
       secure: raX5hiieSXgtTiXFvRQafRFN2qA4rg9evnBREHR/pGn9o/B4wF7N6qA9Vs5HdiXI
