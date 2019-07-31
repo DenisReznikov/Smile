@@ -1,5 +1,4 @@
 version: 'Smile-1.0.{build}'
-
 branches:
   except:
     - project/travis
@@ -36,20 +35,21 @@ build_script:
   - cd C:/projects/smile/Smile/Server
   - copy "test.db" "C:/projects/smile/Test/release"
   - copy "test.db" "C:/projects/smile/Smile/release"
-  - cd C:/projects/smile/Test
+  - qmake C:/projects/smile/Test/Test.pro
+  - nmake release
   - cd release
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
 on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
-
 artifacts:
   - path: release
     name: $(releaseName)
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
-    description: 'Smileb Test Release                                              and please copy db from https://github.com/DenisReznikov/Smile/blob/master/Smile/Server/test.db in folder with exe'
+    
+    description: '"Smile Test Release".                                          For work You must copy db from https://github.com/DenisReznikov/Smile/blob/master/Smile/Server/test.db in folder with exe'
     draft: true
     prerelease: true
     auth_token:
