@@ -45,7 +45,8 @@ on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
-  - path: Smile\release
+  - path: bin
+    name: $(releaseName)
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
