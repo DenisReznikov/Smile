@@ -34,9 +34,7 @@ build_script:
   - nmake release
   - cd C:/projects/smile/Smile/Server
   - copy "test.db" "C:/projects/smile/Test/release"
-  - copy "test.db" "C:/projects/smile/Smile/release"
-  - copy "test.db" "C:/projects/smile/Test"
-  - copy "test.db" "C:/projects/smile/Smile"
+  - copy "test.db" "C:/projects/smile/Smile/Server/release"
   - qmake C:/projects/smile/Test/Test.pro
   - nmake release
   - cd release
