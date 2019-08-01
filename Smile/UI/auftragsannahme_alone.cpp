@@ -8,6 +8,11 @@ Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QVector<QString> valu
   ui->setupUi(this);
   ui->Name_person->setText(login);
   ui->AuftragsNr->setText(value[5]);
+  QList<QLineEdit *> box=ui->centralwidget->findChildren<QLineEdit*>();
+  for(QLineEdit *i : box)
+  {
+    i->setReadOnly(true);
+  }
 }
 
 Auftragsannahme_Alone::~Auftragsannahme_Alone()

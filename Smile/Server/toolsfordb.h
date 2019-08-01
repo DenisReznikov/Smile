@@ -16,10 +16,9 @@ public:
   ~toolsForDB();
   QSqlQuery returnTable(QString tableName,QMap<QString,QString> );
 private:
-  
+
   void selectTable(QString str);
   QSqlQueryModel sqlAsk(QString sqlQuest);
-  static QSqlQueryModel *tableModel;
   QSqlDatabase db;
   QSqlQuery *sqlQuery;
 };

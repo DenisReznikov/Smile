@@ -19,6 +19,8 @@ Auswahl_Dispo_Center::Auswahl_Dispo_Center(QString login,QWidget *parent) :
 Auswahl_Dispo_Center::~Auswahl_Dispo_Center()
 {
   delete ui;
+  delete auftrags;
+  delete model;
 }
 void Auswahl_Dispo_Center::createTable()
 {
