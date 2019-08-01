@@ -34,8 +34,7 @@ build_script:
   - nmake release
   - cd release
   - dir "C:/projects/smile/Smile/Server/"
-  - dir "C:/projects/smile/Smile/Server/release"
-  - copy "C:/projects/smile/Smile/Server/test.db" "C:/projects/smile/Smile/Server/release"
+  - copy "C:/projects/smile/Smile/Server/test.db" "C:/projects/smile/release/release"
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
   
