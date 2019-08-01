@@ -32,19 +32,20 @@ build_script:
   
   - qmake C:/projects/smile/Test/Test.pro
   - nmake release
-  - cd C:/projects/smile/Smile/Server
-  - copy "test.db" "C:/projects/smile/Test/release"
-  - copy "test.db" "C:/projects/smile/Smile/release"
-  - qmake C:/projects/smile/Test/Test.pro
-  - nmake release
   - cd release
+  - dir "C:/projects/smile/release/release"
+  - copy "C:\projects\smile\Smile\Server\*.*" "C:/projects/smile/release"
+  - copy "C:\projects\smile\Smile\Server\*.*" "C:/projects/smile/release/release"
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
+  
 on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
+
 artifacts:
   - path: release
     name: $(releaseName)
+
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub

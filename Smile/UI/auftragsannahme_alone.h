@@ -14,6 +14,10 @@ public:
   explicit Auftragsannahme_Alone(QString login,QVector<QString> value,QWidget *parent = 0);
   ~Auftragsannahme_Alone();
 
+private slots:
+
+  void on_button_Abbrechen_clicked();
+
 private:
   Ui::Auftragsannahme_Alone *ui;
 };

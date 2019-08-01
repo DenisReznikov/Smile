@@ -12,3 +12,8 @@ New_Passwort::~New_Passwort()
 {
   delete ui;
 }
+
+void New_Passwort::on_button_Abbrechen_clicked()
+{
+  this->close();
+}

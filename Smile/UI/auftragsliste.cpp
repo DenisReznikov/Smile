@@ -43,3 +43,8 @@ void Auftragsliste::createTable()
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
 }
+
+void Auftragsliste::on_button_Abbrechen_clicked()
+{
+  this->close();
+}

@@ -43,7 +43,7 @@ void Auftragsannahme_TelAs::on_OK_clicked()
   QMap<QString,QString> *map=new QMap<QString,QString>;
   map->insert("name",ui->line_Name_Name->text());
   static toolsForDB db =  toolsForDB();
-  QSqlQuery qSqlQuery = db.checkInTable("Auftragsannahme_TelAs",*map);
+  QSqlQuery qSqlQuery = db.returnTable("Auftragsannahme_TelAs",*map);
   qSqlQuery.last();
   if(qSqlQuery.at()+1 == 1)
   {
@@ -83,4 +83,9 @@ void Auftragsannahme_TelAs::on_radio_L_Volhistorie_clicked(bool checked)
 void Auftragsannahme_TelAs::on_radio_laufendeAufrage_clicked(bool checked)
 {
   this->ui->tabWidget->setTabEnabled(10,checked);
+}
+
+void Auftragsannahme_TelAs::on_button_Abbrech_clicked()
+{
+  this->close();
 }

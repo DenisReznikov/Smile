@@ -20,9 +20,14 @@ void Auftragsauswahl::on_OK_clicked()
 {
   QMap<QString,QString> map;
   toolsForDB b;
-  QSqlQuery QSqlQ=b.checkInTable("Auftragsliste",map);
+  QSqlQuery QSqlQ=b.returnTable("Auftragsliste",map);
   QString sql_string ="select * from Auftragsliste";
   auftragsliste = new Auftragsliste(login,QSqlQ);
   auftragsliste->show();
 }
 
+
+void Auftragsauswahl::on_button_Abbrechen_clicked()
+{
+    this->close();
+}

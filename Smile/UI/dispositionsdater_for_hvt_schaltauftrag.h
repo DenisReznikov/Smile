@@ -15,6 +15,9 @@ public:
   explicit Dispositionsdater_for_HVt_Schaltauftrag(QString login,QString DispoCenter,QWidget *parent = 0);
   ~Dispositionsdater_for_HVt_Schaltauftrag();
 
+private slots:
+  void on_button_Abbrechen_clicked();
+
 private:
   Ui::Dispositionsdater_for_HVt_Schaltauftrag *ui;
 };

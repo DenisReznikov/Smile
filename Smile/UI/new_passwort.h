@@ -14,6 +14,9 @@ public:
   explicit New_Passwort(QWidget *parent = 0);
   ~New_Passwort();
 
+private slots:
+  void on_button_Abbrechen_clicked();
+
 private:
   Ui::New_Passwort *ui;
 };

@@ -19,6 +19,8 @@ public:
 private slots:
   void on_lupeButton_clicked();
 
+  void on_button_Abbrechen_clicked();
+
 private:
   void createTable();
   Ui::Auftragsliste *ui;
