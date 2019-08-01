@@ -19,6 +19,8 @@ public:
 private slots:
   void on_OK_clicked();
 
+  void on_button_Abbrechen_clicked();
+
 private:
   Ui::Auftragsauswahl *ui;
   Auftragsliste *auftragsliste;

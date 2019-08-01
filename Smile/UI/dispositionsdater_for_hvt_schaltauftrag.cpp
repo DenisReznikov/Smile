@@ -14,3 +14,8 @@ Dispositionsdater_for_HVt_Schaltauftrag::~Dispositionsdater_for_HVt_Schaltauftra
 {
   delete ui;
 }
+
+void Dispositionsdater_for_HVt_Schaltauftrag::on_button_Abbrechen_clicked()
+{
+  this->close();
+}

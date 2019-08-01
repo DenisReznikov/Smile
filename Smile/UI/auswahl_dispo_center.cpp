@@ -10,7 +10,8 @@ Auswahl_Dispo_Center::Auswahl_Dispo_Center(QString login,QWidget *parent) :
   ui->Name_person->setText(login);
   model = new QSqlQueryModel;
   static toolsForDB db =  toolsForDB();
-  QSqlQuery qSqlQuery= db.checkInTable("Auswahl_Dispo_Center");
+  QMap<QString,QString> map;
+  QSqlQuery qSqlQuery= db.returnTable("Auswahl_Dispo_Center",map);
   model->setQuery(qSqlQuery);
   this->createTable();
 }
@@ -47,5 +48,10 @@ void Auswahl_Dispo_Center::on_tableView_clicked(const QModelIndex &index)
 
 void Auswahl_Dispo_Center::on_tableView_entered(const QModelIndex &index)
 {
-    this->on_tableView_doubleClicked(index);
+  this->on_tableView_doubleClicked(index);
+}
+
+void Auswahl_Dispo_Center::on_button_Abbrechen_clicked()
+{
+  this->close();
 }

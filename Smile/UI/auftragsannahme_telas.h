@@ -27,6 +27,8 @@ private slots:
   void on_radio_L_Volhistorie_clicked(bool checked);
   void on_radio_laufendeAufrage_clicked(bool checked);
 
+  void on_button_Abbrech_clicked();
+
 private:
   bool checkWidjets();
   QString login;

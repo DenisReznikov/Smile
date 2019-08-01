@@ -80,7 +80,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Cancel">
+      <widget class="QPushButton" name="button_Abbrechen">
        <property name="text">
         <string>Abbrechen</string>
        </property>

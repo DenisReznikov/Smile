@@ -16,7 +16,7 @@ toolsForDB::~toolsForDB()
 
 }
 
-QSqlQuery toolsForDB::checkInTable(QString tableName, QMap<QString, QString> map)
+QSqlQuery toolsForDB::returnTable(QString tableName, QMap<QString, QString> map)
 {
   QString sqlAsk="select * from "+tableName+" where ";
   sqlQuery = new QSqlQuery(db);

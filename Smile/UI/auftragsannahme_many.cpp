@@ -59,3 +59,8 @@ void Auftragsannahme_Many::on_lupeButton_clicked()
 {
   lupe(ui->outFrame);
 }
+
+void Auftragsannahme_Many::on_button_Abbrechen_clicked()
+{
+  this->close();
+}

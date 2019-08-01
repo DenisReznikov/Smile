@@ -52,7 +52,7 @@ bool Authentication::checkLogAndPassInBase(QString login,QString password)
   QMap<QString,QString> map;
   map.insert("login",login);
   map.insert("pass",password);
-  QSqlQuery q = db.checkInTable("auth",map);
+  QSqlQuery q = db.returnTable("auth",map);
   QDir::currentPath();
   if(q.last())
   {

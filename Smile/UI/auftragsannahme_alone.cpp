@@ -14,3 +14,8 @@ Auftragsannahme_Alone::~Auftragsannahme_Alone()
 {
   delete ui;
 }
+
+void Auftragsannahme_Alone::on_button_Abbrechen_clicked()
+{
+  this->close();
+}

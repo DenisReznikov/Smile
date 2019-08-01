@@ -1001,7 +1001,7 @@ WG</string>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="Abbrech">
+       <widget class="QPushButton" name="button_Abbrechen">
         <property name="minimumSize">
          <size>
           <width>90</width>
