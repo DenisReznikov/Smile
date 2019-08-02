@@ -1,6 +1,6 @@
 #ifndef AUFTRAGSANNAHME_ALONE_H
 #define AUFTRAGSANNAHME_ALONE_H
-
+#include <QDebug>
 #include <QMainWindow>
 
 namespace Ui {

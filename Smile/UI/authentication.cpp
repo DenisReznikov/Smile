@@ -7,6 +7,9 @@ Authentication::Authentication(QWidget *parent) :
   ui(new Ui::Authentication)
 {
   ui->setupUi(this);
+
+  ui->lineUserName->setValidator( new QRegExpValidator( QRegExp( "[A-z]{1,9}" ) ) );
+
 }
 
 Authentication::~Authentication()

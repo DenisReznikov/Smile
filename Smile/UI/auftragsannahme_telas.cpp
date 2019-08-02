@@ -89,3 +89,17 @@ void Auftragsannahme_TelAs::on_button_Abbrech_clicked()
 {
   this->close();
 }
+
+void Auftragsannahme_TelAs::on_tabWidget_tabBarClicked(int index)
+{
+  if(index==10)
+  {
+    ui->radio_L_Volhistorie->setEnabled(false);
+    ui->radio_Volhistorie->setEnabled(false);
+  }
+  else
+  {
+    ui->radio_L_Volhistorie->setEnabled(true);
+    ui->radio_Volhistorie->setEnabled(true);
+  }
+}

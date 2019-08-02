@@ -1,4 +1,5 @@
 #include "toolsfordb.h"
+#include <QDebug>
 toolsForDB::toolsForDB(QString parent)
 {
 
@@ -33,6 +34,7 @@ QSqlQuery toolsForDB::returnTable(QString tableName, QMap<QString, QString> map)
     sqlAsk.resize(sqlAsk.size()-7);
   }
   sqlQuery->exec(sqlAsk);
+  qDebug()<<sqlAsk;
   return *sqlQuery;
 }
 

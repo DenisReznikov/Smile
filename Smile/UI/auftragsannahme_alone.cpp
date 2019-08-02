@@ -11,7 +11,7 @@ Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QVector<QString> valu
   QList<QLineEdit *> box=ui->centralwidget->findChildren<QLineEdit*>();
   for(QLineEdit *i : box)
   {
-    i->setReadOnly(true);
+    i->setStyleSheet("background-color: red");
   }
 }
 
