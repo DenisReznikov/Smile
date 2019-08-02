@@ -3,7 +3,7 @@
  <class>Auftragsliste</class>
  <widget class="QMainWindow" name="Auftragsliste">
   <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
+   <enum>Qt::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -113,7 +113,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_8"/>
+          <widget class="QLineEdit" name="lineNBezug"/>
          </item>
         </layout>
        </item>
@@ -436,7 +436,7 @@ Host</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_40">
+        <widget class="QLabel" name="labelDispo">
          <property name="minimumSize">
           <size>
            <width>70</width>

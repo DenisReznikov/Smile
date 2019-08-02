@@ -12,7 +12,7 @@ class Dispositionsdater_for_HVt_Schaltauftrag : public QMainWindow
   Q_OBJECT
 
 public:
-  explicit Dispositionsdater_for_HVt_Schaltauftrag(QString login,QString DispoCenter,QWidget *parent = 0);
+  explicit Dispositionsdater_for_HVt_Schaltauftrag(QString login,QString DispoCenter,QVector<QString> values,QWidget *parent = 0);
   ~Dispositionsdater_for_HVt_Schaltauftrag();
 
 private slots:

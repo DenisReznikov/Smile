@@ -3,7 +3,7 @@
  <class>Dispositionsdater_for_HVt_Schaltauftrag</class>
  <widget class="QMainWindow" name="Dispositionsdater_for_HVt_Schaltauftrag">
   <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
+   <enum>Qt::WindowModal</enum>
   </property>
   <property name="geometry">
    <rect>

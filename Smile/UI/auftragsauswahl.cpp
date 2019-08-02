@@ -22,7 +22,7 @@ void Auftragsauswahl::on_OK_clicked()
   toolsForDB b;
   QSqlQuery QSqlQ=b.returnTable("Auftragsliste",map);
   QString sql_string ="select * from Auftragsliste";
-  auftragsliste = new Auftragsliste(login,QSqlQ);
+  auftragsliste = new Auftragsliste(login,ui->labelDispoCenter->text(),QSqlQ,this);
   auftragsliste->show();
 }
 
