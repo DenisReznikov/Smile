@@ -1,6 +1,6 @@
 #include "auftragsannahme_many.h"
 #include "ui_auftragsannahme_many.h"
-
+#include <QSqlRecord>
 Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_Many)
@@ -10,7 +10,11 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   this->login=login;
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
+  this->qSqlQuery=qSqlQuery;
+  qDebug()<<model->columnCount();
+  model->removeColumns(11,model->columnCount()-11);
   this->createTable();
+
 }
 
 Auftragsannahme_Many::~Auftragsannahme_Many()
@@ -22,6 +26,9 @@ Auftragsannahme_Many::~Auftragsannahme_Many()
 
 void Auftragsannahme_Many::on_tableView_clicked(const QModelIndex &index)
 {
+  QSqlRecord rec = qSqlQuery.record();
+  qSqlQuery.seek(index.row());
+  ui->line_SO->setText(qSqlQuery.value(rec.indexOf("SO")).toString());
   ui->line_f_ATZ->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),1)).toString());
   ui->line_Name->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),6)).toString());
 }
@@ -63,4 +70,14 @@ void Auftragsannahme_Many::on_lupeButton_clicked()
 void Auftragsannahme_Many::on_button_Abbrechen_clicked()
 {
   this->close();
+}
+
+void Auftragsannahme_Many::on_tableView_activated(const QModelIndex &index)
+{
+  this->on_tableView_clicked(index);
+}
+
+void Auftragsannahme_Many::on_tableView_pressed(const QModelIndex &index)
+{
+  this->on_tableView_clicked(index);
 }

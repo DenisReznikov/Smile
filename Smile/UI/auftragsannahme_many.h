@@ -25,11 +25,16 @@ private slots:
   void on_lupeButton_clicked();
   void on_button_Abbrechen_clicked();
 
+  void on_tableView_activated(const QModelIndex &index);
+
+  void on_tableView_pressed(const QModelIndex &index);
+
 private:
   void createTable();
   QSqlQueryModel *model;
   QSqlDatabase db;
   QString login;
+  QSqlQuery qSqlQuery;
   Auftragsannahme_Alone *auAlone;
   Ui::Auftragsannahme_Many *ui;
 };

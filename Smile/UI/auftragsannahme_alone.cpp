@@ -1,6 +1,6 @@
 #include "auftragsannahme_alone.h"
 #include "ui_auftragsannahme_alone.h"
-
+#include <sstream>
 Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QVector<QString> value,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_Alone)
@@ -9,9 +9,13 @@ Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QVector<QString> valu
   ui->Name_person->setText(login);
   ui->AuftragsNr->setText(value[5]);
   QList<QLineEdit *> box=ui->centralwidget->findChildren<QLineEdit*>();
+  int b=0;
   for(QLineEdit *i : box)
   {
-    i->setStyleSheet("background-color: red");
+    QString str="";
+    i->setText(str.number(b));
+    qDebug()<<str;
+    b++;
   }
 }
 
