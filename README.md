@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/DenisReznikov/Smile.svg?branch=master)](https://travis-ci.org/DenisReznikov/Smile)
 # Smile
+[![Build Status](https://travis-ci.org/DenisReznikov/Smile.svg?branch=master)](https://travis-ci.org/DenisReznikov/Smile)
 ![1463472544_7](https://user-images.githubusercontent.com/52967686/62469134-53cb6600-b7a0-11e9-832f-6645c97f96ad.gif)
 ## About
 My task in the project consisted in rewriting the application in a new graphical framework(QT framework).
