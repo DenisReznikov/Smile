@@ -1,6 +1,6 @@
 #include "auftragsannahme_telas.h"
 #include "ui_auftragsannahme_telas.h"
-
+#include <QTimer>
 Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_TelAs)
@@ -10,7 +10,26 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   ui->Name_person->setText(login);
   this->login=login;
 }
-
+void Auftragsannahme_TelAs::search(QMap<QString,QString> map)
+{
+  static toolsForDB db =  toolsForDB();
+  QSqlQuery qSqlQuery = db.returnTable("Auftragsannahme_TelAs",map);
+  qSqlQuery.last();
+  if(qSqlQuery.at()+1 == 1)
+  {
+    AUF_Alone = new Auftragsannahme_Alone(this->login,qSqlQuery,this);
+    AUF_Alone->show();
+  }
+  else if(qSqlQuery.at()+1>1)
+  {
+    AUF_many = new Auftragsannahme_Many(this->login,qSqlQuery,this);
+    AUF_many->show();
+  }
+  else
+  {
+    QMessageBox::warning(this,"Name","no matching records found");
+  }
+}
 Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
 {
   delete AUF_Alone;
@@ -18,54 +37,90 @@ Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
   delete ui;
 }
 
-bool Auftragsannahme_TelAs::checkWidjets()
-{
-  QList<QLineEdit *> box=ui->Name->findChildren<QLineEdit*>();
-  for (QList<QLineEdit *>::iterator iter = box.begin(); iter != box.end(); iter++)
-  {
-    if((*iter)->text().isEmpty())
-    {
-      (*iter)->setStyleSheet("background-color:yellow");
-      return false;
-    }
-  }
-  return true;
-}
 
 void Auftragsannahme_TelAs::on_OK_clicked()
 {
-  if(!checkWidjets())
+  QMap<QString,QString> map;
+  if(ui->radio_SE->isChecked())
   {
-    QMessageBox::warning(this,"Внимание ","Вы не заполнили обязательные поля ");
-    return;
+    map.insert("AKI","SE");
   }
-  QVector<QString> values;
-  QMap<QString,QString> *map=new QMap<QString,QString>;
-  map->insert("name",ui->line_Name_Name->text());
-  static toolsForDB db =  toolsForDB();
-  QSqlQuery qSqlQuery = db.returnTable("Auftragsannahme_TelAs",*map);
-  qSqlQuery.last();
-  if(qSqlQuery.at()+1 == 1)
+  else if (ui->radio_SL->isChecked())
   {
-    int i = 0;
-    while(i<qSqlQuery.record().count())
-    {
-      values.push_back(qSqlQuery.value(i).toString());
-      i++;
-    }
-    AUF_Alone = new Auftragsannahme_Alone(this->login,values);
-    AUF_Alone->show();
+    map.insert("AKI","SL");
   }
-
-  else if(qSqlQuery.at()+1>1)
+  else if (ui->radio_MI->isChecked())
   {
-    AUF_many = new Auftragsannahme_Many(this->login,qSqlQuery,this);
-    AUF_many->show();
+    map.insert("AKI","MI");
   }
-
   else
   {
-    QMessageBox::warning(this,"Name","jordan или не nejordan");
+    map.insert("AKI","MX");
+  }
+  switch(ui->tabWidget->currentIndex())
+  {
+    case 0:
+      {
+        break;
+      }
+    case 1:
+      {
+        if(ui->line_LtgBez_ONKzA->text()=="")
+        {
+          ui->line_LtgBez_ONKzA->setStyleSheet("background-color: red");
+          QMessageBox m;
+          m.setWindowTitle("Search");
+          m.setText( "You have not filled 'ONKzA' !");
+          QTimer::singleShot(5000, &m, SLOT(close()));
+          m.exec();
+        }
+        else
+        {
+          map.insert("ONKzA",ui->line_LtgBez_ONKzA->text());
+          this->search(map);
+        }
+        break;
+      }
+    case 2:
+      {
+        break;
+      }
+    case 3:
+      {
+        if(ui->line_Name_Name->text()=="")
+        {
+          ui->line_Name_Name->setStyleSheet("background-color: red");
+          QMessageBox m;
+          m.setWindowTitle("Search");
+          m.setText( "You have not filled 'Name' !");
+          QTimer::singleShot(5000, &m, SLOT(close()));
+          m.exec();
+        }
+        else
+        {
+          map.insert("Name",ui->line_Name_Name->text());
+          this->search(map);
+        }
+        break;
+      }
+    case 6:
+      {
+        if(ui->line_AuftragsNr_AuftragsNr->text()=="")
+        {
+          ui->line_AuftragsNr_AuftragsNr->setStyleSheet("background-color: red");
+          QMessageBox m;
+          m.setWindowTitle("Search");
+          m.setText( "You have not filled 'AuftragsNr' !");
+          QTimer::singleShot(5000, &m, SLOT(close()));
+          m.exec();
+        }
+        else
+        {
+          map.insert("AuftragsNr",ui->line_AuftragsNr_AuftragsNr->text());
+          this->search(map);
+        }
+        break;
+      }
   }
 }
 

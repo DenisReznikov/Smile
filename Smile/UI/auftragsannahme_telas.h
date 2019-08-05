@@ -31,11 +31,11 @@ private slots:
   void on_tabWidget_tabBarClicked(int index);
 
 private:
-  bool checkWidjets();
   QString login;
   Ui::Auftragsannahme_TelAs *ui;
   Auftragsannahme_Many *AUF_many;
   Auftragsannahme_Alone *AUF_Alone;
+  void search(QMap<QString,QString> map);
 
 };
 

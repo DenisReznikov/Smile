@@ -11,10 +11,8 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
   this->qSqlQuery=qSqlQuery;
-  qDebug()<<model->columnCount();
   model->removeColumns(11,model->columnCount()-11);
   this->createTable();
-
 }
 
 Auftragsannahme_Many::~Auftragsannahme_Many()
@@ -26,21 +24,23 @@ Auftragsannahme_Many::~Auftragsannahme_Many()
 
 void Auftragsannahme_Many::on_tableView_clicked(const QModelIndex &index)
 {
-  QSqlRecord rec = qSqlQuery.record();
+  ui->line_BigInfo->clear();
   qSqlQuery.seek(index.row());
-  ui->line_SO->setText(qSqlQuery.value(rec.indexOf("SO")).toString());
-  ui->line_f_ATZ->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),1)).toString());
-  ui->line_Name->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),6)).toString());
+  QList<QLineEdit *> box=ui->outFrame->findChildren<QLineEdit*>();
+  int b=11;
+  for(QLineEdit *i : box)
+  {
+    QString str="";
+    i->setText(qSqlQuery.value(b).toString());
+    b++;
+  }
+  ui->line_BigInfo->insertPlainText(qSqlQuery.value(b++).toString());
 }
 
 void Auftragsannahme_Many::on_tableView_doubleClicked(const QModelIndex &index)
 {
-  QVector<QString> values;
-  for(int i=0;i<model->columnCount();i++)
-  {
-    values.push_back((ui->tableView->model()->data(ui->tableView->model()->index(index.row(),i)).toString()));
-  }
-  auAlone =new Auftragsannahme_Alone(this->login,values,this);
+  qSqlQuery.seek(index.row());
+  auAlone =new Auftragsannahme_Alone(this->login,qSqlQuery,this);
   auAlone->show();
 }
 

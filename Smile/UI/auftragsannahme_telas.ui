@@ -145,7 +145,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>8</number>
+          <number>6</number>
          </property>
          <property name="elideMode">
           <enum>Qt::ElideLeft</enum>
@@ -1779,7 +1779,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QRadioButton" name="radioButton_6">
+            <widget class="QRadioButton" name="radio_SE">
              <property name="text">
               <string>SE</string>
              </property>
@@ -1802,7 +1802,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QRadioButton" name="radioButton_7">
+            <widget class="QRadioButton" name="radio_SL">
              <property name="text">
               <string>SL</string>
              </property>
@@ -1822,7 +1822,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QRadioButton" name="radioButton_8">
+            <widget class="QRadioButton" name="radio_MI">
              <property name="text">
               <string>MI</string>
              </property>
@@ -1842,7 +1842,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QRadioButton" name="radioButton_9">
+            <widget class="QRadioButton" name="radio_MX">
              <property name="text">
               <string>MX</string>
              </property>

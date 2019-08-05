@@ -68,6 +68,9 @@
            <property name="acceptDrops">
             <bool>true</bool>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -85,6 +88,9 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -95,7 +101,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_CRM_Auftr_Nr"/>
+          <widget class="QLineEdit" name="line_CRM_Auftr_Nr">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_8">
@@ -105,7 +115,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="OPD_FA_Nr">
+          <widget class="QLineEdit" name="line_OPD_FA_Nr">
            <property name="minimumSize">
             <size>
              <width>40</width>
@@ -117,6 +127,9 @@
              <width>40</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -167,7 +180,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_Druckkopf"/>
+          <widget class="QLineEdit" name="line_Druckkopf">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -187,7 +204,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_Auftragasart"/>
+          <widget class="QLineEdit" name="line_Auftragasart">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_9">
@@ -197,7 +218,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_Auftragsunterart"/>
+          <widget class="QLineEdit" name="line_Auftragsunterart">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -220,9 +245,12 @@
           <widget class="QLineEdit" name="line_VerweisauftragsNr">
            <property name="maximumSize">
             <size>
-             <width>90</width>
+             <width>16777215</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -256,9 +284,12 @@
           <widget class="QLineEdit" name="line_Kdl_Kenner">
            <property name="maximumSize">
             <size>
-             <width>200</width>
+             <width>16777215</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -336,6 +367,9 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
         </layout>
@@ -391,7 +425,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_Termin"/>
+            <widget class="QLineEdit" name="line_Termin">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLineEdit" name="line_Terminatrt">
@@ -400,6 +438,9 @@
                <width>20</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -421,7 +462,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_Kdbes_AS"/>
+            <widget class="QLineEdit" name="line_Kdbes_AS">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_20">
@@ -431,7 +476,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_Zeift"/>
+            <widget class="QLineEdit" name="line_Zeift">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton">
@@ -482,7 +531,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_Uhreseit_von"/>
+            <widget class="QLineEdit" name="line_Uhreseit_von">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_21">
@@ -492,7 +545,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_bis"/>
+            <widget class="QLineEdit" name="line_bis">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -518,6 +575,9 @@
                <width>20</width>
                <height>20</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -622,6 +682,9 @@
                  <height>20</height>
                 </size>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
              <item row="1" column="0">
@@ -657,6 +720,9 @@
                  <height>20</height>
                 </size>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
              <item row="2" column="0">
@@ -691,6 +757,9 @@
                  <width>16777215</width>
                  <height>20</height>
                 </size>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -731,6 +800,9 @@
                  <height>20</height>
                 </size>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
              <item row="1" column="0">
@@ -765,6 +837,9 @@
                  <width>16777215</width>
                  <height>20</height>
                 </size>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -801,6 +876,9 @@
                  <height>20</height>
                 </size>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
             </layout>
@@ -824,12 +902,12 @@
                   </size>
                  </property>
                  <property name="text">
-                  <string>DrdNc:</string>
+                  <string>OrdNr:</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QLineEdit" name="line_DrdNc">
+                <widget class="QLineEdit" name="line_OrdNr">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -841,6 +919,9 @@
                    <width>16777215</width>
                    <height>20</height>
                   </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -876,6 +957,9 @@
                    <width>16777215</width>
                    <height>20</height>
                   </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -916,6 +1000,9 @@
                    <height>20</height>
                   </size>
                  </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -950,6 +1037,9 @@
                    <width>25</width>
                    <height>20</height>
                   </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -995,56 +1085,22 @@
         <property name="frameShadow">
          <enum>QFrame::Sunken</enum>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_14">
-         <property name="spacing">
-          <number>5</number>
-         </property>
-         <property name="leftMargin">
-          <number>7</number>
-         </property>
-         <property name="topMargin">
-          <number>2</number>
-         </property>
-         <property name="rightMargin">
-          <number>7</number>
-         </property>
-         <property name="bottomMargin">
-          <number>2</number>
-         </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
            <item>
             <widget class="QLabel" name="label_32">
+             <property name="minimumSize">
+              <size>
+               <width>73</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="text">
               <string>VBKz:</string>
              </property>
             </widget>
            </item>
-           <item>
-            <widget class="QLabel" name="label_33">
-             <property name="text">
-              <string>OrgEtyp:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_34">
-             <property name="text">
-              <string>Rouying-ONKz:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_35">
-             <property name="text">
-              <string>Routing-Azb:</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
             <widget class="QLineEdit" name="line_VBz">
              <property name="minimumSize">
@@ -1055,9 +1111,29 @@
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_33">
+             <property name="minimumSize">
+              <size>
+               <width>73</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>OrgEtyp:</string>
              </property>
             </widget>
            </item>
@@ -1071,9 +1147,23 @@
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>Rouying-ONKz:</string>
              </property>
             </widget>
            </item>
@@ -1087,9 +1177,29 @@
              </property>
              <property name="maximumSize">
               <size>
-               <width>60</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QLabel" name="label_35">
+             <property name="minimumSize">
+              <size>
+               <width>73</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Routing-Azb:</string>
              </property>
             </widget>
            </item>
@@ -1103,9 +1213,12 @@
              </property>
              <property name="maximumSize">
               <size>
-               <width>55</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -1141,13 +1254,25 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_Kundennummer"/>
+          <widget class="QLineEdit" name="line_Kundennummer">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_FKTO"/>
+          <widget class="QLineEdit" name="line_FKTO">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_RuckrufNr"/>
+          <widget class="QLineEdit" name="line_RuckrufNr">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1175,7 +1300,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="line_Vertragstyp_Bedeufung"/>
+              <widget class="QLineEdit" name="line_Vertragstyp_Bedeufung">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
@@ -1201,7 +1330,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="line_Vertagsdatum"/>
+              <widget class="QLineEdit" name="line_Vertagsdatum">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="QLabel" name="label_41">
@@ -1214,6 +1347,9 @@
               <widget class="QLineEdit" name="line_Duma_ONKz">
                <property name="text">
                 <string/>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -1255,7 +1391,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="line_Duma_Nr"/>
+              <widget class="QLineEdit" name="line_Duma_Nr">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>

@@ -2,7 +2,7 @@
 #define AUFTRAGSANNAHME_ALONE_H
 #include <QDebug>
 #include <QMainWindow>
-
+#include <QSqlQuery>
 namespace Ui {
   class Auftragsannahme_Alone;
 }
@@ -11,7 +11,7 @@ class Auftragsannahme_Alone : public QMainWindow
 {
   Q_OBJECT
 public:
-  explicit Auftragsannahme_Alone(QString login,QVector<QString> value,QWidget *parent = 0);
+  explicit Auftragsannahme_Alone(QString login,QSqlQuery qSqlQuery,QWidget *parent = 0);
   ~Auftragsannahme_Alone();
 
 private slots:
@@ -19,6 +19,7 @@ private slots:
   void on_button_Abbrechen_clicked();
 
 private:
+  void addLine(QSqlQuery qSqlQuery);
   Ui::Auftragsannahme_Alone *ui;
 };
 
