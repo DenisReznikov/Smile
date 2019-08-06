@@ -1,6 +1,7 @@
 #include "auftragsannahme_telas.h"
 #include "ui_auftragsannahme_telas.h"
 #include <QTimer>
+#include <QDesktopWidget>
 Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_TelAs)
@@ -9,6 +10,10 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   ui->data_grobeZust_Zeitbereich->setDate(QDate::currentDate());
   ui->Name_person->setText(login);
   this->login=login;
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  qDebug()<<mainScreenSize.height();
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
 }
 void Auftragsannahme_TelAs::search(QMap<QString,QString> map)
 {

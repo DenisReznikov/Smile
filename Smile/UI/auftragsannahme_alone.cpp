@@ -1,6 +1,6 @@
 #include "auftragsannahme_alone.h"
 #include "ui_auftragsannahme_alone.h"
-#include <sstream>
+#include <QDesktopWidget>
 Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QSqlQuery qSqlQuery,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_Alone)
@@ -8,6 +8,10 @@ Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QSqlQuery qSqlQuery,Q
   ui->setupUi(this);
   ui->Name_person->setText(login);
   this->addLine(qSqlQuery);
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  qDebug()<<mainScreenSize.height();
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
 
 }
 

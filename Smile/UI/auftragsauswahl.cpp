@@ -1,6 +1,6 @@
 #include "auftragsauswahl.h"
 #include "ui_auftragsauswahl.h"
-
+#include <QDesktopWidget>
 Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsauswahl)
@@ -9,6 +9,10 @@ Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *pare
   this->login=login;
   ui->Name_person->setText(login);
   ui->labelDispoCenter->setText(DispoCenter);
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
+
 }
 
 Auftragsauswahl::~Auftragsauswahl()

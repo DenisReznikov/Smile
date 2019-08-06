@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QDesktopWidget>
 MainWindow::MainWindow(QString login,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow)
@@ -10,6 +10,11 @@ MainWindow::MainWindow(QString login,QWidget *parent) :
   Auswahl=0;
   ui->Name_person->setText(login);
   this->login=login;
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  qDebug()<<mainScreenSize.height();
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
+
 }
 
 MainWindow::~MainWindow()

@@ -1,6 +1,6 @@
 #include "auswahl_dispo_center.h"
 #include "ui_auswahl_dispo_center.h"
-
+#include <QDesktopWidget>
 Auswahl_Dispo_Center::Auswahl_Dispo_Center(QString login,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auswahl_Dispo_Center)
@@ -13,6 +13,9 @@ Auswahl_Dispo_Center::Auswahl_Dispo_Center(QString login,QWidget *parent) :
   QMap<QString,QString> map;
   QSqlQuery qSqlQuery= db.returnTable("Auswahl_Dispo_Center",map);
   model->setQuery(qSqlQuery);
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
   this->createTable();
 }
 

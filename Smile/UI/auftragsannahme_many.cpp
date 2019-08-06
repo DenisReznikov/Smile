@@ -1,6 +1,7 @@
 #include "auftragsannahme_many.h"
 #include "ui_auftragsannahme_many.h"
 #include <QSqlRecord>
+#include <QDesktopWidget>
 Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsannahme_Many)
@@ -12,6 +13,10 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   model->setQuery(qSqlQuery);
   this->qSqlQuery=qSqlQuery;
   model->removeColumns(11,model->columnCount()-11);
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  qDebug()<<mainScreenSize.height();
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
   this->createTable();
 }
 

@@ -1,6 +1,6 @@
 #include "auftragsliste.h"
 #include "ui_auftragsliste.h"
-
+#include <QDesktopWidget>
 Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::Auftragsliste)
@@ -10,6 +10,9 @@ Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWi
   ui->labelDispo->setText(dispo);
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
+  QDesktopWidget widget;
+  QRect mainScreenSize = widget.screenGeometry(this);
+  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
   createTable();
 }
 
@@ -34,14 +37,15 @@ void Auftragsliste::createTable()
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(7, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::Stretch);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
+
 }
 
 void Auftragsliste::on_button_Abbrechen_clicked()
