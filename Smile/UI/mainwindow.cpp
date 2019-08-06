@@ -30,7 +30,14 @@ void MainWindow::on_Auftragsauswahl_clicked()
     Auf->show();
   }
 }
-
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+  event->ignore();
+  if((Auf==0||!Auf->isVisible())&&(Auswahl==0||!Auswahl->isVisible()))
+  {
+    event->accept();
+  }
+}
 void MainWindow::on_Dispositionsmodul_clicked()
 {
   if(Auswahl==0||!Auswahl->isVisible())

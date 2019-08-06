@@ -25,6 +25,7 @@ private:
   Ui::MainWindow *ui;
   Auftragsannahme_TelAs *Auf;
   Auswahl_Dispo_Center *Auswahl;
+  void closeEvent(QCloseEvent *event);
 };
 
 #endif // MAINWINDOW_H
