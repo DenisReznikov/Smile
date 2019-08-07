@@ -12,9 +12,7 @@ MainWindow::MainWindow(QString login,QWidget *parent) :
   this->login=login;
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
-  qDebug()<<mainScreenSize.height();
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
-
 }
 
 MainWindow::~MainWindow()

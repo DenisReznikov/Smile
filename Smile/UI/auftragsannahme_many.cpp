@@ -15,7 +15,6 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   model->removeColumns(11,model->columnCount()-11);
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
-  qDebug()<<mainScreenSize.height();
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
   this->createTable();
 }

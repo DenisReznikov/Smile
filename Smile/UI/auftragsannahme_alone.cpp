@@ -10,9 +10,7 @@ Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QSqlQuery qSqlQuery,Q
   this->addLine(qSqlQuery);
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
-  qDebug()<<mainScreenSize.height();
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
-
 }
 
 Auftragsannahme_Alone::~Auftragsannahme_Alone()
@@ -80,4 +78,10 @@ void Auftragsannahme_Alone::addLine(QSqlQuery qSqlQuery)
   }
   ui->line_Duma_ONKz->setText(qSqlQuery.value(53).toString());
   ui->line_Duma_Nr->setText(qSqlQuery.value(54).toString());
+  ui->check_Standorrtanschrift->setEnabled(false);
+  ui->check_Kundenanschrift->setEnabled(false);
+  ui->big_Text_Name->insertPlainText("Name and Firm: ");
+  ui->big_Text_Name->appendPlainText("  "+qSqlQuery.value(6).toString()+".");
+  ui->big_Text_Name->appendPlainText("Name: ");
+  ui->big_Text_Name->appendPlainText("  "+qSqlQuery.value(15).toString()+".");
 }

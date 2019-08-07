@@ -12,7 +12,6 @@ Auftragsannahme_TelAs::Auftragsannahme_TelAs(QString login,QWidget *parent) :
   this->login=login;
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
-  qDebug()<<mainScreenSize.height();
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
 }
 void Auftragsannahme_TelAs::search(QMap<QString,QString> map)
@@ -124,6 +123,10 @@ void Auftragsannahme_TelAs::on_OK_clicked()
           map.insert("AuftragsNr",ui->line_AuftragsNr_AuftragsNr->text());
           this->search(map);
         }
+        break;
+      }
+    default:
+      {
         break;
       }
   }
