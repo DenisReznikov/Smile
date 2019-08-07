@@ -1,5 +1,5 @@
 
-QT +=  core gui sql testlib
+QT +=  core gui sql testlib multimedia
 CONFIG += qt warn_on depend_includepath testcase console
 QT += widgets
 TEMPLATE = app

@@ -24,6 +24,10 @@ private slots:
   void on_login_clicked();
   void on_lineUserPassword_returnPressed();
 
+  void on_cancelButton_clicked();
+
+  void on_newPasswort_clicked();
+
 private:
 
 
