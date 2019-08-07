@@ -41,7 +41,7 @@
             <widget class="QLabel" name="label">
              <property name="minimumSize">
               <size>
-               <width>118</width>
+               <width>124</width>
                <height>0</height>
               </size>
              </property>
@@ -51,7 +51,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_15"/>
+            <widget class="QLineEdit" name="line_Smile_AuftragsNr"/>
            </item>
            <item>
             <spacer name="horizontalSpacer">
@@ -74,10 +74,10 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="label_Auftragsklasse">
              <property name="minimumSize">
               <size>
-               <width>118</width>
+               <width>124</width>
                <height>0</height>
               </size>
              </property>
@@ -87,7 +87,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_16"/>
+            <widget class="QLineEdit" name="line_Auftragsklasse"/>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_6">
@@ -127,15 +127,15 @@
            <item>
             <widget class="QLabel" name="label_3">
              <property name="text">
-              <string>AuftragsNr./OPD-FA-Nr:</string>
+              <string>AuftragsNr ./ OPD-FA-Nr:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_17"/>
+            <widget class="QLineEdit" name="line_AuftragsNr"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_18"/>
+            <widget class="QLineEdit" name="line_OPD_FA_Nr"/>
            </item>
            <item>
             <spacer name="horizontalSpacer_5">
@@ -196,7 +196,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_13"/>
+            <widget class="QLineEdit" name="line_KundenNr"/>
            </item>
           </layout>
          </item>
@@ -216,7 +216,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_12"/>
+            <widget class="QLineEdit" name="line_Name"/>
            </item>
           </layout>
          </item>
@@ -236,7 +236,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_11"/>
+            <widget class="QLineEdit" name="line_StraBe"/>
            </item>
            <item>
             <widget class="QLabel" name="label_15">
@@ -246,7 +246,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_14"/>
+            <widget class="QLineEdit" name="line_HsNr"/>
            </item>
           </layout>
          </item>
@@ -261,12 +261,12 @@
               </size>
              </property>
              <property name="text">
-              <string>PLZ</string>
+              <string>PLZ:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_9"/>
+            <widget class="QLineEdit" name="line_PLZ"/>
            </item>
            <item>
             <widget class="QLabel" name="label_14">
@@ -276,7 +276,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_10"/>
+            <widget class="QLineEdit" name="line_Ort"/>
            </item>
           </layout>
          </item>
@@ -331,7 +331,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_19"/>
+            <widget class="QLineEdit" name="line_VertragsNr"/>
            </item>
            <item>
             <widget class="QLabel" name="label_6">
@@ -341,7 +341,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_21"/>
+            <widget class="QLineEdit" name="line_TDN"/>
            </item>
           </layout>
          </item>
@@ -355,7 +355,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_20">
+            <widget class="QLineEdit" name="line_NachtragsNr">
              <property name="minimumSize">
               <size>
                <width>86</width>
@@ -408,7 +408,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="line_Auftragsart"/>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_17">
@@ -418,7 +418,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_8"/>
+          <widget class="QLineEdit" name="line_Auftragsunsunterait"/>
          </item>
         </layout>
        </widget>
@@ -684,7 +684,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_33"/>
+             <widget class="QLineEdit" name="line_ONKz"/>
             </item>
            </layout>
           </item>
@@ -698,7 +698,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_34"/>
+             <widget class="QLineEdit" name="line_AsB"/>
             </item>
            </layout>
           </item>
@@ -751,7 +751,7 @@
                <item row="0" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_16">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit">
+                  <widget class="QLineEdit" name="line_PlanGr">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -802,14 +802,14 @@
                   </size>
                  </property>
                  <property name="text">
-                  <string>bearbZust:</string>
+                  <string>BearbZust:</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_17">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_2">
+                  <widget class="QLineEdit" name="line_BearbZust">
                    <property name="minimumSize">
                     <size>
                      <width>95</width>
@@ -861,7 +861,7 @@
                <item row="2" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_18">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_3"/>
+                  <widget class="QLineEdit" name="line_Wartegrund"/>
                  </item>
                  <item>
                   <widget class="QPushButton" name="pushButton_2">
@@ -912,7 +912,7 @@
                <item row="3" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_19">
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_4"/>
+                  <widget class="QLineEdit" name="line_ZV_Nr"/>
                  </item>
                  <item>
                   <widget class="QPushButton" name="pushButton_4">
@@ -976,7 +976,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_23">
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_5"/>
+                      <widget class="QLineEdit" name="line_Servicemontuer"/>
                      </item>
                      <item>
                       <widget class="QPushButton" name="pushButton_5">
@@ -1012,7 +1012,7 @@
                     </layout>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_6"/>
+                    <widget class="QLineEdit" name="line_OrgEtype"/>
                    </item>
                   </layout>
                  </item>
@@ -1103,7 +1103,7 @@ WG</string>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_32"/>
+              <widget class="QLineEdit" name="line_Delta_ATZ"/>
              </item>
             </layout>
            </item>

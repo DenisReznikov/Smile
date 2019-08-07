@@ -10,6 +10,7 @@ Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWi
   ui->labelDispo->setText(dispo);
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
+  model->removeColumns(11,model->columnCount()-11);
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
@@ -45,7 +46,7 @@ void Auftragsliste::createTable()
   ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::Stretch);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
-
+  ui->tableView->horizontalHeader()->
 }
 
 void Auftragsliste::on_button_Abbrechen_clicked()
@@ -55,7 +56,7 @@ void Auftragsliste::on_button_Abbrechen_clicked()
 
 void Auftragsliste::on_tableView_clicked(const QModelIndex &index)
 {
- ui->lineNBezug->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),8)).toString());
+  ui->lineNBezug->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),8)).toString());
 }
 
 void Auftragsliste::on_tableView_doubleClicked(const QModelIndex &index)

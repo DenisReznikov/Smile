@@ -53,7 +53,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit">
+              <widget class="QLineEdit" name="line_Auftrags_Nr">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
@@ -86,7 +86,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_4">
+              <widget class="QLineEdit" name="line_PlanGr">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -224,7 +224,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_6">
+              <widget class="QLineEdit" name="line_AuftrUKI">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -247,7 +247,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_9">
+              <widget class="QLineEdit" name="line_Prioritat">
                <property name="maximumSize">
                 <size>
                  <width>50</width>
@@ -282,7 +282,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_2">
+                  <widget class="QLineEdit" name="line_Servicemonteur">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -381,7 +381,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_3"/>
+                  <widget class="QLineEdit" name="line_Grobe_Zustandigkeit"/>
                  </item>
                 </layout>
                </item>
@@ -395,7 +395,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_11">
+                  <widget class="QLineEdit" name="line_Termin">
                    <property name="maximumSize">
                     <size>
                      <width>80</width>
@@ -405,7 +405,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_12">
+                  <widget class="QLineEdit" name="line_ATZ_1">
                    <property name="maximumSize">
                     <size>
                      <width>40</width>
@@ -422,7 +422,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_13">
+                  <widget class="QLineEdit" name="line_ATZ_2">
                    <property name="maximumSize">
                     <size>
                      <width>40</width>
@@ -455,7 +455,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_5">
+                <widget class="QLineEdit" name="line_Erledigungsdauer">
                  <property name="maximumSize">
                   <size>
                    <width>70</width>
@@ -504,7 +504,7 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_14">
+                <widget class="QLineEdit" name="line_Auftrage_im_Bundel">
                  <property name="maximumSize">
                   <size>
                    <width>25</width>
@@ -538,7 +538,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_10">
+                <widget class="QLineEdit" name="line_Skill">
                  <property name="maximumSize">
                   <size>
                    <width>70</width>
@@ -586,7 +586,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_15"/>
+                <widget class="QLineEdit" name="line_TDN"/>
                </item>
               </layout>
              </item>
@@ -614,7 +614,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_7"/>
+            <widget class="QLineEdit" name="line_SchaltArt"/>
            </item>
            <item>
             <spacer name="horizontalSpacer_4">
@@ -647,7 +647,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_8">
+            <widget class="QLineEdit" name="line_Vabst_ID">
              <property name="minimumSize">
               <size>
                <width>120</width>
@@ -670,7 +670,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_16">
+            <widget class="QLineEdit" name="line_Anzaht">
              <property name="maximumSize">
               <size>
                <width>25</width>
@@ -687,7 +687,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_17">
+            <widget class="QLineEdit" name="line_Vollstanding">
              <property name="maximumSize">
               <size>
                <width>30</width>
@@ -717,7 +717,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_19"/>
+            <widget class="QLineEdit" name="line_CRM"/>
            </item>
            <item>
             <spacer name="horizontalSpacer_2">
@@ -767,7 +767,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_18">
+          <widget class="QLineEdit" name="line_ONKz">
            <property name="maximumSize">
             <size>
              <width>60</width>
@@ -807,7 +807,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_20">
+          <widget class="QLineEdit" name="line_AzB">
            <property name="maximumSize">
             <size>
              <width>40</width>
@@ -847,7 +847,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_21">
+          <widget class="QLineEdit" name="line_PLZ">
            <property name="maximumSize">
             <size>
              <width>60</width>
@@ -857,7 +857,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_23">
+          <widget class="QLineEdit" name="line_Ortsname">
            <property name="maximumSize">
             <size>
              <width>200</width>
@@ -897,10 +897,10 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_22"/>
+          <widget class="QLineEdit" name="line_StraNername"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_24">
+          <widget class="QLineEdit" name="line_HsHr">
            <property name="maximumSize">
             <size>
              <width>50</width>
@@ -910,7 +910,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_25">
+          <widget class="QLineEdit" name="line_HsHtZusatz">
            <property name="maximumSize">
             <size>
              <width>60</width>
@@ -960,7 +960,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+          <widget class="QPlainTextEdit" name="big_line_Auftragsbeschreibung"/>
          </item>
         </layout>
        </item>

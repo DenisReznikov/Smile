@@ -78,12 +78,12 @@
          <item>
           <widget class="QLabel" name="label">
            <property name="text">
-            <string>LATZ:</string>
+            <string>f .ATZ:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="line_f_ATZ"/>
          </item>
          <item>
           <widget class="QLabel" name="label_6">
@@ -93,7 +93,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="line_s_EZ"/>
          </item>
          <item>
           <widget class="QLabel" name="label_7">
@@ -103,7 +103,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="line_SO"/>
          </item>
          <item>
           <widget class="QLabel" name="label_8">
@@ -127,7 +127,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="line_Name"/>
          </item>
          <item>
           <widget class="QLabel" name="label_9">
@@ -137,7 +137,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_9">
+          <widget class="QLineEdit" name="line_A_A">
            <property name="text">
             <string/>
            </property>
@@ -151,7 +151,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_10">
+          <widget class="QLineEdit" name="line_A_UA">
            <property name="text">
             <string/>
            </property>
@@ -160,7 +160,7 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
           <layout class="QFormLayout" name="formLayout">
            <item row="0" column="0">
@@ -171,22 +171,42 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QLineEdit" name="lineEdit_2"/>
+            <widget class="QLineEdit" name="line_VBKz"/>
            </item>
-           <item row="1" column="0">
+           <item row="2" column="0">
             <widget class="QLabel" name="label_4">
              <property name="text">
               <string>ZM:</string>
              </property>
             </widget>
            </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="line_ZM"/>
+           </item>
            <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEdit_4"/>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+          <widget class="QPlainTextEdit" name="big_info">
+           <property name="minimumSize">
+            <size>
+             <width>580</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -200,7 +220,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="line_Vabst_ID"/>
          </item>
          <item>
           <widget class="QLabel" name="label_11">
@@ -210,7 +230,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_11"/>
+          <widget class="QLineEdit" name="line_Anzahl"/>
          </item>
          <item>
           <widget class="QLabel" name="label_12">
@@ -220,7 +240,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_12"/>
+          <widget class="QLineEdit" name="line_Vollstandg"/>
          </item>
          <item>
           <widget class="QLabel" name="label_13">
@@ -230,7 +250,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_13"/>
+          <widget class="QLineEdit" name="line_CRM"/>
          </item>
         </layout>
        </item>

@@ -22,6 +22,27 @@ Auftragsauswahl::~Auftragsauswahl()
 
 void Auftragsauswahl::on_OK_clicked()
 {
+
+  QMap<QString,QString> map;
+  if(ui->line_Name->text()!="*"&&ui->line_Name->text()!="")
+  {
+    map.insert("Name",ui->line_Name->text());
+  }
+/* if (ui->line_StraBe->text()!="*"&&ui->line_StraBe->text()!="")
+  {
+    map.insert("Strabe",ui->line_StraBe->text());
+  }
+  */
+  else if (ui->radio_MI->isChecked())
+  {
+    map.insert("AKI","MI");
+  }
+  else
+  {
+    map.insert("AKI","MX");
+  }
+
+
   QMap<QString,QString> map;
   toolsForDB b;
   QSqlQuery QSqlQ=b.returnTable("Auftragsliste",map);
