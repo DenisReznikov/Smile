@@ -9,8 +9,7 @@ The application is divided into three main parts - GUI, business logic and serve
 ```
 Smile/
 ├── Smile/
-|   ├── GUI/                       // Presentation tier
-|   ├── business logic/            // Application tier (business logic, logic tier, or middle tier)
+|   ├── GUI/                       // GUI & slightly business logic
 |   ├── Server/                    // Data tier
 ├── Tests/                         // Unit test
 ```
