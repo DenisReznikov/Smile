@@ -95,13 +95,8 @@ void Authentication::on_lineUserPassword_returnPressed()
 }
 
 
-void Authentication::on_cancelButton_clicked()
-{
-  QSound *bells = new QSound("path.wav");
-  bells->play();
-}
 
-void Authentication::on_newPasswort_clicked()
+void Authentication::on_cancelButton_clicked()
 {
   QSound *bells = new QSound("path.wav");
   bells->play();
