@@ -13,7 +13,6 @@ Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *pare
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
-
 }
 
 Auftragsauswahl::~Auftragsauswahl()
@@ -85,8 +84,3 @@ void Auftragsauswahl::on_button_Abbrechen_clicked()
 }
 
 
-void Auftragsauswahl::on_button_BearbZust_clicked()
-{
-  bearbZust = new BearbZust(this);
-  bearbZust->show();
-}

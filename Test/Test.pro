@@ -17,10 +17,10 @@ SOURCES += \
         ../Smile/UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
         ../Smile/UI/mainwindow.cpp \
         ../Smile/UI/new_passwort.cpp \
+        ../Smile/UI/bearbzust.cpp \
         tst_authentication_test.cpp
 
 HEADERS += \
-  ../Smile/UI/bearbzust.h \
   ../Smile/Server/toolsfordb.h \
   ../Smile/UI/auftragsannahme_alone.h \
   ../Smile/UI/auftragsannahme_many.h \
@@ -32,6 +32,7 @@ HEADERS += \
   ../Smile/UI/base_window_with_table.h \
   ../Smile/UI/dispositionsdater_for_hvt_schaltauftrag.h \
   ../Smile/UI/mainwindow.h \
+  ../Smile/UI/bearbzust.h \
   ../Smile/UI/new_passwort.h
 FORMS  +=\
   ../Smile/UI/auftragsannahme_alone.ui \
