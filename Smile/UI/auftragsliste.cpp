@@ -8,6 +8,7 @@ Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWi
   ui->setupUi(this);
   ui->Name_person->setText(login);
   ui->labelDispo->setText(dispo);
+  this->qSqlQuery =qSqlQuery;
   model = new QSqlQueryModel;
   model->setQuery(qSqlQuery);
   model->removeColumns(11,model->columnCount()-11);
@@ -46,7 +47,6 @@ void Auftragsliste::createTable()
   ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::Stretch);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->
 }
 
 void Auftragsliste::on_button_Abbrechen_clicked()
@@ -56,16 +56,27 @@ void Auftragsliste::on_button_Abbrechen_clicked()
 
 void Auftragsliste::on_tableView_clicked(const QModelIndex &index)
 {
-  ui->lineNBezug->setText(ui->tableView->model()->data(ui->tableView->model()->index(index.row(),8)).toString());
+  ui->big_info->clear();
+  qSqlQuery.seek(index.row());
+  ui->line_f_ATZ->setText(qSqlQuery.value(11).toString());
+  ui->line_s_EZ->setText(qSqlQuery.value(12).toString());
+  ui->line_SO->setText(qSqlQuery.value(13).toString());
+  ui->line_NBezug->setText(qSqlQuery.value(14).toString());
+  ui->line_Name->setText(qSqlQuery.value(15).toString());
+  ui->line_A_A->setText(qSqlQuery.value(16).toString());
+  ui->line_A_UA->setText(qSqlQuery.value(17).toString());
+  ui->line_VBKz->setText(qSqlQuery.value(18).toString());
+  ui->line_ZM->setText(qSqlQuery.value(19).toString());
+  ui->line_Vabst_ID->setText(qSqlQuery.value(20).toString());
+  ui->line_Anzahl->setText(qSqlQuery.value(21).toString());
+  ui->line_Vollstandg->setText(qSqlQuery.value(22).toString());
+  ui->line_CRM->setText(qSqlQuery.value(23).toString());
+  ui->big_info->insertPlainText(qSqlQuery.value(24).toString());
 }
 
 void Auftragsliste::on_tableView_doubleClicked(const QModelIndex &index)
 {
-  QVector<QString> values;
-  for(int i=0;i<model->columnCount();i++)
-  {
-    values.push_back((ui->tableView->model()->data(ui->tableView->model()->index(index.row(),i)).toString()));
-  }
-  DispoHvt=new Dispositionsdater_for_HVt_Schaltauftrag(this->login,ui->labelDispo->text(),values,this);
+  qSqlQuery.seek(index.row());
+  DispoHvt=new Dispositionsdater_for_HVt_Schaltauftrag(this->login,ui->labelDispo->text(),qSqlQuery,this);
   DispoHvt->show();
 }

@@ -145,7 +145,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>9</number>
+          <number>7</number>
          </property>
          <property name="elideMode">
           <enum>Qt::ElideLeft</enum>
@@ -1274,8 +1274,17 @@
               <layout class="QHBoxLayout" name="horizontalLayout_59">
                <item>
                 <widget class="QLabel" name="label_83">
+                 <property name="minimumSize">
+                  <size>
+                   <width>75</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="text">
                   <string>FremdauftrNr:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>

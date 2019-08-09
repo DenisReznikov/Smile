@@ -20,6 +20,12 @@
    <layout class="QVBoxLayout" name="verticalLayout_9">
     <item>
      <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>219</height>
+       </size>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Box</enum>
       </property>
@@ -27,6 +33,19 @@
        <enum>QFrame::Sunken</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_15">
          <item>
@@ -59,6 +78,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -98,6 +120,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -188,16 +213,6 @@
                  <height>16777215</height>
                 </size>
                </property>
-               <item>
-                <property name="text">
-                 <string>of - offen</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>of2</string>
-                </property>
-               </item>
               </widget>
              </item>
             </layout>
@@ -237,6 +252,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
              <item>
@@ -253,6 +271,9 @@
                  <width>50</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -288,6 +309,9 @@
                      <width>0</width>
                      <height>0</height>
                     </size>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -381,7 +405,11 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="line_Grobe_Zustandigkeit"/>
+                  <widget class="QLineEdit" name="line_Grobe_Zustandigkeit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -402,6 +430,9 @@
                      <height>16777215</height>
                     </size>
                    </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
                   </widget>
                  </item>
                  <item>
@@ -411,6 +442,9 @@
                      <width>40</width>
                      <height>16777215</height>
                     </size>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -428,6 +462,9 @@
                      <width>40</width>
                      <height>16777215</height>
                     </size>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -461,6 +498,9 @@
                    <width>70</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -511,6 +551,9 @@
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -544,6 +587,9 @@
                    <width>70</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -586,7 +632,11 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="line_TDN"/>
+                <widget class="QLineEdit" name="line_TDN">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -595,6 +645,19 @@
           </layout>
          </item>
         </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -614,7 +677,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_SchaltArt"/>
+            <widget class="QLineEdit" name="line_SchaltArt">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <spacer name="horizontalSpacer_4">
@@ -660,6 +727,9 @@
                <height>16777215</height>
               </size>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item>
@@ -677,6 +747,9 @@
                <height>16777215</height>
               </size>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item>
@@ -693,6 +766,9 @@
                <width>30</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -717,7 +793,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="line_CRM"/>
+            <widget class="QLineEdit" name="line_CRM">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <spacer name="horizontalSpacer_2">
@@ -738,6 +818,19 @@
           </layout>
          </item>
         </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -773,6 +866,9 @@
              <width>60</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -814,6 +910,9 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -854,6 +953,9 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -863,6 +965,9 @@
              <width>200</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -897,7 +1002,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_StraNername"/>
+          <widget class="QLineEdit" name="line_StraNername">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLineEdit" name="line_HsHr">
@@ -906,6 +1015,9 @@
              <width>50</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -916,6 +1028,9 @@
              <width>60</width>
              <height>16777215</height>
             </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -960,7 +1075,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QPlainTextEdit" name="big_line_Auftragsbeschreibung"/>
+          <widget class="QPlainTextEdit" name="big_line_Auftragsbeschreibung">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>

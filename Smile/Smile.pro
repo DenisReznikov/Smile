@@ -33,6 +33,7 @@ SOURCES += \
         UI/auswahl_dispo_center.cpp \
         UI/authentication.cpp \
         UI/base_window_with_table.cpp \
+        UI/bearbzust.cpp \
         UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
         UI/mainwindow.cpp \
         UI/new_passwort.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
   UI/auswahl_dispo_center.h \
   UI/authentication.h \
   UI/base_window_with_table.h \
+  UI/bearbzust.h \
   UI/dispositionsdater_for_hvt_schaltauftrag.h \
   UI/mainwindow.h \
   UI/new_passwort.h
@@ -65,6 +67,7 @@ FORMS += \
   UI/auftragsliste.ui \
   UI/auswahl_dispo_center.ui \
   UI/authentication.ui \
+  UI/bearbzust.ui \
   UI/dispositionsdater_for_hvt_schaltauftrag.ui \
   UI/mainwindow.ui \
   UI/new_passwort.ui

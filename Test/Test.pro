@@ -20,6 +20,7 @@ SOURCES += \
         tst_authentication_test.cpp
 
 HEADERS += \
+  ../Smile/UI/bearbzust.h \
   ../Smile/Server/toolsfordb.h \
   ../Smile/UI/auftragsannahme_alone.h \
   ../Smile/UI/auftragsannahme_many.h \
@@ -42,6 +43,7 @@ FORMS  +=\
   ../Smile/UI/authentication.ui \
   ../Smile/UI/dispositionsdater_for_hvt_schaltauftrag.ui \
   ../Smile/UI/mainwindow.ui \
-  ../Smile/UI/new_passwort.ui
+  ../Smile/UI/new_passwort.ui \
+  ../Smile/UI/bearbzust.ui
 
 INCLUDEPATH += $$PWD/..

@@ -31,6 +31,7 @@ private:
   Ui::Auftragsliste *ui;
   QSqlQueryModel *model;
   Dispositionsdater_for_HVt_Schaltauftrag *DispoHvt;
+  QSqlQuery qSqlQuery;
 };
 
 #endif // AUFTRAGSLISTE_H
