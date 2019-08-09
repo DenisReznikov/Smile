@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/DenisReznikov/Smile.svg?branch=master)](https://travis-ci.org/DenisReznikov/Smile)
 [![Build status](https://ci.appveyor.com/api/projects/status/c6oyyokjn0ffn8n5/branch/master?svg=true)](https://ci.appveyor.com/project/DenisReznikov/smile/branch/master)
 # Smile
 ![1463472544_7](https://user-images.githubusercontent.com/52967686/62469134-53cb6600-b7a0-11e9-832f-6645c97f96ad.gif)
