@@ -84,3 +84,13 @@ void Auftragsauswahl::on_button_Abbrechen_clicked()
 }
 
 
+\
+
+void Auftragsauswahl::on_button_BearbZust_clicked()
+{
+  bearbZust = new BearbZust(this);
+  bearbZust->setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+  bearbZust->show();
+  bearbZust->exec();
+  ui->line_BearbZust->setText(bearbZust->ret);
+}

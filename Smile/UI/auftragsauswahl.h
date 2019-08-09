@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "Smile/Server/toolsfordb.h"
 #include "Smile/UI/dispositionsdater_for_hvt_schaltauftrag.h"
-#include "Smile/UI/bearbzust.h"
+#include "bearbzust.h"
 namespace Ui {
   class Auftragsauswahl;
 }
@@ -23,13 +23,14 @@ private slots:
   void on_button_Abbrechen_clicked();
 
 
+  void on_button_BearbZust_clicked();
+
 private:
   void search(QMap<QString,QString> map);
   Ui::Auftragsauswahl *ui;
   Auftragsliste *auftragsliste;
   Dispositionsdater_for_HVt_Schaltauftrag *dispo;
   BearbZust *bearbZust;
-  void addBearbZust(QString str);
 };
 
 #endif // AUFTRAGSAUSWAHL_H
