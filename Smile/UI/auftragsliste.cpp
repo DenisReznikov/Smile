@@ -9,7 +9,7 @@ Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWi
   ui->Name_person->setText(login);
   ui->labelDispo->setText(dispo);
   this->qSqlQuery =qSqlQuery;
-  model = new QSqlQueryModel;
+  model = new MSqlQueryModel;
   model->setQuery(qSqlQuery);
   model->removeColumns(11,model->columnCount()-11);
   QDesktopWidget widget;

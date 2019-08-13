@@ -3,7 +3,7 @@
 #include "base_window_with_table.h"
 #include <QMainWindow>
 #include <QSqlDatabase>
-#include <QSqlQueryModel>
+#include "Smile/UI/msqlquerymodel.h"
 #include <Smile/UI/auftragsannahme_alone.h>
 #include <QSqlError>
 #include "auftragsannahme_alone.h"
@@ -31,7 +31,7 @@ private slots:
 
 private:
   void createTable();
-  QSqlQueryModel *model;
+  MSqlQueryModel *model;
   QSqlDatabase db;
   QString login;
   QSqlQuery qSqlQuery;

@@ -2,12 +2,13 @@
 #include "ui_bearbzust.h"
 #include <QDebug>
 #include <QDesktopWidget>
+
 BearbZust::BearbZust(QWidget *parent) :
   QDialog(parent),
   ui(new Ui::BearbZust)
 {
   ui->setupUi(this);
-  model = new QSqlQueryModel;
+  model = new MSqlQueryModel;
   static toolsForDB db =  toolsForDB();
   QMap<QString,QString> map;
   QSqlQuery qSqlQuery= db.returnTable("BearbZust",map);

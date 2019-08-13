@@ -36,6 +36,7 @@ SOURCES += \
         UI/bearbzust.cpp \
         UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
         UI/mainwindow.cpp \
+        UI/msqlquerymodel.cpp \
         UI/new_passwort.cpp \
         main.cpp
 
@@ -52,6 +53,7 @@ HEADERS += \
   UI/bearbzust.h \
   UI/dispositionsdater_for_hvt_schaltauftrag.h \
   UI/mainwindow.h \
+  UI/msqlquerymodel.h \
   UI/new_passwort.h
 
 # Default rules for deployment.

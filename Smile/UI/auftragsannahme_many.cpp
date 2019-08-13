@@ -9,7 +9,7 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   ui->setupUi(this);
   ui->Name_person->setText(login);
   this->login=login;
-  model = new QSqlQueryModel;
+  model = new MSqlQueryModel;
   model->setQuery(qSqlQuery);
   this->qSqlQuery=qSqlQuery;
   model->removeColumns(11,model->columnCount()-11);

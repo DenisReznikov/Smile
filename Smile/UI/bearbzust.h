@@ -2,6 +2,7 @@
 #define BEARBZUST_H
 #include <QSqlQueryModel>
 #include <QDialog>
+#include <Smile/UI/msqlquerymodel.h>
 #include <Smile/Server/toolsfordb.h>
 namespace Ui {
   class BearbZust;
@@ -20,7 +21,7 @@ private slots:
 
 private:
   Ui::BearbZust *ui;
-  QSqlQueryModel *model;
+  MSqlQueryModel *model;
   void createTable();
 };
 
