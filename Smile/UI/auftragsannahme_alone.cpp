@@ -22,7 +22,7 @@ void Auftragsannahme_Alone::on_button_Abbrechen_clicked()
 {
   this->close();
 }
-void Auftragsannahme_Alone::addLine(QSqlQuery qSqlQuery)
+void Auftragsannahme_Alone::addLine(QSqlQuery qSqlQuery) const
 {
   QString str;
   ui->line_AuftragsNr->setText(qSqlQuery.value(5).toString());
@@ -74,7 +74,6 @@ void Auftragsannahme_Alone::addLine(QSqlQuery qSqlQuery)
   else
   {
     ui->line_Vertagsdatum->setText(qSqlQuery.value(52).toString());
-
   }
   ui->line_Duma_ONKz->setText(qSqlQuery.value(53).toString());
   ui->line_Duma_Nr->setText(qSqlQuery.value(54).toString());

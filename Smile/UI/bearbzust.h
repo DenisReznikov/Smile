@@ -19,6 +19,10 @@ public:
 private slots:
   void on_button_OK_clicked();
 
+  void on_button_Abbrechen_clicked();
+
+  void on_tableView_doubleClicked(const QModelIndex );
+
 private:
   Ui::BearbZust *ui;
   MSqlQueryModel *model;

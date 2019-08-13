@@ -40,3 +40,13 @@ void BearbZust::on_button_OK_clicked()
   ret=ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),0)).toString();
   this->close();
 }
+
+void BearbZust::on_button_Abbrechen_clicked()
+{
+  this->close();
+}
+
+void BearbZust::on_tableView_doubleClicked(const QModelIndex )
+{
+    this->on_button_OK_clicked();
+}

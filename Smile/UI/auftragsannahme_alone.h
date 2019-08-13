@@ -18,7 +18,7 @@ private slots:
   void on_button_Abbrechen_clicked();
 
 private:
-  void addLine(QSqlQuery qSqlQuery);
+  void addLine(QSqlQuery qSqlQuery) const;
   Ui::Auftragsannahme_Alone *ui;
 };
 
