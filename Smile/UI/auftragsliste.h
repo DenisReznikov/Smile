@@ -24,7 +24,7 @@ private slots:
   void on_tableView_doubleClicked(const QModelIndex &index);
 
 private:
-  void createTable();
+  void createTable() const;
   Ui::Auftragsliste *ui;
   MSqlQueryModel *model;
   Dispositionsdater_for_HVt_Schaltauftrag *DispoHvt;

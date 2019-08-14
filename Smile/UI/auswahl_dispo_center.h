@@ -24,8 +24,7 @@ private slots:
   void on_button_Abbrechen_clicked();
 
 private:
-  void createTable();
-  void selectRow();
+  void createTable() const;
   Ui::Auswahl_Dispo_Center *ui;
   QString login;
   Auftragsauswahl *auftrags;

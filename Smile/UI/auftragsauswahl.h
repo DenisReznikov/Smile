@@ -21,8 +21,6 @@ public:
 private slots:
   void on_OK_clicked();
   void on_button_Abbrechen_clicked();
-
-
   void on_button_BearbZust_clicked();
 
 private:

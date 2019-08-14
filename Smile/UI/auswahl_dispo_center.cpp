@@ -25,7 +25,7 @@ Auswahl_Dispo_Center::~Auswahl_Dispo_Center()
   delete auftrags;
   delete model;
 }
-void Auswahl_Dispo_Center::createTable()
+void Auswahl_Dispo_Center::createTable() const
 {
   ui->tableView->setModel(model);
   ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");

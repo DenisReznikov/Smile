@@ -48,11 +48,11 @@ void Auftragsannahme_Many::on_tableView_doubleClicked(const QModelIndex &index)
   auAlone->show();
 }
 
-void Auftragsannahme_Many::createTable()
+void Auftragsannahme_Many::createTable() const
 {
   ui->tableView->setModel(model);
   ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
-  ui->tableView->verticalHeader()->setVisible(false);
+  //ui->tableView->verticalHeader()->setVisible(false);
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);

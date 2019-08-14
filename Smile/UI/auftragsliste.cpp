@@ -31,7 +31,7 @@ void Auftragsliste::on_lupeButton_clicked()
 }
 
 
-void Auftragsliste::createTable()
+void Auftragsliste::createTable() const
 {
   ui->tableView->setModel(model);
   ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
