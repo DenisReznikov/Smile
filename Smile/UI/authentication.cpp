@@ -1,16 +1,12 @@
 #include "authentication.h"
 #include "ui_authentication.h"
 #include "../Smile/Server/toolsfordb.h"
-#include <QDir>
-#include <QSound>
 Authentication::Authentication(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::Authentication)
 {
   ui->setupUi(this);
-
   ui->lineUserName->setValidator( new QRegExpValidator( QRegExp( "[A-z]{1,9}" ) ) );
-
 }
 
 Authentication::~Authentication()
@@ -56,7 +52,6 @@ bool Authentication::checkLogAndPassInBase(QString login,QString password)
   map.insert("login",login);
   map.insert("pass",password);
   QSqlQuery q = db.returnTable("auth",map);
-  QDir::currentPath();
   if(q.last())
   {
     return true;
@@ -98,6 +93,4 @@ void Authentication::on_lineUserPassword_returnPressed()
 
 void Authentication::on_cancelButton_clicked()
 {
-  QSound *bells = new QSound("path.wav");
-  bells->play();
 }
