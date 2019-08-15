@@ -23,7 +23,7 @@
    <string>Auftragsliste</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="10,5,0,0">
     <item>
      <widget class="QTableView" name="tableView">
       <property name="minimumSize">
@@ -69,7 +69,7 @@
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>167</height>
+        <height>16777215</height>
        </size>
       </property>
       <property name="frameShape">
@@ -80,8 +80,8 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
           <widget class="QLabel" name="label">
            <property name="minimumSize">
             <size>
@@ -94,44 +94,44 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QLineEdit" name="line_f_ATZ"/>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1,0,3,0,3">
+           <item>
+            <widget class="QLineEdit" name="line_f_ATZ"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>s. EZ:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_s_EZ"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>SO:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_SO"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>N-Bezug:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_NBezug"/>
+           </item>
+          </layout>
          </item>
-         <item>
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>s. EZ:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_s_EZ"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>SO:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_SO"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>N-Bezug:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_NBezug"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
+         <item row="1" column="0">
           <widget class="QLabel" name="label_2">
            <property name="minimumSize">
             <size>
@@ -144,57 +144,48 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QLineEdit" name="line_Name"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_9">
-           <property name="text">
-            <string>A-A:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_A_A">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_10">
-           <property name="text">
-            <string>A-UA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_A_UA">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="line_Name"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>A-A:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_A_A">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>A-UA:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_A_UA">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,4">
          <item>
-          <layout class="QFormLayout" name="formLayout">
-           <item row="0" column="1">
-            <spacer name="verticalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="1" column="0">
+          <layout class="QFormLayout" name="formLayout_2">
+           <item row="0" column="0">
             <widget class="QLabel" name="label_3">
              <property name="minimumSize">
               <size>
@@ -207,23 +198,34 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="line_VBKz"/>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,11">
+             <item>
+              <widget class="QLineEdit" name="line_VBKz">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </item>
-           <item row="2" column="1">
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="0">
+           <item row="1" column="0">
             <widget class="QLabel" name="label_4">
              <property name="minimumSize">
               <size>
@@ -236,21 +238,15 @@
              </property>
             </widget>
            </item>
-           <item row="3" column="1">
-            <widget class="QLineEdit" name="line_ZM"/>
-           </item>
-           <item row="4" column="1">
-            <spacer name="verticalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="line_ZM">
+             <property name="minimumSize">
               <size>
-               <width>20</width>
-               <height>40</height>
+               <width>0</width>
+               <height>20</height>
               </size>
              </property>
-            </spacer>
+            </widget>
            </item>
           </layout>
          </item>
@@ -258,8 +254,8 @@
           <widget class="QPlainTextEdit" name="big_info">
            <property name="minimumSize">
             <size>
-             <width>580</width>
-             <height>60</height>
+             <width>0</width>
+             <height>0</height>
             </size>
            </property>
           </widget>
@@ -267,46 +263,50 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
             <string>Vabst-ID:</string>
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QLineEdit" name="line_Vabst_ID"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_11">
-           <property name="text">
-            <string>Anzahl:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_Anzahl"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_12">
-           <property name="text">
-            <string>Vollstandg:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_Vollstandg"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_13">
-           <property name="text">
-            <string>CRM-Auftr.-Nr:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="line_CRM"/>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="7,0,3,0,3,0,7">
+           <item>
+            <widget class="QLineEdit" name="line_Vabst_ID"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Anzahl:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_Anzahl"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Vollstandg:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_Vollstandg"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>CRM-Auftr.-Nr:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_CRM"/>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
