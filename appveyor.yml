@@ -36,8 +36,6 @@ build_script:
   - dir "C:/projects/smile/release/release"
   - copy "C:\projects\smile\Smile\Server\*.db" "C:/projects/smile/release"
   - copy "C:\projects\smile\Smile\Server\*.db" "C:/projects/smile/release/release"
-  - copy "C:\projects\smile\Smile\Server\*.wav" "C:/projects/smile/release"
-  - copy "C:\projects\smile\Smile\Server\*.wav" "C:/projects/smile/release/release"
   - windeployqt --release Test.exe
   - .\Test.exe -xunitxml > tests.xml 
   
