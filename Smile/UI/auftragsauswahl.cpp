@@ -7,7 +7,6 @@ Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *pare
   ui(new Ui::Auftragsauswahl)
 {
   ui->setupUi(this);
-  this->login=login;
   ui->Name_person->setText(login);
   ui->labelDispoCenter->setText(DispoCenter);
   QDesktopWidget widget;
@@ -27,12 +26,12 @@ void Auftragsauswahl::search(QMap<QString,QString> map)
   qSqlQuery.last();
   if(qSqlQuery.at()+1 == 1)
   {
-    dispo = new Dispositionsdater_for_HVt_Schaltauftrag(this->login,ui->labelDispoCenter->text(),qSqlQuery,this);
+    dispo = new Dispositionsdater_for_HVt_Schaltauftrag(ui->Name_person->text(),ui->labelDispoCenter->text(),qSqlQuery,this);
     dispo->show();
   }
   else if(qSqlQuery.at()+1>1)
   {
-    auftragsliste = new Auftragsliste(this->login,ui->labelDispoCenter->text(),qSqlQuery,this);
+    auftragsliste = new Auftragsliste(ui->Name_person->text(),ui->labelDispoCenter->text(),qSqlQuery,this);
     auftragsliste->show();
   }
   else
@@ -57,7 +56,6 @@ void Auftragsauswahl::on_OK_clicked()
       map.insert("HsNr",ui->line_HsNr->text());
     }
   }
-
   if (ui->line_PlanGr->text()!="*" && ui->line_PlanGr->text()!="")
   {
     map.insert("PlanGr",ui->line_PlanGr->text());
@@ -82,9 +80,6 @@ void Auftragsauswahl::on_button_Abbrechen_clicked()
 {
   this->close();
 }
-
-
-\
 
 void Auftragsauswahl::on_button_BearbZust_clicked()
 {

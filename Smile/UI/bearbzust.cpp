@@ -17,7 +17,6 @@ BearbZust::BearbZust(QWidget *parent) :
   QRect mainScreenSize = widget.screenGeometry(this);
   this->setGeometry(mainScreenSize.width()*0.8/2,mainScreenSize.height()*0.5/2,(int)(mainScreenSize.width()*0.2),mainScreenSize.height()*0.5);
   this->createTable();
-  this->createTable();
 }
 
 BearbZust::~BearbZust()

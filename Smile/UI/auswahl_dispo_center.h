@@ -26,7 +26,6 @@ private slots:
 private:
   void createTable() const;
   Ui::Auswahl_Dispo_Center *ui;
-  QString login;
   Auftragsauswahl *auftrags;
   QSqlQueryModel *model;
 };

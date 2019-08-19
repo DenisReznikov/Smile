@@ -3,12 +3,12 @@
 #include <QDesktopWidget>
 Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWidget *parent) :
   QMainWindow(parent),
-  ui(new Ui::Auftragsliste)
+  ui(new Ui::Auftragsliste),
+  qSqlQuery(qSqlQuery)
 {
   ui->setupUi(this);
   ui->Name_person->setText(login);
   ui->labelDispo->setText(dispo);
-  this->qSqlQuery =qSqlQuery;
   model = new MSqlQueryModel;
   model->setQuery(qSqlQuery);
   model->removeColumns(11,model->columnCount()-11);
@@ -23,13 +23,10 @@ Auftragsliste::~Auftragsliste()
   delete ui;
 }
 
-
 void Auftragsliste::on_lupeButton_clicked()
 {
-
   lupe(ui->outFrame);
 }
-
 
 void Auftragsliste::createTable() const
 {
@@ -39,12 +36,12 @@ void Auftragsliste::createTable() const
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
   ui->tableView->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(7, QHeaderView::ResizeToContents);
-  ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::Stretch);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
 }

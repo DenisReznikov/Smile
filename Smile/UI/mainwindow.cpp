@@ -3,13 +3,12 @@
 #include <QDesktopWidget>
 MainWindow::MainWindow(QString login,QWidget *parent) :
   QMainWindow(parent),
-  ui(new Ui::MainWindow)
+  ui(new Ui::MainWindow),
+  Auf(nullptr),
+  Auswahl(nullptr)
 {
   ui->setupUi(this);
-  Auf=0;
-  Auswahl=0;
   ui->Name_person->setText(login);
-  this->login=login;
   QDesktopWidget widget;
   QRect mainScreenSize = widget.screenGeometry(this);
   this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
@@ -22,25 +21,25 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Auftragsauswahl_clicked()
 {
-  if(Auf==0||!Auf->isVisible())
+  if(Auf==nullptr||!Auf->isVisible())
   {
-    Auf = new Auftragsannahme_TelAs(this->login);
+    Auf = new Auftragsannahme_TelAs(ui->Name_person->text());
     Auf->show();
   }
 }
 void MainWindow::closeEvent(QCloseEvent *event)
 {
   event->ignore();
-  if((Auf==0||!Auf->isVisible())&&(Auswahl==0||!Auswahl->isVisible()))
+  if((Auf==nullptr||!Auf->isVisible())&&(Auswahl==nullptr||!Auswahl->isVisible()))
   {
     event->accept();
   }
 }
 void MainWindow::on_Dispositionsmodul_clicked()
 {
-  if(Auswahl==0||!Auswahl->isVisible())
+  if(Auswahl==nullptr||!Auswahl->isVisible())
   {
-    Auswahl = new Auswahl_Dispo_Center(this->login);
+    Auswahl = new Auswahl_Dispo_Center(ui->Name_person->text());
     Auswahl->show();
   }
 }

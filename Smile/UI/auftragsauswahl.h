@@ -16,7 +16,6 @@ class Auftragsauswahl : public QMainWindow
 public:
   explicit Auftragsauswahl(QString login,QString DispoCenter,QWidget *parent = 0);
   ~Auftragsauswahl();
-  QString login;
 
 private slots:
   void on_OK_clicked();

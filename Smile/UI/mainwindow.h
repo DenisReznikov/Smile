@@ -21,7 +21,6 @@ private slots:
   void on_Dispositionsmodul_clicked();
 
 private:
-  QString login;
   Ui::MainWindow *ui;
   Auftragsannahme_TelAs *Auf;
   Auswahl_Dispo_Center *Auswahl;

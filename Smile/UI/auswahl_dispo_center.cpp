@@ -6,7 +6,6 @@ Auswahl_Dispo_Center::Auswahl_Dispo_Center(QString login,QWidget *parent) :
   ui(new Ui::Auswahl_Dispo_Center)
 {
   ui->setupUi(this);
-  this->login=login;
   ui->Name_person->setText(login);
   model = new QSqlQueryModel;
   static toolsForDB db =  toolsForDB();

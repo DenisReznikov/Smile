@@ -89,8 +89,6 @@ void Authentication::on_lineUserPassword_returnPressed()
   }
 }
 
-
-
 void Authentication::on_cancelButton_clicked()
 {
 }
