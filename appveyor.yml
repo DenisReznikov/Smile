@@ -33,7 +33,6 @@ build_script:
   - qmake C:/projects/smile/Test/Test.pro
   - nmake release
   - cd release
-  - dir "C:/projects/smile/release/release"
   - copy "C:\projects\smile\Smile\Server\*.db" "C:/projects/smile/release"
   - copy "C:\projects\smile\Smile\Server\*.db" "C:/projects/smile/release/release"
   - windeployqt --release Test.exe
