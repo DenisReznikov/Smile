@@ -12,9 +12,9 @@ Auftragsliste::Auftragsliste(QString login,QString dispo,QSqlQuery qSqlQuery,QWi
   model = new MSqlQueryModel;
   model->setQuery(qSqlQuery);
   model->removeColumns(11,model->columnCount()-11);
-  QDesktopWidget widget;
-  QRect mainScreenSize = widget.screenGeometry(this);
-  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
+  QDesktopWidget wid;
+  QRect mainScreenSize = wid.screenGeometry(this);
+  this->setGeometry(static_cast<int>(mainScreenSize.width()*0.2/2),static_cast<int>(mainScreenSize.height()*0.2/2),static_cast<int>(mainScreenSize.width()*0.8),static_cast<int>(mainScreenSize.height()*0.8));
   createTable();
 }
 

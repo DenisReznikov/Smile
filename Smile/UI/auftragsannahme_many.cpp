@@ -13,9 +13,9 @@ Auftragsannahme_Many::Auftragsannahme_Many(QString login,QSqlQuery qSqlQuery, QW
   model->setQuery(qSqlQuery);
   this->qSqlQuery=qSqlQuery;
   model->removeColumns(11,model->columnCount()-11);
-  QDesktopWidget widget;
-  QRect mainScreenSize = widget.screenGeometry(this);
-  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
+  QDesktopWidget wid;
+  QRect mainScreenSize = wid.screenGeometry(this);
+  this->setGeometry(static_cast<int>(mainScreenSize.width()*0.2/2),static_cast<int>(mainScreenSize.height()*0.2/2),static_cast<int>(mainScreenSize.width()*0.8),static_cast<int>(mainScreenSize.height()*0.8));
   this->createTable();
 }
 

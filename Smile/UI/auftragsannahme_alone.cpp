@@ -8,9 +8,9 @@ Auftragsannahme_Alone::Auftragsannahme_Alone(QString login,QSqlQuery qSqlQuery,Q
   ui->setupUi(this);
   ui->Name_person->setText(login);
   this->addLine(qSqlQuery);
-  QDesktopWidget widget;
-  QRect mainScreenSize = widget.screenGeometry(this);
-  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
+  QDesktopWidget wid;
+  QRect mainScreenSize = wid.screenGeometry(this);
+  this->setGeometry(static_cast<int>(mainScreenSize.width()*0.2/2),static_cast<int>(mainScreenSize.height()*0.2/2),static_cast<int>(mainScreenSize.width()*0.8),static_cast<int>(mainScreenSize.height()*0.8));
 }
 
 Auftragsannahme_Alone::~Auftragsannahme_Alone()
@@ -22,6 +22,7 @@ void Auftragsannahme_Alone::on_button_Abbrechen_clicked()
 {
   this->close();
 }
+
 void Auftragsannahme_Alone::addLine(QSqlQuery qSqlQuery) const
 {
   QString str;

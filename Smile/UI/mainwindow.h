@@ -4,7 +4,6 @@
 #include "auswahl_dispo_center.h"
 #include <QMessageBox>
 #include <QMainWindow>
-
 namespace Ui {
   class MainWindow;
 }

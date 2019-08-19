@@ -9,9 +9,9 @@ Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *pare
   ui->setupUi(this);
   ui->Name_person->setText(login);
   ui->labelDispoCenter->setText(DispoCenter);
-  QDesktopWidget widget;
-  QRect mainScreenSize = widget.screenGeometry(this);
-  this->setGeometry(mainScreenSize.width()*0.2/2,mainScreenSize.height()*0.2/2,(int)(mainScreenSize.width()*0.8),mainScreenSize.height()*0.8);
+  QDesktopWidget wid;
+  QRect mainScreenSize = wid.screenGeometry(this);
+  this->setGeometry(static_cast<int>(mainScreenSize.width()*0.2/2),static_cast<int>(mainScreenSize.height()*0.2/2),static_cast<int>(mainScreenSize.width()*0.8),static_cast<int>(mainScreenSize.height()*0.8));
 }
 
 Auftragsauswahl::~Auftragsauswahl()
