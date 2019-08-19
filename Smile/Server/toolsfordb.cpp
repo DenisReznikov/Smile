@@ -38,3 +38,15 @@ QSqlQuery toolsForDB::returnTable(QString tableName, QMap<QString, QString> map)
   return *sqlQuery;
 }
 
+void toolsForDB::addInTable(QString tableName, QVector<QString> vector)
+{
+  QString sqlAsk="INSERT INTO "+tableName+" VALUES (";
+  foreach(QString values,vector)
+  {
+    sqlAsk=sqlAsk + "'"+values +"'"+ ",";
+  }
+  sqlAsk = sqlAsk.left(sqlAsk.size()-1);
+  sqlAsk=sqlAsk+")";
+  qDebug()<<sqlAsk;
+  sqlQuery->exec(sqlAsk);
+}

@@ -14,7 +14,8 @@ public:
   
   toolsForDB(QString nameDB="test.db");
   ~toolsForDB();
-  QSqlQuery returnTable(QString tableName,QMap<QString,QString> );
+  QSqlQuery returnTable(QString tableName, QMap<QString,QString> map);
+  void addInTable(QString tableName, QVector<QString> vector);
 private:
 
   void selectTable(QString str);

@@ -1,6 +1,5 @@
 #include "authentication.h"
 #include "ui_authentication.h"
-#include "../Smile/Server/toolsfordb.h"
 Authentication::Authentication(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::Authentication)
@@ -70,7 +69,6 @@ bool Authentication::checkLogAndPassInBase(QString login,QString password)
 }
 void Authentication::on_login_clicked()
 {
-
   if(this->checkLogAndPassInBase(ui->lineUserName->text(),ui->lineUserPassword->text()))
   {
     mainWind = new MainWindow(ui->lineUserName->text());
@@ -91,4 +89,10 @@ void Authentication::on_lineUserPassword_returnPressed()
 
 void Authentication::on_cancelButton_clicked()
 {
+}
+
+void Authentication::on_newPasswort_clicked()
+{
+  newPasswort = new New_Passwort();
+  newPasswort->show();
 }
