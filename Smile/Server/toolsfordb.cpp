@@ -3,17 +3,18 @@
 toolsForDB::toolsForDB(QString parent)
 {
 
+  db = QSqlDatabase::addDatabase("QSQLITE");
+  db.setDatabaseName(parent);
   if(!db.isOpen())
   {
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(parent);
     db.open();
   }
+
 }
 
 toolsForDB::~toolsForDB()
 {
-  db.close();
+
 }
 
 QSqlQuery toolsForDB::returnTable(QString tableName, QMap<QString, QString> map)
