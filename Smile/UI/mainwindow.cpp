@@ -17,6 +17,8 @@ MainWindow::MainWindow(QString login,QWidget *parent) :
 MainWindow::~MainWindow()
 {
   delete ui;
+  delete Auf;
+  delete Auswahl;
 }
 
 void MainWindow::on_Auftragsauswahl_clicked()

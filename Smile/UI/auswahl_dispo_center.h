@@ -13,7 +13,7 @@ class Auswahl_Dispo_Center : public QMainWindow,public BaseWindowWithTable
   Q_OBJECT
 
 public:
-  explicit Auswahl_Dispo_Center(QString login,QWidget *parent = 0);
+  explicit Auswahl_Dispo_Center(QString login,QWidget *parent = nullptr);
   ~Auswahl_Dispo_Center();
 
 private slots:

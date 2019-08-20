@@ -17,6 +17,9 @@ Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *pare
 Auftragsauswahl::~Auftragsauswahl()
 {
   delete ui;
+  delete auftragsliste;
+  delete dispo;
+  delete bearbZust;
 }
 
 void Auftragsauswahl::search(QMap<QString,QString> map)
@@ -88,4 +91,5 @@ void Auftragsauswahl::on_button_BearbZust_clicked()
   bearbZust->show();
   bearbZust->exec();
   ui->line_BearbZust->setText(bearbZust->ret);
+  delete bearbZust;
 }

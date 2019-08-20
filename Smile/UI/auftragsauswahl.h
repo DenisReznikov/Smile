@@ -14,7 +14,7 @@ class Auftragsauswahl : public QMainWindow
   Q_OBJECT
 
 public:
-  explicit Auftragsauswahl(QString login,QString DispoCenter,QWidget *parent = 0);
+  explicit Auftragsauswahl(QString login,QString DispoCenter,QWidget *parent = nullptr);
   ~Auftragsauswahl();
 
 private slots:

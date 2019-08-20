@@ -22,6 +22,7 @@ BearbZust::BearbZust(QWidget *parent) :
 BearbZust::~BearbZust()
 {
   delete ui;
+  delete model;
 }
 
 void BearbZust::createTable()

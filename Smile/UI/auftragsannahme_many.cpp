@@ -64,6 +64,7 @@ void Auftragsannahme_Many::createTable() const
   ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
+  delete model;
 }
 
 void Auftragsannahme_Many::on_lupeButton_clicked()

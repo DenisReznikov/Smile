@@ -18,7 +18,7 @@ class Auftragsannahme_TelAs : public QMainWindow
   Q_OBJECT
 
 public:
-  explicit Auftragsannahme_TelAs(QString login,QWidget *parent = 0);
+  explicit Auftragsannahme_TelAs(QString login,QWidget *parent = nullptr);
   ~Auftragsannahme_TelAs();
 
 private slots:
