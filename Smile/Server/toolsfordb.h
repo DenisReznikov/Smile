@@ -20,7 +20,7 @@ private:
 
   void selectTable(QString str);
   QSqlQueryModel sqlAsk(QString sqlQuest);
-  QSqlDatabase db;
+  static inline QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
   QSqlQuery *sqlQuery;
 };
 
