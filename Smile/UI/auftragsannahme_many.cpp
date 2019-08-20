@@ -23,7 +23,6 @@ Auftragsannahme_Many::~Auftragsannahme_Many()
 {
   delete ui;
   delete model;
-  delete auAlone;
 }
 
 void Auftragsannahme_Many::on_tableView_clicked(const QModelIndex &index)

@@ -30,9 +30,11 @@ void BearbZust::createTable()
   ui->tableView->setModel(model);
   ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
   ui->tableView->verticalHeader()->setVisible(false);
+  ui->tableView->selectRow(0);
+  ui->tableView->setItemDelegate(new CheckBoxDelegate(ui->tableView,2));
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
-  ui->tableView->selectRow(0);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
 }
 
 void BearbZust::on_button_OK_clicked()
@@ -48,5 +50,5 @@ void BearbZust::on_button_Abbrechen_clicked()
 
 void BearbZust::on_tableView_doubleClicked(const QModelIndex )
 {
-    this->on_button_OK_clicked();
+  this->on_button_OK_clicked();
 }

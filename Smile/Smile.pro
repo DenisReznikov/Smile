@@ -33,6 +33,7 @@ SOURCES += \
   UI/authentication.cpp \
   UI/base_window_with_table.cpp \
   UI/bearbzust.cpp \
+  UI/checkboxdelegate.cpp \
   UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
   UI/mainwindow.cpp \
   UI/msqlquerymodel.cpp \
@@ -50,6 +51,7 @@ HEADERS += \
   UI/authentication.h \
   UI/base_window_with_table.h \
   UI/bearbzust.h \
+  UI/checkboxdelegate.h \
   UI/dispositionsdater_for_hvt_schaltauftrag.h \
   UI/mainwindow.h \
   UI/msqlquerymodel.h \

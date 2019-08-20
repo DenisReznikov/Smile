@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <Smile/UI/msqlquerymodel.h>
 #include <Smile/Server/toolsfordb.h>
+#include <Smile/UI/checkboxdelegate.h>
 namespace Ui {
   class BearbZust;
 }

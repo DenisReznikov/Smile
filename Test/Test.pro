@@ -18,6 +18,7 @@ TEMPLATE = app
   ../Smile/UI/mainwindow.cpp \
   ../Smile/UI/new_passwort.cpp \
   ../Smile/UI/bearbzust.cpp \
+  ../Smile/UI/checkboxdelegate.cpp \
   ../Smile/UI/msqlquerymodel.cpp \
   tst_authentication_test.cpp
 
@@ -34,6 +35,7 @@ HEADERS += \
   ../Smile/UI/dispositionsdater_for_hvt_schaltauftrag.h \
   ../Smile/UI/mainwindow.h \
   ../Smile/UI/bearbzust.h \
+  ../Smile/UI/checkboxdelegate.h \
   ../Smile/UI/msqlquerymodel.h \
   ../Smile/UI/new_passwort.h
 

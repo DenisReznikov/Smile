@@ -17,9 +17,6 @@ Auftragsauswahl::Auftragsauswahl(QString login,QString DispoCenter,QWidget *pare
 Auftragsauswahl::~Auftragsauswahl()
 {
   delete ui;
-  delete auftragsliste;
-  delete dispo;
-  delete bearbZust;
 }
 
 void Auftragsauswahl::search(QMap<QString,QString> map)

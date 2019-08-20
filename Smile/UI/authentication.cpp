@@ -11,7 +11,6 @@ Authentication::Authentication(QWidget *parent) :
 Authentication::~Authentication()
 {
   delete ui;
-  delete newPasswort;
 }
 
 bool Authentication::checkMissing(QString log, QString pass)

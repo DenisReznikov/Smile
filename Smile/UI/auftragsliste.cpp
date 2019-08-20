@@ -22,7 +22,6 @@ Auftragsliste::~Auftragsliste()
 {
   delete ui;
   delete model;
-  delete DispoHvt;
 }
 
 void Auftragsliste::on_lupeButton_clicked()

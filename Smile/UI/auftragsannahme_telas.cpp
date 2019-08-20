@@ -36,8 +36,6 @@ void Auftragsannahme_TelAs::search(QMap<QString,QString> map)
 }
 Auftragsannahme_TelAs::~Auftragsannahme_TelAs()
 {
-  delete AUF_Alone;
-  delete AUF_many;
   delete ui;
 }
 
