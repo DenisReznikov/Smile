@@ -24,21 +24,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++17
 INCLUDEPATH += $$PWD/..
 SOURCES += \
-        Server/toolsfordb.cpp \
-        UI/auftragsannahme_alone.cpp \
-        UI/auftragsannahme_many.cpp \
-        UI/auftragsannahme_telas.cpp \
-        UI/auftragsauswahl.cpp \
-        UI/auftragsliste.cpp \
-        UI/auswahl_dispo_center.cpp \
-        UI/authentication.cpp \
-        UI/base_window_with_table.cpp \
-        UI/bearbzust.cpp \
-        UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
-        UI/mainwindow.cpp \
-        UI/msqlquerymodel.cpp \
-        UI/new_passwort.cpp \
-        main.cpp
+  Server/toolsfordb.cpp \
+  UI/auftragsannahme_alone.cpp \
+  UI/auftragsannahme_many.cpp \
+  UI/auftragsannahme_telas.cpp \
+  UI/auftragsauswahl.cpp \
+  UI/auftragsliste.cpp \
+  UI/auswahl_dispo_center.cpp \
+  UI/authentication.cpp \
+  UI/base_window_with_table.cpp \
+  UI/bearbzust.cpp \
+  UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
+  UI/mainwindow.cpp \
+  UI/msqlquerymodel.cpp \
+  UI/new_passwort.cpp \
+  main.cpp
 
 HEADERS += \
   Server/toolsfordb.h \

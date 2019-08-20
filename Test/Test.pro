@@ -4,22 +4,22 @@ CONFIG += qt warn_on depend_includepath testcase
 QT += widgets
 TEMPLATE = app
 
-SOURCES += \
-        ../Smile/Server/toolsfordb.cpp \
-        ../Smile/UI/auftragsannahme_alone.cpp \
-        ../Smile/UI/auftragsannahme_many.cpp \
-        ../Smile/UI/auftragsannahme_telas.cpp \
-        ../Smile/UI/auftragsauswahl.cpp \
-        ../Smile/UI/auftragsliste.cpp \
-        ../Smile/UI/auswahl_dispo_center.cpp \
-        ../Smile/UI/authentication.cpp \
-        ../Smile/UI/base_window_with_table.cpp \
-        ../Smile/UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
-        ../Smile/UI/mainwindow.cpp \
-        ../Smile/UI/new_passwort.cpp \
-        ../Smile/UI/bearbzust.cpp \
-        ../Smile/UI/msqlquerymodel.cpp \
-        tst_authentication_test.cpp
+  SOURCES += \
+  ../Smile/Server/toolsfordb.cpp \
+  ../Smile/UI/auftragsannahme_alone.cpp \
+  ../Smile/UI/auftragsannahme_many.cpp \
+  ../Smile/UI/auftragsannahme_telas.cpp \
+  ../Smile/UI/auftragsauswahl.cpp \
+  ../Smile/UI/auftragsliste.cpp \
+  ../Smile/UI/auswahl_dispo_center.cpp \
+  ../Smile/UI/authentication.cpp \
+  ../Smile/UI/base_window_with_table.cpp \
+  ../Smile/UI/dispositionsdater_for_hvt_schaltauftrag.cpp \
+  ../Smile/UI/mainwindow.cpp \
+  ../Smile/UI/new_passwort.cpp \
+  ../Smile/UI/bearbzust.cpp \
+  ../Smile/UI/msqlquerymodel.cpp \
+  tst_authentication_test.cpp
 
 HEADERS += \
   ../Smile/Server/toolsfordb.h \
@@ -36,6 +36,7 @@ HEADERS += \
   ../Smile/UI/bearbzust.h \
   ../Smile/UI/msqlquerymodel.h \
   ../Smile/UI/new_passwort.h
+
 FORMS  +=\
   ../Smile/UI/auftragsannahme_alone.ui \
   ../Smile/UI/auftragsannahme_many.ui \
@@ -48,4 +49,5 @@ FORMS  +=\
   ../Smile/UI/mainwindow.ui \
   ../Smile/UI/new_passwort.ui \
   ../Smile/UI/bearbzust.ui
+
 INCLUDEPATH += $$PWD/..
