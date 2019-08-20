@@ -5,10 +5,8 @@ branches:
 
 before_build:
   - set msvc=msvc2017
-  - set vs=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
   - set QTDIR=C:\Qt\5.12\msvc2017_64
   - set PATH=%PATH%;%QTDIR%\bin;
-  - set vcvarsall=%vs%\vcvarsall.bat
   - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
 build_script:
   - qmake Smile/Smile.pro
