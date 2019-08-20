@@ -9,7 +9,7 @@ before_build:
   - set QTDIR=C:\Qt\5.12\msvc2017_64
   - set PATH=%PATH%;%QTDIR%\bin;
   - set vcvarsall=%vs%\vcvarsall.bat
-  
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
 build_script:
   - qmake Smile/Smile.pro
   - nmake release
