@@ -48,8 +48,4 @@ FORMS  +=\
   ../Smile/UI/mainwindow.ui \
   ../Smile/UI/new_passwort.ui \
   ../Smile/UI/bearbzust.ui
-
-QMAKE_CXX = g++-7
-QMAKE_CC = gcc-7
-
 INCLUDEPATH += $$PWD/..
