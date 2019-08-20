@@ -2,11 +2,14 @@
 #include <QDebug>
 toolsForDB::toolsForDB(QString parent)
 {
+
+  db = QSqlDatabase::addDatabase("QSQLITE");
   db.setDatabaseName(parent);
   if(!db.isOpen())
   {
     db.open();
   }
+
 }
 
 toolsForDB::~toolsForDB()
