@@ -1,6 +1,5 @@
 #include "bearbzust.h"
 #include "ui_bearbzust.h"
-#include <QDebug>
 #include <QDesktopWidget>
 
 BearbZust::BearbZust(QWidget *parent) :

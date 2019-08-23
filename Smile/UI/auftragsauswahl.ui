@@ -265,7 +265,7 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:red</string>
+              <string notr="true"/>
              </property>
             </widget>
            </item>
@@ -285,7 +285,7 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:red</string>
+              <string notr="true"/>
              </property>
             </widget>
            </item>

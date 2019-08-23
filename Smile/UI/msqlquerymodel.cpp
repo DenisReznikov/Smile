@@ -1,7 +1,6 @@
 #include "msqlquerymodel.h"
 #include <QSqlRecord>
 #include <QColor>
-#include <QDebug>
 
 QVariant MSqlQueryModel::data(const QModelIndex &index, int role) const {
   QVariant value = QSqlQueryModel::data(index, role);

@@ -1,6 +1,5 @@
 #include "new_passwort.h"
 #include "ui_new_passwort.h"
-#include <QDebug>
 New_Passwort::New_Passwort(QWidget *parent) :
   QWidget(parent),
   ui(new Ui::New_Passwort)
@@ -46,7 +45,6 @@ void New_Passwort::on_Login_clicked()
     vec.push_back(ui->lineLogin->text());
     vec.push_back(ui->linePasswordF->text());
     QSqlQuery q = db.returnTable("auth",map);
-    qDebug()<<q.last();
     if(q.last())
     {
       QMessageBox m;
