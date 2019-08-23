@@ -19,7 +19,7 @@ void New_Passwort::on_button_Abbrechen_clicked()
 
 void New_Passwort::on_Login_clicked()
 {
-  if(ui->lineLogin->text()==""||ui->linePasswordS->text()==""||ui->linePasswordF->text()=="")
+  if  (ui->lineLogin->text()==""||ui->linePasswordS->text()==""||ui->linePasswordF->text()=="")
   {
     QMessageBox m;
     m.setWindowTitle("Create login and password");
