@@ -47,11 +47,11 @@ void Auftragsannahme_Many::on_tableView_doubleClicked(const QModelIndex &index)
   auAlone->show();
 }
 
-void Auftragsannahme_Many::createTable() const
+void Auftragsannahme_Many::createTable()
 {
   ui->tableView->setModel(model);
   ui->tableView->setStyleSheet("QHeaderView::section {background-color:gray}");
-  //ui->tableView->verticalHeader()->setVisible(false);
+  ui->tableView->verticalHeader()->setVisible(false);
   ui->tableView->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
@@ -63,7 +63,6 @@ void Auftragsannahme_Many::createTable() const
   ui->tableView->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(9, QHeaderView::ResizeToContents);
   ui->tableView->horizontalHeader()->setSectionResizeMode(10, QHeaderView::ResizeToContents);
-  delete model;
 }
 
 void Auftragsannahme_Many::on_lupeButton_clicked()

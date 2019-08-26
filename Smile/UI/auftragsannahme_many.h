@@ -28,7 +28,7 @@ private slots:
   void on_tableView_pressed(const QModelIndex &index);
 
 private:
-  void createTable() const;
+  void createTable();
   MSqlQueryModel *model;
   QSqlDatabase db;
   QString login;

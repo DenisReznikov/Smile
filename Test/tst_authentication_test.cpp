@@ -39,7 +39,7 @@ void authentication_test::checkMissing_data()
   QTest::newRow("all_empty") << QString(str) << QString(str) << bool(false);
   QTest::newRow("log_empty") << QString(str) << QString("d") << bool(false);
   QTest::newRow("pass_empty") << QString("2007") << QString(str) << bool(false);
-  QTest::newRow("all_correct") << QString("dd") << QString("20")<< bool(false);
+  QTest::newRow("all_correct") << QString("dd") << QString("20")<< bool(true);
 }
 
 void authentication_test::checkMissing()
