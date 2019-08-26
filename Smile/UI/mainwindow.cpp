@@ -35,6 +35,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     event->accept();
   }
 }
+
 void MainWindow::on_Dispositionsmodul_clicked()
 {
   if(Auswahl==nullptr||!Auswahl->isVisible())
