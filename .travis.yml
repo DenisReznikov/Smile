@@ -70,7 +70,7 @@ before_script:
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then export PATH=${qtDir}/bin:${PATH} ; fi
 script:
      - qmake -project
-     - qmake ALL_in_one.pro 
+     - qmake Smile.pro 
      - make -o filename 
 before_deploy:
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt bin/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv bin/${targetFile}.dmg bin/${releaseName} ; fi
