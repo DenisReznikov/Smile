@@ -69,9 +69,8 @@ before_script:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then source /opt/qt512/bin/qt512-env.sh; fi
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then export PATH=${qtDir}/bin:${PATH} ; fi
 script:
-     - qmake -project
-     - qmake ALL_in_one.pro 
-     - make -o filename 
+    - qmake
+    - make
 before_deploy:
     - ls /bin
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt bin/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv bin/${targetFile}.dmg bin/${releaseName} ; fi
