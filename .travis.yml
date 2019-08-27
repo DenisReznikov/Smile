@@ -33,18 +33,6 @@ matrix:
         apt: true
         directories:
             - /opt/qt*/ 
-#macOS 10.13 with xcode 9.4
-    - os: osx
-      osx_image: xcode9.4
-      env: 
-        targetFile=Smile
-        releaseName=Smile_macos10-13_xcode9-4.dmg
-        qtDir=/usr/local/opt/qt
-      cache:
-        bundler: true
-        directories:
-            - /usr/local/Cellar/qt/
-            - /usr/local/opt/qt/
 #macOS 10.14 with xcode 10.3
     - os: osx
       osx_image: xcode10.3
@@ -94,5 +82,6 @@ deploy:              # 部署
   skip_cleanup: true     # 设置为 true 以跳过清理,不然 apk 文件就会被清理
   on:     # 发布时机           
     tags: true       # tags 设置为 true 表示只有在有 tag 的情况下才部署   
+    all_branches: true
 notifications:
     email: false
