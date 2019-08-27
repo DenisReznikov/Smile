@@ -1,10 +1,98 @@
-before_install:
- - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
- - sudo apt-get update -qq
- - sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
- - sudo apt-get install qt5-default qttools5-dev-tools
+language: cpp
 
+sudo: required
+
+compiler: gcc
+
+#env: QT_BASE="512"
+
+matrix:
+  include:
+#ubuntu 16.04 LTS(xenial)
+    - os: linux
+      dist: xenial
+      env: 
+        targetFile=Smile
+        releaseName=Smile_ubuntu_xenial_x64
+        qtppa="ppa:beineri/opt-qt-5.12.3-xenial"
+#缓存, 指定qt安装路径，可以避免重复安装，节约CI时间
+      cache:
+        bundler: true
+        apt: true
+        directories:
+            - /opt/qt*/
+#ubuntu 18.04 LTS(bionic)
+    - os: linux
+      dist: bionic
+      env: 
+        targetFile=Smile
+        releaseName=Smile_ubuntu_bionic_x64
+        qtppa="ppa:beineri/opt-qt-5.12.3-bionic"
+      cache:
+        bundler: true
+        apt: true
+        directories:
+            - /opt/qt*/ 
+#macOS 10.13 with xcode 9.4
+    - os: osx
+      osx_image: xcode9.4
+      env: 
+        targetFile=Smile
+        releaseName=Smile_macos10-13_xcode9-4.dmg
+        qtDir=/usr/local/opt/qt
+      cache:
+        bundler: true
+        directories:
+            - /usr/local/Cellar/qt/
+            - /usr/local/opt/qt/
+#macOS 10.14 with xcode 10.3
+    - os: osx
+      osx_image: xcode10.3
+      env: 
+        targetFile=Smile
+        releaseName=Smile_macos10-14_xcode10-2.dmg
+        qtDir=/usr/local/opt/qt
+      cache:
+        bundler: true
+        directories:
+            - /usr/local/Cellar/qt/
+            - /usr/local/opt/qt/
+  #macOS 10.14 with xcode 11
+    - os: osx
+      osx_image: xcode11
+      env: 
+        targetFile=Smile
+        releaseName=Smile_macos10-14_xcode10-2.dmg
+        qtDir=/usr/local/opt/qt
+      cache:
+        bundler: true
+        directories:
+            - /usr/local/Cellar/qt/
+            - /usr/local/opt/qt/
+            
+group: deprecated-2019Q1
+
+
+before_install:
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; brew install qt; brew link qt --force; fi 
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository ${qtppa} -y; sudo apt-get update -qq; sudo apt-get install -y libglew-dev libglfw3-dev; sudo apt-get install -y qt512-meta-minimal; fi
+
+before_script:
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then source /opt/qt512/bin/qt512-env.sh; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then export PATH=${qtDir}/bin:${PATH} ; fi
 script:
- - qmake -project
- - qmake ALL_in_one.pro 
- - make -o filename 
+     - qmake -project
+     - qmake ALL_in_one.pro 
+     - make -o filename 
+before_deploy:
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt bin/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv bin/${targetFile}.dmg bin/${releaseName} ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv bin/${targetFile} bin/${releaseName} ; fi
+deploy:              # 部署
+  provider: releases # 部署到 GitHub Release，除此之外，Travis CI 还支持发布到 fir.im、AWS、Google App Engine 等
+  api_key: $GITHUB_OAUTH_TOKEN # 填写 GitHub 的 token （Settings -> Personal access tokens -> Generate new token）
+  file: bin/${releaseName}   # 部署文件路径
+  skip_cleanup: true     # 设置为 true 以跳过清理,不然 apk 文件就会被清理
+  on:     # 发布时机           
+    tags: true       # tags 设置为 true 表示只有在有 tag 的情况下才部署   
+notifications:
+    email: false
