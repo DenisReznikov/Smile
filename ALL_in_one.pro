@@ -1,7 +1,8 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-  Smile/Smile.pro \
-  Test
+  Test \
+  Smile/Smile.pro
+
 
 DISTFILES += \
   Server/test.db
