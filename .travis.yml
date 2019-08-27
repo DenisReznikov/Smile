@@ -71,8 +71,10 @@ before_script:
 script:
     - qmake
     - make
+    - pwd
 before_deploy:
-    - ls /bin
+    - pwd
+    - ls 
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt bin/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv bin/${targetFile}.dmg bin/${releaseName} ; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv bin/${targetFile} bin/${releaseName} ; fi
 deploy:              # 部署
