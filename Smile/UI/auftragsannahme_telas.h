@@ -2,7 +2,6 @@
 #define AUFTRAGSANNAHME_TELAS_H
 
 #include <QCloseEvent>
-#include <QMainWindow>
 #include <QMessageBox>
 #include "auftragsannahme_many.h"
 #include "auftragsannahme_alone.h"

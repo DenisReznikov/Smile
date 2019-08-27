@@ -1,7 +1,6 @@
 #ifndef AUFTRAGSANNAHME_MANY_H
 #define AUFTRAGSANNAHME_MANY_H
 #include "base_window_with_table.h"
-#include <QMainWindow>
 #include <QSqlDatabase>
 #include "Smile/UI/msqlquerymodel.h"
 #include <Smile/UI/auftragsannahme_alone.h>
