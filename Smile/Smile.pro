@@ -57,7 +57,6 @@ HEADERS += \
   UI/msqlquerymodel.h \
   UI/new_passwort.h
 
-DESTDIR = $$absolute_path($${_PRO_FILE_PWD_}/bin/)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
