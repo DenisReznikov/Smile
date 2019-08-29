@@ -76,7 +76,7 @@ before_deploy:
     - pwd
     - ls 
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt bin/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv bin/${targetFile}.dmg bin/${releaseName} ; fi
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv home/travis/build/DenisReznikov/${targetFile} bin/${releaseName} ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv bin/${targetFile} bin/${releaseName} ; fi
 deploy:
   provider: releases # 部署到 GitHub Release，除此之外，Travis CI 还支持发布到 fir.im、AWS、Google App Engine 等
   api_key: $GITHUB_OAUTH_TOKEN # 填写 GitHub 的 token （Settings -> Personal access tokens -> Generate new token）
