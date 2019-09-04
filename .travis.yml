@@ -75,7 +75,7 @@ script:
 before_deploy:
     - pwd
     - ls 
-    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt bin/ALL_in_one/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv bin/${targetFile}.dmg bin/${releaseName} ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt Smile/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv Smile/${targetFile}.dmg Smile/${releaseName} ; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv Smile/${targetFile} Smile/${releaseName} ; fi
 deploy:
   provider: releases # 部署到 GitHub Release，除此之外，Travis CI 还支持发布到 fir.im、AWS、Google App Engine 等
