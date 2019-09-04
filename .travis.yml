@@ -71,7 +71,6 @@ before_script:
 script:
     - qmake
     - make
-    - pwd
 before_deploy:
     - pwd
     - ls 
