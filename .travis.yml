@@ -14,7 +14,7 @@ matrix:
       env: 
         targetFile=Smile
         releaseName=Smile_ubuntu_xenial_x64
-        qtppa="ppa:beineri/opt-qt-5.12.3-xenial"
+        qtppa="ppa:beineri/opt-qt-5.13.0-xenial"
 #缓存, 指定qt安装路径，可以避免重复安装，节约CI时间
       cache:
         bundler: true
@@ -27,7 +27,7 @@ matrix:
       env: 
         targetFile=Smile
         releaseName=Smile_ubuntu_bionic_x64
-        qtppa="ppa:beineri/opt-qt-5.12.3-bionic"
+        qtppa="ppa:beineri/opt-qt-5.13.0-bionic"
       cache:
         bundler: true
         apt: true
