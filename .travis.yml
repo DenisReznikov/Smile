@@ -42,7 +42,6 @@ before_install:
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; brew install qt; brew link qt --force; fi 
 
 install:
-  - sudo apt-get -y install qt59base libgl1-mesa-dev
   - source /opt/qt*/bin/qt*-env.sh
 
 before_script:
