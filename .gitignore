@@ -44,3 +44,4 @@ CMakeLists.txt.user*
 Smile/bin/Smile.exe
 Test/Test
 Smile/Smile
+Smile/.qmake.stash
