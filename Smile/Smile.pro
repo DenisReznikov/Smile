@@ -59,28 +59,6 @@ HEADERS += \
 
 QMAKE_CXXFLAGS += -std=c++0x
 
-unix {
-    #VARIABLES
-    isEmpty(PREFIX) {
-        PREFIX = /usr
-    }
-    BINDIR = $$PREFIX/bin
-    DATADIR =$$PREFIX/share
-
-    DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
-
-    #MAKE INSTALL
-
-    INSTALLS += target desktop icon
-
-    target.path =$$BINDIR
-
-    desktop.path = $$DATADIR/Smile
-    desktop.files += $${TARGET}.desktop
-
-}
-
-
 FORMS += \
   UI/auftragsannahme_alone.ui \
   UI/auftragsannahme_many.ui \
