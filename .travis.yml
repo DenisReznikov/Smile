@@ -67,7 +67,7 @@ before_deploy:
 deploy:
   provider: releases 
   api_key: $GITHUB_OAUTH_TOKEN 
-  file: Smile/${releaseName}.AppImage
+  file: ${releaseName}.AppImage
   skip_cleanup: true  
 notifications:
     email: false
