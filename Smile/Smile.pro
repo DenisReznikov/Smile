@@ -58,10 +58,27 @@ HEADERS += \
   UI/new_passwort.h
 
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+unix {
+    #VARIABLES
+    isEmpty(PREFIX) {
+        PREFIX = /usr
+    }
+    BINDIR = $$PREFIX/bin
+    DATADIR =$$PREFIX/share
+
+    DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+
+    #MAKE INSTALL
+
+    INSTALLS += target desktop icon
+
+    target.path =$$BINDIR
+
+    desktop.path = $$DATADIR/Smile
+    desktop.files += $${TARGET}.desktop
+
+}
+
 
 FORMS += \
   UI/auftragsannahme_alone.ui \
