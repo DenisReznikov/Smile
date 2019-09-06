@@ -5,4 +5,4 @@ Comment=The best Qt Application Ever
 Exec=Smile
 Icon=smile-icon
 Categories=Office;
-Terminal=false;
+Terminal=false
