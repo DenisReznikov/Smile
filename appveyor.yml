@@ -47,8 +47,8 @@ deploy:
     
     description: '"Smile Test Release"'
     draft: false
-    prerelease: true
+    prerelease: false
     auth_token:
       secure: raX5hiieSXgtTiXFvRQafRFN2qA4rg9evnBREHR/pGn9o/B4wF7N6qA9Vs5HdiXI
     on:
-      branch: master
+      APPVEYOR_REPO_TAG: true

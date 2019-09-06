@@ -65,6 +65,8 @@ deploy:
   provider: releases 
   api_key: $GITHUB_OAUTH_TOKEN 
   file: ${releaseName}.AppImage
-  skip_cleanup: true  
+  skip_cleanup: true
+  on:           
+    tags: true  
 notifications:
     email: false
