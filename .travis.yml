@@ -50,12 +50,11 @@ before_script:
 
 script:
   - cd Smile
-  - qmake CONFIG+=release PREFIX=/usr
-  - make -j$(nproc)
-  - make INSTALL_ROOT=appdir -j$(nproc) install ; find appdir/
+  - qmake CONFIG+=release
+  - make
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
   - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
-  - ./linuxdeployqt-continuous-x86_64.AppImage appdir/opt/Smile/bin/Smile -appimage
+  - ./linuxdeployqt-continuous-x86_64.AppImage Smile -appimage
   - pwd
   - ls
 
