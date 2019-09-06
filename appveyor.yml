@@ -44,11 +44,10 @@ artifacts:
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
-    
     description: '"Smile Test Release"'
     draft: false
-    prerelease: false
+    prerelease: true
     auth_token:
       secure: raX5hiieSXgtTiXFvRQafRFN2qA4rg9evnBREHR/pGn9o/B4wF7N6qA9Vs5HdiXI
     on:
-      APPVEYOR_REPO_TAG: true
+      branch: master
