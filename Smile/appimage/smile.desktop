@@ -3,6 +3,6 @@ Type=Application
 Name=Smile
 Comment=The best Qt Application Ever
 Exec=Smile
-Icon=Smile-icon
+Icon=smile-icon
 Categories=Office;
 Terminal=false;
