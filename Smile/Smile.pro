@@ -57,6 +57,7 @@ HEADERS += \
   UI/msqlquerymodel.h \
   UI/new_passwort.h
 
+QMAKE_CXXFLAGS += -std=c++0x
 
 unix {
     #VARIABLES
