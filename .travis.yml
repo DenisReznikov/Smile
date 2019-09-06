@@ -55,7 +55,7 @@ script:
   - make INSTALL_ROOT=appdir -j$(nproc) install ; find appdir/
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
   - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
-  - ./linuxdeployqt-continuous-x86_64.AppImage appdir/opt/Smile/bin/*.desktop -appimage
+  - ./linuxdeployqt-continuous-x86_64.AppImage appdir/opt/Smile/bin/Smile -appimage
   - pwd
   - ls
 
