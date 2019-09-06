@@ -59,7 +59,7 @@ before_deploy:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt Smile/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv Smile/${targetFile}.dmg Smile/${releaseName} ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod a+x linuxdeploy-x86_64.AppImage ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; OUTPUT="$releaseName.AppImage" ./linuxdeploy-x86_64.AppImage --appimage-extract-and-run -e Smile --appdir appdir -e Smile -i appimage/smile-icon.svg -d appimage/smile.desktop --output appimage ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then OUTPUT="$releaseName.AppImage" ./linuxdeploy-x86_64.AppImage --appimage-extract-and-run -e Smile --appdir appdir -e Smile -i appimage/smile-icon.svg -d appimage/smile.desktop --output appimage ; fi
 
 deploy:
   provider: releases 
