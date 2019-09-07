@@ -61,7 +61,8 @@ before_deploy:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod a+x linuxdeploy-x86_64.AppImage ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then OUTPUT="$releaseName.AppImage" ./linuxdeploy-x86_64.AppImage --appimage-extract-and-run -e Smile --appdir appdir -e Smile -i appimage/smile-icon.svg -d appimage/smile.desktop --output appimage ; fi
-
+  - ls
+  
 deploy:
   provider: releases 
   api_key: $GITHUB_OAUTH_TOKEN 
