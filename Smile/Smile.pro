@@ -57,8 +57,6 @@ HEADERS += \
   UI/msqlquerymodel.h \
   UI/new_passwort.h
 
-QMAKE_CXXFLAGS += -std=c++0x
-
 FORMS += \
   UI/auftragsannahme_alone.ui \
   UI/auftragsannahme_many.ui \
@@ -74,3 +72,6 @@ FORMS += \
 
 DISTFILES += \
   Server/test.db
+
+
+QMAKE_CXXFLAGS += -std=c++0x
