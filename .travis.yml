@@ -56,6 +56,8 @@ script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make ; fi
   
 before_deploy:
+  - pw
+  - ls
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then macdeployqt Smile/${targetFile}.app -qmldir=${qtDir}/qml -verbose=1 -dmg ; mv Smile/${targetFile}.dmg Smile/${releaseName} ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod a+x linuxdeploy-x86_64.AppImage ; fi
