@@ -12,7 +12,7 @@ matrix:
     - os: linux
       dist: xenial
       env: 
-        targetFile=Smile
+        targetFile=Smile.AppImage
         releaseName=Smile_ubuntu_xenial_x64
         qtppa="ppa:beineri/opt-qt-5.12.3-xenial"
       cache:
@@ -62,7 +62,6 @@ before_deploy:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then OUTPUT="$releaseName.AppImage" ./linuxdeploy-x86_64.AppImage --appimage-extract-and-run -e Smile --appdir appdir -e Smile -i appimage/smile-icon.svg -d appimage/smile.desktop --output appimage ; fi
 
 deploy:
-  provider: releases 
   api_key: $GITHUB_OAUTH_TOKEN 
   file: ${releaseName}
   skip_cleanup: true
