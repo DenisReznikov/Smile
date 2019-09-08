@@ -71,7 +71,7 @@ deploy:
   draft: false
   prerelease: true
   on:
-    tags: true
+    branch: master
 
 
 notifications:
