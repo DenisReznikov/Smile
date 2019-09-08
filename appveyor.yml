@@ -1,7 +1,9 @@
 version: 'Smile-1.0.{build}'
 branches:
   only:
-  - master
+    - master
+    - production
+    
   environment:
   matrix:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
