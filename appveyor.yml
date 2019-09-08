@@ -1,8 +1,7 @@
 version: 'Smile-1.0.{build}'
 branches:
-  except:
-    - project/travis
-environment:
+  only:
+  - masterenvironment:
   matrix:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x86
