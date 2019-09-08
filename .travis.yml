@@ -1,6 +1,8 @@
 version: 'Smile-1.0.{build}'
 language: cpp
-
+branches:
+  only:
+  - master
 sudo: required
 
 compiler: gcc
