@@ -6,10 +6,6 @@ environment:
     platform: x86
     qt: 5.12
     releaseName: Smile_qt512_vs2017_x86
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    platform: x64
-    qt: 5.12
-    releaseName: Smile_qt512_vs2017_x64
       
 branches:
   only: 
