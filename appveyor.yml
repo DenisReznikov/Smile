@@ -36,7 +36,7 @@ build_script:
   - .\Test.exe -xunitxml > tests.xml 
   - cd ..
   - rm *.cpp
-  - rm *.hpp
+  - rm *.h
   - rm release
   
 on_finish:
